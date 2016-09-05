@@ -1,0 +1,4 @@
+services:
+#    librinfo_seed_batch.example:
+#        class: Librinfo\SeedBatchBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
