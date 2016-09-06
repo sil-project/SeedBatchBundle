@@ -1,0 +1,8 @@
+Librinfo\SeedBatchBundle\Entity\Producer:
+    type: entity
+
+    fields:
+        test:
+            type:       string
+            length:     255
+            nullable:   true

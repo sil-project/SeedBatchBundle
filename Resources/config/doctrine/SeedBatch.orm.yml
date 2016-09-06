@@ -1,0 +1,7 @@
+Librinfo\SeedBatchBundle\Entity\SeedBatch:
+    type: entity
+
+    fields:
+        code:
+            type:       string(255)
+            nullable:   true
