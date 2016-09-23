@@ -6,9 +6,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Librinfo\CRMBundle\Entity\Organism;
 use Librinfo\DoctrineBundle\Entity\Traits\BaseEntity;
-use Librinfo\UserBundle\Entity\Traits\Traceable;
 use Librinfo\DoctrineBundle\Entity\Traits\Descriptible;
 use Librinfo\DoctrineBundle\Entity\Traits\Loggable;
+use Librinfo\UserBundle\Entity\Traits\Traceable;
+use Librinfo\VarietiesBundle\Entity\Variety;
 
 /**
  * Producer
@@ -25,6 +26,11 @@ class SeedBatch
      * @var string
      */
     private $code;
+
+    /**
+     * @var Variety
+     */
+    private $variety;
 
 
     /**
@@ -49,6 +55,31 @@ class SeedBatch
     public function getCode()
     {
         return $this->code;
+    }
+
+    /**
+     * Set variety
+     *
+     * @param Variety $variety
+     *
+     * @return SeedBatch
+     */
+    public function setVariety($variety)
+    {
+        $this->variety = $variety;
+        $variety->addSeedBatch($this);
+
+        return $this;
+    }
+
+    /**
+     * Get code
+     *
+     * @return Variety
+     */
+    public function getVariety()
+    {
+        return $this->variety;
     }
 
 }

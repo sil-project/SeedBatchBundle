@@ -1,2 +1,20 @@
 parameters:
     librinfo:
+        Librinfo\SeedBatchBundle\Entity\SeedBatch:
+            Sonata\AdminBundle\Show\ShowMapper:
+                forceTabs: true
+                add:
+                    form_group_general:
+                        '':
+                            code: ~
+            Sonata\AdminBundle\Form\FormMapper:
+                add:
+                    form_group_general:
+                        '':
+                            code: ~
+            Sonata\AdminBundle\Datagrid\ListMapper:
+                add:
+                    code: ~
+            Sonata\AdminBundle\Datagrid\DatagridMapper:
+                add:
+                    code: ~
