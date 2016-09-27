@@ -1,0 +1,10 @@
+Librinfo\CRMBundle\Entity\Organism:
+    type: entity
+
+    oneToMany:
+        seedBatches:
+            targetEntity: Librinfo\SeedBatchBundle\Entity\SeedBatch
+            mappedBy: producer
+        plots:
+            targetEntity: Librinfo\SeedBatchBundle\Entity\Plot
+            mappedBy: producer
