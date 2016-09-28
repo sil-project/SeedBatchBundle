@@ -1,5 +1,5 @@
 services:
-    seedbatch.organism:
+    librinfo_seed_batch.admin.organism:
         class: Librinfo\SeedBatchBundle\Admin\OrganismAdmin
         arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoCRMBundle:OrganismAdmin]
         tags:
@@ -12,7 +12,7 @@ services:
             - [ setTemplate, [edit, LibrinfoCRMBundle:OrganismAdmin:edit.html.twig]]
             - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
 
-    seedbatch.seed_batch:
+    librinfo_seed_batch.admin.seed_batch:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdminConcrete
         arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, SonataAdminBundle:CRUD]
         tags:
@@ -20,4 +20,14 @@ services:
                 manager_type: orm
                 group: Seed Batches
                 label: librinfo.seedbatch.seed_batch_admin.label
+                labeql_translator_strategy: librinfo_core.label.strategy.librinfo
+
+    librinfo_seed_batch.admin.plot:
+        class: Librinfo\SeedBatchBundle\Admin\PlotAdminConcrete
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, SonataAdminBundle:CRUD]
+        tags:
+            -   name: sonata.admin
+                manager_type: orm
+                group: Seed Batches
+                label: librinfo.seedbatch.plot_admin.label
                 labeql_translator_strategy: librinfo_core.label.strategy.librinfo

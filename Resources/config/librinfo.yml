@@ -8,13 +8,63 @@ parameters:
                         '':
                             code: ~
             Sonata\AdminBundle\Form\FormMapper:
+                remove: [description]
                 add:
                     form_group_general:
                         '':
                             code: ~
+                            variety:
+                                type: sonata_type_model_autocomplete
+#                                route: { name: searchable_admin_retrieve_autocomplete_items }
+                                by_reference: false
+                                property: name
+                                _options:
+                                    admin_code: librinfo_varieties.admin.variety
+                            producer:
+                                type: sonata_type_model_autocomplete
+#                                route: { name: searchable_admin_retrieve_autocomplete_items }
+                                by_reference: false
+                                property: name # not used but required
+                                _options:
+                                    admin_code: crm.organism
+                            productionYear: ~
+                            batchNumber: ~
+                            plot:
+                                type: sonata_type_model_autocomplete
+#                                route: { name: searchable_admin_retrieve_autocomplete_items }
+                                by_reference: false
+                                property: name # not used but required
+#                                _options:
+#                                    admin_code: librinfo_seed_batch.admin.plot
+                            description: ~
+                        form_group_germination_rate:
+                            germinationRate: ~
+                            germinationDate: ~
+                        form_group_tkw:
+                            tkw: ~
+                            tkwDate: ~
+                    form_tab_stocks:
+                        form_group_delivery:
+                            deliveryDate: ~
+                            deliveryNote: ~
+                            grossProducerWeight: ~
+                            grossDeliveredWeight: ~
+                            netScreenedWeight: ~
+                            toScreenWeight: ~
+                    _options:
+                        tabsOrder:
+                            - form_group_general
+                            - form_tab_stocks
+                            - form_group_specifics
             Sonata\AdminBundle\Datagrid\ListMapper:
+                remove: [createdAt]
                 add:
-                    code: ~
+                    code:
+                        identifier: true
+                    variety: ~
+                    producer:
+                        admin_code: crm.organism
+                    productionYear: ~
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
                     code: ~

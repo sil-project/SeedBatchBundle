@@ -52,6 +52,11 @@ class SeedBatch
     /**
      * @var int
      */
+    private $batchNumber;
+
+    /**
+     * @var int
+     */
     private $productionYear;
 
     /**
@@ -67,13 +72,52 @@ class SeedBatch
     /**
      * @var float
      */
-    private $tkwRate;
+    private $tkw;
 
     /**
      * @var \DateTime
      */
     private $tkwDate;
 
+    /**
+     * @var string
+     */
+    private $certifications;
+
+    /**
+     * @var int
+     */
+    private $grossProducerWeight;
+
+    /**
+     * @var int
+     */
+    private $grossDeliveredWeight;
+
+    /**
+     * @var int
+     */
+    private $netScreenedWeight;
+
+    /**
+     * @var int
+     */
+    private $toScreenWeight;
+
+    /**
+     * @var \DateTime
+     */
+    private $deliveryDate;
+
+    /**
+     * @var bool
+     */
+    private $deliveryNote;
+
+    public function __toString()
+    {
+        return $this->code ? $this->code : $this->id;
+    }
 
     /**
      * Set code
@@ -97,6 +141,30 @@ class SeedBatch
     public function getCode()
     {
         return $this->code;
+    }
+
+    /**
+     * Set batchNumber
+     *
+     * @param int $batchNumber
+     *
+     * @return SeedBatch
+     */
+    public function setBatchNumber($batchNumber)
+    {
+        $this->batchNumber = $batchNumber;
+
+        return $this;
+    }
+
+    /**
+     * Get batchNumber
+     *
+     * @return int
+     */
+    public function getBatchNumber()
+    {
+        return $this->batchNumber;
     }
 
     /**
@@ -172,27 +240,27 @@ class SeedBatch
     }
 
     /**
-     * Set tkwRate
+     * Set tkw
      *
-     * @param float $tkwRate
+     * @param float $tkw
      *
      * @return SeedBatch
      */
-    public function setTkwRate($tkwRate)
+    public function setTkw($tkw)
     {
-        $this->tkwRate = $tkwRate;
+        $this->tkw = $tkw;
 
         return $this;
     }
 
     /**
-     * Get tkwRate
+     * Get tkw
      *
      * @return float
      */
-    public function getTkwRate()
+    public function getTkw()
     {
-        return $this->tkwRate;
+        return $this->tkw;
     }
 
     /**
@@ -313,6 +381,174 @@ class SeedBatch
     public function getPlot()
     {
         return $this->plot;
+    }
+
+    /**
+     * Set certifications
+     *
+     * @param string $certifications
+     *
+     * @return SeedBatch
+     */
+    public function setCertifications($certifications)
+    {
+        $this->certifications = $certifications;
+
+        return $this;
+    }
+
+    /**
+     * Get certifications
+     *
+     * @return string
+     */
+    public function getCertifications()
+    {
+        return $this->certifications;
+    }
+
+    /**
+     * Set grossProducerWeight
+     *
+     * @param int $grossProducerWeight
+     *
+     * @return SeedBatch
+     */
+    public function setGrossProducerWeight($grossProducerWeight)
+    {
+        $this->grossProducerWeight = $grossProducerWeight;
+
+        return $this;
+    }
+
+    /**
+     * Get grossProducerWeight
+     *
+     * @return int
+     */
+    public function getGrossProducerWeight()
+    {
+        return $this->grossProducerWeight;
+    }
+
+    /**
+     * Set grossDeliveredWeight
+     *
+     * @param int $grossDeliveredWeight
+     *
+     * @return SeedBatch
+     */
+    public function setGrossDeliveredWeight($grossDeliveredWeight)
+    {
+        $this->grossDeliveredWeight = $grossDeliveredWeight;
+
+        return $this;
+    }
+
+    /**
+     * Get grossDeliveredWeight
+     *
+     * @return int
+     */
+    public function getGrossDeliveredWeight()
+    {
+        return $this->grossDeliveredWeight;
+    }
+
+    /**
+     * Set netScreenedWeight
+     *
+     * @param int $netScreenedWeight
+     *
+     * @return SeedBatch
+     */
+    public function setNetScreenedWeight($netScreenedWeight)
+    {
+        $this->netScreenedWeight = $netScreenedWeight;
+
+        return $this;
+    }
+
+    /**
+     * Get netScreenedWeight
+     *
+     * @return int
+     */
+    public function getNetScreenedWeight()
+    {
+        return $this->netScreenedWeight;
+    }
+
+    /**
+     * Set toScreenWeight
+     *
+     * @param int $toScreenWeight
+     *
+     * @return SeedBatch
+     */
+    public function setToScreenWeight($toScreenWeight)
+    {
+        $this->toScreenWeight = $toScreenWeight;
+
+        return $this;
+    }
+
+    /**
+     * Get toScreenWeight
+     *
+     * @return int
+     */
+    public function getToScreenWeight()
+    {
+        return $this->toScreenWeight;
+    }
+
+    /**
+     * Set deliveryDate
+     *
+     * @param \DateTime $deliveryDate
+     *
+     * @return SeedBatch
+     */
+    public function setDeliveryDate(\DateTime $deliveryDate)
+    {
+        $this->deliveryDate = $deliveryDate;
+
+        return $this;
+    }
+
+    /**
+     * Get deliveryDate
+     *
+     * @return \DateTime
+     */
+    public function getDeliveryDate()
+    {
+        return $this->deliveryDate;
+    }
+
+    /**
+     * Set deliveryNote
+     *
+     * @param bool $deliveryNote
+     *
+     * @return SeedBatch
+     */
+    public function setDeliveryNote($deliveryNote)
+    {
+        $this->deliveryNote = $deliveryNote;
+
+        return $this;
+    }
+
+    /**
+     * Get deliveryNote
+     *
+     * @return bool
+     */
+    public function getDeliveryNote()
+    {
+        return $this->deliveryNote;
     }
 }
 
