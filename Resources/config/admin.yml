@@ -1,18 +1,18 @@
 services:
-#    librinfo_seed_batch.admin.organism:
-#        class: Librinfo\SeedBatchBundle\Admin\OrganismAdmin
-#        arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoCRMBundle:OrganismAdmin]
-#        tags:
-#            -   name: sonata.admin
-#                manager_type: orm
-#                group: Seed Batches
-#                label: librinfo.seedbatch.organism_admin.label
-#                label_translator_strategy: librinfo_core.label.strategy.librinfo
-#        calls:
-#            - [ setTemplate, [edit, LibrinfoCRMBundle:OrganismAdmin:edit.html.twig]]
-#            - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
+    librinfo_seedbatch.admin.organism:
+        class: Librinfo\SeedBatchBundle\Admin\OrganismAdminConcrete
+        arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoCRMBundle:OrganismAdmin]
+        tags:
+            -   name: sonata.admin
+                manager_type: orm
+                group: Customers Relationship Management
+                label: librinfo.crm.organism_admin.label
+                label_translator_strategy: librinfo_core.label.strategy.librinfo
+        calls:
+            - [ setTemplate, [edit, LibrinfoCRMBundle:OrganismAdmin:edit.html.twig]]
+            - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
 
-    librinfo_seed_batch.admin.seed_batch:
+    librinfo_seedbatch.admin.seedbatch:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdminConcrete
         arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, SonataAdminBundle:CRUD]
         tags:
@@ -22,7 +22,7 @@ services:
                 label: librinfo.seedbatch.seed_batch_admin.label
                 labeql_translator_strategy: librinfo_core.label.strategy.librinfo
 
-    librinfo_seed_batch.admin.plot:
+    librinfo_seedbatch.admin.plot:
         class: Librinfo\SeedBatchBundle\Admin\PlotAdminConcrete
         arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, SonataAdminBundle:CRUD]
         tags:

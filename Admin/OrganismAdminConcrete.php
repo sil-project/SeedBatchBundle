@@ -3,14 +3,17 @@
 namespace Librinfo\SeedBatchBundle\Admin;
 
 use Librinfo\CoreBundle\Admin\CoreAdmin;
-use Librinfo\CRMBundle\Admin\OrganismAdminConcrete as CRMOrganismAdmin;
+use Librinfo\EmailCRMBundle\Admin\OrganismAdminConcrete as BaseOrganismAdminConcrete;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class OrganismAdmin extends CRMOrganismAdmin
+class OrganismAdminConcrete extends BaseOrganismAdminConcrete
 {
+    protected $baseRouteName = 'admin_librinfo_seedbatch_organism';
+    protected $baseRoutePattern = 'librinfo/seedbatch/organism';
+
     /**
      * @param DatagridMapper $mapper
      */
@@ -41,7 +44,5 @@ class OrganismAdmin extends CRMOrganismAdmin
     protected function configureShowFields(ShowMapper $mapper)
     {
         CoreAdmin::configureShowFields($mapper);
-        //$mapper->remove('vat');
     }
 }
-

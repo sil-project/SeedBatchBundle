@@ -12,6 +12,32 @@ parameters:
                     form_group_general:
                         '':
                             code: ~
+                            variety: ~
+#                            producer:
+#                                admin_code: librinfo_emailcrm.admin.organism
+                            productionYear: ~
+                            batchNumber: ~
+                            plot: ~
+                        form_group_germination_rate:
+                            germinationRate: ~
+                            germinationDate: ~
+                        form_group_tkw:
+                            tkw: ~
+                            tkwDate: ~
+                    form_tab_stocks:
+                        form_group_delivery:
+                            deliveryDate: ~
+                            deliveryNote: ~
+                            grossProducerWeight: ~
+                            grossDeliveredWeight: ~
+                            netScreenedWeight: ~
+                            toScreenWeight: ~
+                    _options:
+                        tabsOrder:
+                            - form_group_general
+                            - form_tab_stocks
+                            - form_group_specifics
+
             Sonata\AdminBundle\Form\FormMapper:
                 remove: [description]
                 add:
@@ -31,7 +57,7 @@ parameters:
                                 by_reference: false
                                 property: name # not used but required
                                 _options:
-                                    admin_code: crm.organism
+                                    admin_code: librinfo_emailcrm.admin.organism
                             productionYear: ~
                             batchNumber: ~
                             plot:
@@ -39,8 +65,8 @@ parameters:
 #                                route: { name: searchable_admin_retrieve_autocomplete_items }
                                 by_reference: false
                                 property: name # not used but required
-#                                _options:
-#                                    admin_code: librinfo_seed_batch.admin.plot
+                                _options:
+                                    admin_code: librinfo_seedbatch.admin.plot
                             description: ~
                         form_group_germination_rate:
                             germinationRate: ~
@@ -61,6 +87,7 @@ parameters:
                             - form_group_general
                             - form_tab_stocks
                             - form_group_specifics
+
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove: [createdAt]
                 add:
@@ -68,8 +95,9 @@ parameters:
                         identifier: true
                     variety: ~
                     producer:
-                        admin_code: crm.organism
+                        admin_code: librinfo_emailcrm.admin.organism
                     productionYear: ~
+
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
                     code: ~
