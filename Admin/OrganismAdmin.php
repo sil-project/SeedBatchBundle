@@ -41,6 +41,7 @@ class OrganismAdmin extends CRMOrganismAdmin
     protected function configureShowFields(ShowMapper $mapper)
     {
         CoreAdmin::configureShowFields($mapper);
+        //$mapper->remove('vat');
     }
 }
 

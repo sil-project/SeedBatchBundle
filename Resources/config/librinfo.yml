@@ -1,5 +1,10 @@
 parameters:
     librinfo:
+
+##############
+# SEED BATCH
+##############
+
         Librinfo\SeedBatchBundle\Entity\SeedBatch:
             Sonata\AdminBundle\Show\ShowMapper:
                 forceTabs: true
@@ -68,3 +73,12 @@ parameters:
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
                     code: ~
+
+##############
+# ORGANISM
+##############
+
+#        Librinfo\SeedBatchBundle\Admin\OrganismAdmin:
+#            Sonata\AdminBundle\Show\ShowMapper:
+#                forceTabs: true
+#                remove: [vat]
