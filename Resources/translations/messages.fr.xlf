@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            
+
+<!-- SEED BATCHES -->            
+        <trans-unit id="form_tab_stocks">
+            <source>form_tab_stocks</source>
+            <target>Stocks</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.production_year">
+            <source>librinfo.label.production_year</source>
+            <target>Année de production</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.batch_number">
+            <source>librinfo.label.batch_number</source>
+            <target>Lot N°</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.seed_batch_code">
+            <source>librinfo.label.seed_batch_code</source>
+            <target>Code Lot</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.plot">
+            <source>librinfo.label.plot</source>
+            <target>Parcelle</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.variety">
+            <source>librinfo.label.variety</source>
+            <target>Variété</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.producer">
+            <source>librinfo.label.producer</source>
+            <target>Producteur</target>
+        </trans-unit>
+        <trans-unit id="form_group_germination_rate">
+            <source>form_group_germination_rate</source>
+            <target>Taux de germination</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.germination_date">
+            <source>librinfo.label.germination_date</source>
+            <target>Date de la mesure</target>
+        </trans-unit>
+        <trans-unit id="form_group_tkw">
+            <source>form_group_tkw</source>
+            <target>PMG</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.tkw_date">
+            <source>librinfo.label.tkw_date</source>
+            <target>Date de la mesure</target>
+        </trans-unit>
+        <trans-unit id="form_group_delivery">
+            <source>form_group_delivery</source>
+            <target>Livraison</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.delivery_date">
+            <source>librinfo.label.delivery_date</source>
+            <target>Date de livraison</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.delivery_note">
+            <source>librinfo.label.delivery_note</source>
+            <target>Bon de livraison fourni</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.gross_producer_weight">
+            <source>librinfo.label.gross_producer_weight</source>
+            <target>Poids brut chez le producteur</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.gross_delivered_weight">
+            <source>librinfo.label.gross_delivered_weight</source>
+            <target>Poids brud livré</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.net_screened_weight">
+            <source>librinfo.label.net_screened_weight</source>
+            <target>Poids net trié</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.to_screen_weight">
+            <source>librinfo.label.to_screen_weight</source>
+            <target>Poids restant à trier</target>
+        </trans-unit>
+        <trans-unit id="librinfo.seedbatch.seed_batch_admin.label">
+            <source>librinfo.seedbatch.seed_batch_admin.label</source>
+            <target>Lot</target>
+        </trans-unit>
+        <trans-unit id="librinfo.link.seed_batch_list">
+            <source>librinfo.link.seed_batch_list</source>
+            <target>Liste des lots</target>
+        </trans-unit>
+        <trans-unit id="librinfo.label.menu.seed_batches">
+            <source>librinfo.label.menu.seed_batches</source>
+            <target>Lots</target>
+        </trans-unit>
+                            
+
+<!-- PLOTS -->
+            <trans-unit id="librinfo.label.plot_name">
+                <source>librinfo.label.title</source>
+                <target>Titre / civilité</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

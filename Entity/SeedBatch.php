@@ -510,7 +510,7 @@ class SeedBatch
      *
      * @return SeedBatch
      */
-    public function setDeliveryDate(\DateTime $deliveryDate)
+    public function setDeliveryDate($deliveryDate)
     {
         $this->deliveryDate = $deliveryDate;
 

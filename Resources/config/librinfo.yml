@@ -11,10 +11,12 @@ parameters:
                 add:
                     form_group_general:
                         '':
-                            code: ~
+                            code:
+                                label: librinfo.label.seed_batch_code
                             variety: ~
-#                            producer:
-#                                admin_code: librinfo_emailcrm.admin.organism
+                            producer:
+                                admin_code: librinfo_seedbatch.admin.organism
+                                associated_property: producerToString
                             productionYear: ~
                             batchNumber: ~
                             plot: ~
@@ -43,7 +45,8 @@ parameters:
                 add:
                     form_group_general:
                         '':
-                            code: ~
+                            code:
+                                label: librinfo.label.seed_batch_code
                             variety:
                                 type: sonata_type_model_autocomplete
 #                                route: { name: searchable_admin_retrieve_autocomplete_items }
@@ -57,7 +60,7 @@ parameters:
                                 by_reference: false
                                 property: name # not used but required
                                 _options:
-                                    admin_code: librinfo_emailcrm.admin.organism
+                                    admin_code: librinfo_seedbatch.admin.organism
                             productionYear: ~
                             batchNumber: ~
                             plot:
@@ -93,20 +96,84 @@ parameters:
                 add:
                     code:
                         identifier: true
+                        label: librinfo.label.seed_batch_code
                     variety: ~
                     producer:
-                        admin_code: librinfo_emailcrm.admin.organism
+                        admin_code: librinfo_seedbatch.admin.organism
                     productionYear: ~
 
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
+                    code:
+                        label: librinfo.label.seed_batch_code
+
+########
+# PLOT
+########
+
+        Librinfo\SeedBatchBundle\Entity\Plot:
+            Sonata\AdminBundle\Show\ShowMapper:
+                forceTabs: true
+                remove: [vcard_uid]
+                add:
+                    form_group_general:
+                        '':
+                            code: ~
+                            producer:
+                                admin_code: librinfo_seedbatch.admin.organism
+            Sonata\AdminBundle\Form\FormMapper:
+                remove: [name, vcard_uid]
+                add:
+                    form_group_general:
+                        '':
+                            name:
+                                label: librinfo.label.plot_name
+                            code: ~
+                            producer:
+                                type: sonata_type_model_autocomplete
+#                                route: { name: searchable_admin_retrieve_autocomplete_items }
+                                by_reference: false
+                                property: name # not used but required
+                                _options:
+                                    admin_code: librinfo_seedbatch.admin.organism
+
+            Sonata\AdminBundle\Datagrid\ListMapper:
+                remove: [name, createdAt, zip, country]
+                add:
+                    name:
+                        identifier: true
                     code: ~
+                    producer:
+                        admin_code: librinfo_seedbatch.admin.organism
+                    city: ~
+                    _options:
+                        fieldsOrder: [name, code, producer, city]
 
-##############
+            Sonata\AdminBundle\Datagrid\DatagridMapper:
+                add:
+                    code: ~
+                    name: ~
+                    producer.name: ~
+
+############
 # ORGANISM
-##############
+############
 
-#        Librinfo\SeedBatchBundle\Admin\OrganismAdmin:
-#            Sonata\AdminBundle\Show\ShowMapper:
-#                forceTabs: true
-#                remove: [vat]
+        Librinfo\SeedBatchBundle\Admin\OrganismAdminConcrete:
+            Sonata\AdminBundle\Show\ShowMapper:
+                add:
+                    show_tab_plots:
+                        '':
+                            plots: ~
+                    show_tab_seedbatches:
+                        '':
+                            seedBatches: ~
+                    _options:
+                        tabsOrder:
+                            - form_group_alert
+                            - form_group_general
+                            - form_group_contacts
+                            - show_tab_emails
+                            - show_tab_plots
+                            - show_tab_seedbatches
+                            - default
