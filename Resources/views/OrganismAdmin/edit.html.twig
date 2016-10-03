@@ -1,0 +1,73 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Baptiste SIMON <beta@e-glop.net>
+(c) Marcos Bezerra de Menezes <marcos.bezerra@libre-informatique.fr>
+(c) Libre Informatique [http://www.libre-informatique.fr/]
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends 'LibrinfoCRMBundle:OrganismAdmin:edit.html.twig' %}
+
+{% block bottom_js %}
+
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            var prefix = "{{ form.vars.id }}_";
+
+            // ************* Handle Seed Producers ***************
+
+            var seedProducer = $('#' + prefix + 'seedProducer');
+            var supplier = $('#' + prefix + 'supplier');
+            var circles = $('#' + prefix + 'circles');
+            var seedProducerCircleId = "{{ librinfo_app_circles.seed_producers.id|e('js') }}";
+
+            function checkedSeedProducer(event) {
+                // a seed producer must be a supplier
+                supplier.iCheck('check');
+                // A seed producer must be in the seed producers circle
+                var selectedCircles = circles.select2('val');
+                if (selectedCircles[seedProducerCircleId] === undefined)
+                    circles.select2('val', selectedCircles.concat([seedProducerCircleId]));
+            }
+
+            function uncheckedSeedProducer(event) {
+                // Remove from the seed producers circle
+                var selectedCircles = circles.select2('val');
+                var index = selectedCircles.indexOf(seedProducerCircleId);
+                if (index !== -1) {
+                    selectedCircles.splice(index, 1);
+                    circles.select2('val', selectedCircles);
+                }
+            }
+
+            function uncheckedSupplier(event) {
+                // cannot be a producer if not a supplier
+                seedProducer.iCheck('uncheck');
+            }
+
+            function changedCircles(event) {
+                if (event.added !== undefined && event.added.id == seedProducerCircleId)
+                    seedProducer.iCheck('check');
+                else if (event.removed !== undefined && event.removed.id == seedProducerCircleId)
+                    seedProducer.iCheck('uncheck');
+            }
+
+            // Init checkbox
+            if (circles.select2('val').indexOf(seedProducerCircleId) !== -1)
+                seedProducer.iCheck('check');
+
+            // event handlers
+            seedProducer.on('ifChecked', checkedSeedProducer);
+            seedProducer.on('ifUnchecked', uncheckedSeedProducer);
+            supplier.on('ifUnchecked', uncheckedSupplier);
+            circles.on('change', changedCircles);
+
+        });
+    </script>
+{% endblock %}

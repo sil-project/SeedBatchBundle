@@ -10,8 +10,8 @@ trait OrganismExtension
     public function producerToString()
     {
         $parts = [];
-        if ($this->supplierCode) $parts[] = "[" . $this->supplierCode() . "]";
-        if ($this->name) $parts[] = $this->name;
+        if ($this->getSupplierCode()) $parts[] = "[" . $this->getSupplierCode() . "]";
+        if ($this->getName()) $parts[] = $this->getName();
         return implode(' ', $parts);
     }
 }

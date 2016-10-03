@@ -177,3 +177,30 @@ parameters:
                             - show_tab_plots
                             - show_tab_seedbatches
                             - default
+            Sonata\AdminBundle\Form\FormMapper:
+                add:
+                    form_group_general:
+                        form_group_organism:
+                            seedProducer:
+                                mapped: false
+                                type: checkbox
+                                required: false
+                            _options:
+                                fieldsOrder:
+                                    - title
+                                    - firstname
+                                    - name
+                                    - customer
+                                    - customerCode
+                                    - supplier
+                                    - supplierCode
+                                    - seedProducer
+                                    - circles
+                                    - category
+                                    - alert
+                                    - description
+                                    - administrativeNumber
+                                    - email
+                                    - emailNpai
+                                    - emailNoNewsletter
+                                    - url
