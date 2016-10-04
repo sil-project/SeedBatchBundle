@@ -22,8 +22,28 @@ services:
                 label: librinfo.seedbatch.seed_batch_admin.label
                 label_translator_strategy: librinfo_core.label.strategy.librinfo
 
+    librinfo_seedbatch.admin.seedbatch_embedded:
+        class: Librinfo\SeedBatchBundle\Admin\SeedBatchEmbeddedAdmin
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, SonataAdminBundle:CRUD]
+        tags:
+            -   name: sonata.admin
+                manager_type: orm
+                group: Seed Batches
+                label: librinfo.seedbatch.seedbatch_admin.label
+                label_translator_strategy: librinfo_core.label.strategy.librinfo
+
     librinfo_seedbatch.admin.plot:
         class: Librinfo\SeedBatchBundle\Admin\PlotAdminConcrete
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, SonataAdminBundle:CRUD]
+        tags:
+            -   name: sonata.admin
+                manager_type: orm
+                group: Seed Batches
+                label: librinfo.seedbatch.plot_admin.label
+                label_translator_strategy: librinfo_core.label.strategy.librinfo
+
+    librinfo_seedbatch.admin.plot_embedded:
+        class: Librinfo\SeedBatchBundle\Admin\PlotEmbeddedAdmin
         arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, SonataAdminBundle:CRUD]
         tags:
             -   name: sonata.admin

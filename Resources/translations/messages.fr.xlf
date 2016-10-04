@@ -5,6 +5,10 @@
             
 
 <!-- SEED BATCHES -->            
+            <trans-unit id="librinfo.seedbatch.seedbatch_admin.label">
+                <source>librinfo.seedbatch.seedbatch_admin.label</source>
+                <target>Lot</target>
+            </trans-unit>
             <trans-unit id="form_tab_stocks">
                 <source>form_tab_stocks</source>
                 <target>Stocks</target>
@@ -92,10 +96,26 @@
                             
 
 <!-- PLOTS -->
-            <trans-unit id="librinfo.label.plot_name">
-                <source>librinfo.label.title</source>
-                <target>Titre / civilité</target>
+            <trans-unit id="librinfo.seedbatch.plot_admin.label">
+                <source>librinfo.seedbatch.plot_admin.label</source>
+                <target>Parcelle</target>
             </trans-unit>
+            <trans-unit id="librinfo.label.plot_name">
+                <source>librinfo.label.plot_name</source>
+                <target>Nom de la parcelle</target>
+            </trans-unit>
+            <trans-unit id="form_group_plot">
+                <source>form_group_plot</source>
+                <target>Parcelle</target>
+            </trans-unit>
+            <trans-unit id="librinfo.label.menu.plots">
+                <source>librinfo.label.menu.plots</source>
+                <target>Parcelles</target>
+            </trans-unit>            
+            <trans-unit id="librinfo.link.plot_list">
+                <source>librinfo.link.plot_list</source>
+                <target>Liste des parcelles</target>
+            </trans-unit>            
             
 <!-- ORGANISMS -->
             <trans-unit id="librinfo.label.seed_producer">
@@ -104,6 +124,10 @@
             </trans-unit>
             <trans-unit id="show_tab_plots">
                 <source>show_tab_plots</source>
+                <target>Parcelles</target>
+            </trans-unit>
+            <trans-unit id="form_tab_plots">
+                <source>form_tab_plots</source>
                 <target>Parcelles</target>
             </trans-unit>
             <trans-unit id="librinfo.label.plots">
@@ -118,6 +142,7 @@
                 <source>librinfo.label.seedbatches</source>
                 <target>Lots</target>
             </trans-unit>
+            
         </body>
     </file>
 </xliff>
