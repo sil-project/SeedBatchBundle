@@ -93,6 +93,10 @@
                 <source>librinfo.label.menu.seed_batches</source>
                 <target>Lots</target>
             </trans-unit>
+            <trans-unit id="form_group_seedbatch">
+                <source>form_group_seedbatch</source>
+                <target>Lot</target>
+            </trans-unit>               
                             
 
 <!-- PLOTS -->
@@ -142,6 +146,10 @@
                 <source>librinfo.label.seedbatches</source>
                 <target>Lots</target>
             </trans-unit>
+            <trans-unit id="form_tab_seedbatches">
+                <source>form_tab_seedbatches</source>
+                <target>Lots</target>
+            </trans-unit>            
             
         </body>
     </file>
