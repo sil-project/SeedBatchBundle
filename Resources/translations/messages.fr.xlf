@@ -97,6 +97,14 @@
                 <source>form_group_seedbatch</source>
                 <target>Lot</target>
             </trans-unit>               
+            <trans-unit id="librinfo.label.generate_seedbatch_code">
+                <source>librinfo.label.generate_seedbatch_code</source>
+                <target>Générer code</target>
+            </trans-unit>               
+            <trans-unit id="librinfo.link.seed_batch_create">
+                <source>librinfo.link.seed_batch_create</source>
+                <target>Nouveau Lot</target>
+            </trans-unit>               
                             
 
 <!-- PLOTS -->

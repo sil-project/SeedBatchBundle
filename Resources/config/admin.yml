@@ -14,7 +14,7 @@ services:
 
     librinfo_seedbatch.admin.seedbatch:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdminConcrete
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, SonataAdminBundle:CRUD]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, LibrinfoSeedBatchBundle:SeedBatchAdmin]
         tags:
             -   name: sonata.admin
                 manager_type: orm
