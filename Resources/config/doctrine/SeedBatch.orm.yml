@@ -58,6 +58,7 @@ Librinfo\SeedBatchBundle\Entity\SeedBatch:
                 referencedColumnName: id
         variety:
             targetEntity: Librinfo\VarietiesBundle\Entity\Variety
+            inversedBy: seedBatches
             joinColumn:
                 name: variety_id
                 referencedColumnName: id
