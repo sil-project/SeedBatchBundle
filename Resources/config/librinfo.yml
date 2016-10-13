@@ -163,7 +163,8 @@ parameters:
                         '':
                             name:
                                 label: librinfo.label.plot_name
-                            code: ~
+                            code:
+                                type: librinfo_entitycode
                             producer:
                                 type: sonata_type_model_autocomplete
 #                                route: { name: searchable_admin_retrieve_autocomplete_items }
@@ -250,6 +251,10 @@ parameters:
                                 mapped: false
                                 type: checkbox
                                 required: false
+                            seedProducerCode:
+                                type: librinfo_entitycode
+                                attr:
+                                    placeholder: librinfo.placeholder.seed_producer_code
                             _options:
                                 fieldsOrder:
                                     - title
@@ -260,6 +265,7 @@ parameters:
                                     - supplier
                                     - supplierCode
                                     - seedProducer
+                                    - seedProducerCode
                                     - circles
                                     - category
                                     - alert

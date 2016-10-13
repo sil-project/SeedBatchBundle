@@ -1,0 +1,111 @@
+<?php
+
+namespace Librinfo\SeedBatchBundle\CodeGenerator;
+
+use Doctrine\ORM\EntityManager;
+use Librinfo\CoreBundle\CodeGenerator\CodeGeneratorInterface;
+use Librinfo\CRMBundle\Entity\Organism;
+
+class SeedProducerCodeGenerator implements CodeGeneratorInterface
+{
+    const ENTITY_CLASS = 'Librinfo\CRMBundle\Entity\Organism';
+    const ENTITY_FIELD = 'seedProducerCode';
+
+    private static $length = 3;
+
+    /**
+     * @var EntityManager
+     */
+    private static $em;
+
+    public static function setEntityManager(EntityManager $em)
+    {
+        self::$em = $em;
+    }
+
+    /**
+     * @param  Organism $organism
+     * @return string
+     */
+    public static function generate($organism)
+    {
+        $length = self::$length;
+        $name = $organism->getName();
+        if ($organism->isIndividual()) {
+            $positions = $organism->getPositions();
+            if ($positions) {
+                $contact = $positions[0]->getContact();
+                if ($contact->getName())
+                    $name = $contact->getName();
+                else if ($contact->getFirstname())
+                    $name = $contact->getFirstname();
+            }
+        }
+
+        // Unaccent, remove marks and punctuation, upper case
+        $translit = transliterator_transliterate(
+            'Any-Latin; Latin-ASCII; [:Nonspacing Mark:] Remove; [:Punctuation:] Remove; Upper();',
+            $name
+        );
+
+        // Remove everything that is not a letter or a digit
+        $cleaned = preg_replace('/[^A-Z0-9]/', '', $translit);
+
+        // first chars of name, right padded with "X" if necessary
+        $code = str_pad(substr($cleaned, 0, $length), $length, 'X');
+
+        if (self::isCodeUnique($code, $organism))
+            return $code;
+
+        // XX1 ... XX9
+        for($i = 1; $i < 10; $i++) {
+            $code = sprintf('%s%d', substr($code, 0, $length-1), $i);
+            if (self::isCodeUnique($code, $organism))
+                return $code;
+        }
+
+        // X01 ... X99
+        for($i = 1; $i < 100; $i++) {
+            $code = sprintf('%s%02d', substr($code, 0, $length-2), $i);
+            if (self::isCodeUnique($code, $organism))
+                return $code;
+        }
+
+        return '';
+    }
+
+    /**
+     * @param string    $code
+     * @param Organism  $organism
+     * @return          boolean
+     */
+    public static function validate($code, $organism = null)
+    {
+        return preg_match('/^[A-Z0-9]{'.self::$length.'}$/', $code);
+    }
+
+    /**
+     * @return string
+     */
+    public static function getHelp()
+    {
+        return self::$length . " chars (upper case letters and/or digits)";
+    }
+
+    /**
+     * @param string $code
+     * @param Organism $organism
+     * @return boolean
+     */
+    private static function isCodeUnique($code, Organism $organism)
+    {
+        $repo = self::$em->getRepository(Organism::class);
+        $query = $repo->createQueryBuilder('o')
+            ->where('o.seedProducerCode = :code')
+            ->setParameters(['code' => $code]);
+        if ($organism->getId())
+            $query->andWhere('o.id != :id')->setParameter ('id', $organism->getId());
+        $result = $query->getQuery()->setMaxResults(1)->getOneOrNullResult();
+        return $result == null;
+    }
+}

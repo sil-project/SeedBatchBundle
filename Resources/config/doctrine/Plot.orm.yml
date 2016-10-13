@@ -17,3 +17,7 @@ Librinfo\SeedBatchBundle\Entity\Plot:
             joinColumn:
                 name: producer_id
                 referencedColumnName: id
+
+    uniqueConstraints:
+        search_idx:
+            columns: [ producer_id, code ]
