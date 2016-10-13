@@ -163,7 +163,8 @@ parameters:
                         '':
                             name:
                                 label: librinfo.label.plot_name
-                            code: ~
+                            code:
+                                type: librinfo_entitycode
                             producer:
                                 type: sonata_type_model_autocomplete
 #                                route: { name: searchable_admin_retrieve_autocomplete_items }

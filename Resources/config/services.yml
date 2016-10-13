@@ -8,3 +8,10 @@ services:
         arguments: ['%librinfo_seed_batch.code_generator.seed_producer%', '@doctrine.orm.entity_manager']
         tags:
             - { name: librinfo.entity_code_generator }
+
+    librinfo_seed_batch.code_generator.plot:
+        class: Librinfo\SeedBatchBundle\CodeGenerator\PlotCodeGenerator
+        factory:   ['@librinfo_core.code_generator_factory', create]
+        arguments: ['%librinfo_seed_batch.code_generator.plot%', '@doctrine.orm.entity_manager']
+        tags:
+            - { name: librinfo.entity_code_generator }
