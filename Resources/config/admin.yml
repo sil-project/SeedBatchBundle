@@ -1,7 +1,7 @@
 services:
     librinfo_seedbatch.admin.organism:
         class: Librinfo\SeedBatchBundle\Admin\OrganismAdminConcrete
-        arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoCRMBundle:OrganismAdmin]
+        arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoSeedBatchBundle:OrganismAdmin]
         tags:
             -   name: sonata.admin
                 manager_type: orm

@@ -158,6 +158,10 @@
                 <source>form_tab_seedbatches</source>
                 <target>Lots</target>
             </trans-unit>            
+            <trans-unit id="librinfo.placeholder.seed_producer_code">
+                <source>librinfo.placeholder.seed_producer_code</source>
+                <target>Code producteur</target>
+            </trans-unit>            
             
         </body>
     </file>

@@ -7,11 +7,33 @@ trait OrganismExtension
     use Inverse\HasSeedBatches;
     use Inverse\HasPlots;
 
-    public function producerToString()
+    /**
+     * @var string
+     */
+    private $seedProducerCode;
+
+    /**
+     * Set seedProducerCode
+     *
+     * @param string $seedProducerCode
+     *
+     * @return Organism
+     */
+    public function setSeedProducerCode($seedProducerCode)
     {
-        $parts = [];
-        if ($this->getSupplierCode()) $parts[] = "[" . $this->getSupplierCode() . "]";
-        if ($this->getName()) $parts[] = $this->getName();
-        return implode(' ', $parts);
+        $this->seedProducerCode = $seedProducerCode;
+
+        return $this;
     }
+
+    /**
+     * Get seedProducerCode
+     *
+     * @return string
+     */
+    public function getSeedProducerCode()
+    {
+        return $this->seedProducerCode;
+    }
+
 }

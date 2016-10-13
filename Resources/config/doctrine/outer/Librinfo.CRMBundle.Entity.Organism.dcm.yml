@@ -1,6 +1,12 @@
 Librinfo\CRMBundle\Entity\Organism:
     type: entity
 
+    fields:
+        seedProducerCode:
+            type:       string
+            length:     255
+            nullable:   true
+
     oneToMany:
         seedBatches:
             targetEntity: Librinfo\SeedBatchBundle\Entity\SeedBatch

@@ -31,6 +31,14 @@ class LibrinfoSeedBatchExtension extends LibrinfoCoreExtension
 
         $container->setParameter('librinfo_seed_batch', $config);
 
+        // Entity code generators
+        $container->setParameter('librinfo_seed_batch.code_generator.seed_batch',
+            $container->getParameter('librinfo_seed_batch')['code_generator']['seed_batch']
+        );
+        $container->setParameter('librinfo_seed_batch.code_generator.seed_producer',
+            $container->getParameter('librinfo_seed_batch')['code_generator']['seed_producer']
+        );
+
         if ($container->getParameter('kernel.environment') == 'test')
         {
             $loader->load('datafixtures.yml');

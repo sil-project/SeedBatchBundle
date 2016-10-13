@@ -8,7 +8,6 @@
             var url = $(this).attr('href') + '?uniqid=' + '{{ form.parent.vars.id|e('js') }}';
             var data = $(this).closest('form').serializeArray();
             $.post(url, data, function(res){
-                console.log(res);
                 if (res['error'] !== undefined)
                     alert(res['error']);
                 else if (res['code'] !== undefined)

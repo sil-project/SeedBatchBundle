@@ -29,6 +29,7 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('seed_batch')->defaultValue('Librinfo\SeedBatchBundle\CodeGenerator\SeedBatchCodeGenerator')->end()
+                        ->scalarNode('seed_producer')->defaultValue('Librinfo\SeedBatchBundle\CodeGenerator\SeedProducerCodeGenerator')->end()
                     ->end()
                 ->end()
             ->end()

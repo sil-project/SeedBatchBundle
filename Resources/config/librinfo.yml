@@ -250,6 +250,10 @@ parameters:
                                 mapped: false
                                 type: checkbox
                                 required: false
+                            seedProducerCode:
+                                type: librinfo_entitycode
+                                attr:
+                                    placeholder: librinfo.placeholder.seed_producer_code
                             _options:
                                 fieldsOrder:
                                     - title
@@ -260,6 +264,7 @@ parameters:
                                     - supplier
                                     - supplierCode
                                     - seedProducer
+                                    - seedProducerCode
                                     - circles
                                     - category
                                     - alert
