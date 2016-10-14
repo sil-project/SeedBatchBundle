@@ -29,6 +29,18 @@ class SeedFarm
      */
     private $code;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $seedBatches;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->seedBatches = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Set code
@@ -52,6 +64,42 @@ class SeedFarm
     public function getCode()
     {
         return $this->code;
+    }
+
+    /**
+     * Add seedBatch
+     *
+     * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
+     *
+     * @return SeedFarm
+     */
+    public function addSeedBatch(\Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch)
+    {
+        $this->seedBatches[] = $seedBatch;
+
+        return $this;
+    }
+
+    /**
+     * Remove seedBatch
+     *
+     * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeSeedBatch(\Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch)
+    {
+        return $this->seedBatches->removeElement($seedBatch);
+    }
+
+    /**
+     * Get seedBatches
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSeedBatches()
+    {
+        return $this->seedBatches;
     }
 }
 

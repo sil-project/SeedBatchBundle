@@ -129,6 +129,12 @@
                 <target>Liste des parcelles</target>
             </trans-unit>            
             
+<!-- SEED FARMS -->
+            <trans-unit id="librinfo.label.producer_name">
+                <source>librinfo.label.producer_name</source>
+                <target>Producteur</target>
+            </trans-unit>
+            
 <!-- ORGANISMS -->
             <trans-unit id="librinfo.label.seed_producer">
                 <source>librinfo.label.seed_producer</source>

@@ -14,6 +14,7 @@ Librinfo\SeedBatchBundle\Entity\Plot:
     manyToOne:
         producer:
             targetEntity: Librinfo\CRMBundle\Entity\Organism
+            inversedBy: plots
             joinColumn:
                 name: producer_id
                 referencedColumnName: id

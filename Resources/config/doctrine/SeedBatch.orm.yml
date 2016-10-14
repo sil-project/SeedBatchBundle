@@ -53,23 +53,27 @@ Librinfo\SeedBatchBundle\Entity\SeedBatch:
     manyToOne:
         seedFarm:
             targetEntity: Librinfo\SeedBatchBundle\Entity\SeedFarm
+            inversedBy: seedBatches
             joinColumn:
                 name: seed_farm_id
                 referencedColumnName: id
         variety:
             targetEntity: Librinfo\VarietiesBundle\Entity\Variety
+            inversedBy: seedBatches
             joinColumn:
                 name: variety_id
                 referencedColumnName: id
         producer:
             targetEntity: Librinfo\CRMBundle\Entity\Organism
+            inversedBy: seedBatches
             joinColumn:
                 name: producer_id
                 referencedColumnName: id
         plot:
             targetEntity: Librinfo\SeedBatchBundle\Entity\Plot
+            inversedBy: seedBatches
             joinColumn:
-                name: seed_farm_id
+                name: plot_id
                 referencedColumnName: id
 
 
