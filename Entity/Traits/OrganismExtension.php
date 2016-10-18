@@ -36,4 +36,9 @@ trait OrganismExtension
         return $this->seedProducerCode;
     }
 
+    public function producerToString()
+    {
+        return (string)$this;
+    }
+
 }

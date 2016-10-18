@@ -3,6 +3,7 @@
 namespace Librinfo\SeedBatchBundle\Admin;
 
 use Librinfo\CoreBundle\Admin\CoreAdmin;
+use Librinfo\SeedBatchBundle\Entity\Plot;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -40,5 +41,16 @@ class PlotAdmin extends CoreAdmin
     protected function configureShowFields(ShowMapper $showMapper)
     {
 
+    }
+
+    /**
+     *
+     * @param Plot $plot
+     * @param string $property  (not used)
+     * @return string
+     */
+    public static function autocompleteToString(Plot $plot, $property)
+    {
+        return sprintf('%s [%s] [%s]', $plot->getName(), $plot->getCode(), $plot->getProducer()->getName());
     }
 }
