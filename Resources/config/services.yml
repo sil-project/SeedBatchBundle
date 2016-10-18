@@ -15,3 +15,10 @@ services:
         arguments: ['%librinfo_seed_batch.code_generator.plot%', '@doctrine.orm.entity_manager']
         tags:
             - { name: librinfo.entity_code_generator }
+
+    librinfo_seed_batch.code_generator.seed_farm:
+        class: Librinfo\SeedBatchBundle\CodeGenerator\SeedFarmCodeGenerator
+        factory:   ['@librinfo_core.code_generator_factory', create]
+        arguments: ['%librinfo_seed_batch.code_generator.seed_farm%', '@doctrine.orm.entity_manager']
+        tags:
+            - { name: librinfo.entity_code_generator }

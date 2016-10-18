@@ -169,6 +169,15 @@
                 <target>Code producteur</target>
             </trans-unit>            
             
+<!-- SEED FARMS -->
+            <trans-unit id="librinfo.link.seed_farm_list">
+                <source>librinfo.link.seed_farm_list</source>
+                <target>Liste des Artisans Semenciers</target>
+            </trans-unit>            
+            <trans-unit id="librinfo.seedbatch.seed_form_admin.label">
+                <source>librinfo.seedbatch.seed_form_admin.label</source>
+                <target>Artisan Semencier</target>
+            </trans-unit>            
         </body>
     </file>
 </xliff>

@@ -219,6 +219,49 @@ parameters:
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add: ~
 
+#############
+# SEED FARM
+#############
+
+        Librinfo\SeedBatchBundle\Entity\SeedFarm:
+            Sonata\AdminBundle\Show\ShowMapper:
+                forceTabs: true
+                remove: [vcard_uid]
+                add:
+                    form_group_general:
+                        '':
+                            code: ~
+                        _options:
+                            groupsOrder: ['', form_group_description, form_group_main_address]
+
+            Sonata\AdminBundle\Form\FormMapper:
+                remove: [name, vcard_uid]
+                add:
+                    form_group_general:
+                        '':
+                            name: ~
+                            code:
+                                type: librinfo_entitycode
+                        _options:
+                            groupsOrder: ['', form_group_description, form_group_main_address]
+
+            Sonata\AdminBundle\Datagrid\ListMapper:
+                remove: [createdAt, zip, country, city]
+                add:
+                    name:
+                        identifier: true
+                    code: ~
+                    _options:
+                        fieldsOrder: [name, code]
+
+            Sonata\AdminBundle\Datagrid\DatagridMapper:
+                add:
+                    code: ~
+                    name: ~
+                    _options:
+                        fieldsOrder: [name, code]
+
+
 ############
 # ORGANISM
 ############
