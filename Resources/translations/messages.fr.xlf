@@ -105,6 +105,10 @@
                 <source>librinfo.link.seed_batch_create</source>
                 <target>Nouveau Lot</target>
             </trans-unit>               
+            <trans-unit id="librinfo.label.seed_farm">
+                <source>librinfo.label.seed_farm</source>
+                <target>Artisan semencier</target>
+            </trans-unit>               
                             
 
 <!-- PLOTS -->

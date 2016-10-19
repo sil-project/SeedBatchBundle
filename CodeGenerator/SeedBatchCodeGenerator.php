@@ -2,20 +2,42 @@
 
 namespace Librinfo\SeedBatchBundle\CodeGenerator;
 
-use Librinfo\SeedBatchBundle\Entity\SeedBatch;
+use Doctrine\ORM\EntityManager;
+use Librinfo\CoreBundle\CodeGenerator\CodeGeneratorInterface;
 use Librinfo\CoreBundle\Exception\InvalidEntityCodeException;
+use Librinfo\SeedBatchBundle\Entity\SeedBatch;
 
-class SeedBatchCodeGenerator
+class SeedBatchCodeGenerator implements CodeGeneratorInterface
 {
+    const ENTITY_CLASS = 'Librinfo\SeedBatchBundle\Entity\SeedBatch';
+    const ENTITY_FIELD = 'code';
+
+    private static $length = 3;
+
+    /**
+     * @var EntityManager
+     */
+    private static $em;
+
+    public static function setEntityManager(EntityManager $em)
+    {
+        self::$em = $em;
+    }
+
     /**
      * @param  SeedBatch $seedBatch
      * @return string
      * @throws InvalidEntityCodeException
      */
-    public static function generate(SeedBatch $seedBatch)
+    public static function generate($seedBatch)
     {
         // TODO...
         $seedFarmCode = 'LIB';
+
+        if (!$seedFarm = $seedBatch->getSeedFarm())
+            throw new InvalidEntityCodeException('librinfo.error.missing_seed_farm');
+        if (!$seedFarmCode = $seedFarm->getCode())
+            throw new InvalidEntityCodeException('librinfo.error.missing_seed_farm_code');
 
         $variety = $seedBatch->getVariety();
         if (!$variety)
@@ -48,7 +70,7 @@ class SeedBatchCodeGenerator
         if ($batchNumber < 1 || $batchNumber > 99)
             throw new InvalidEntityCodeException('librinfo.error.invalid_batch_number');
 
-        return sprintf('%s%s%s%s%02d%02d',
+        return sprintf('%s-%s%s-%s-%02d-%02d',
             $seedFarmCode,
             $speciesCode,
             $varietyCode,
@@ -59,12 +81,20 @@ class SeedBatchCodeGenerator
     }
 
     /**
-     * @param SeedBatch $seedBatch
      * @param string    $code
+     * @param SeedFarm  $seedBatch
      * @return          boolean
      */
-    public static function validate(SeedBatch $seedBatch, $code)
+    public static function validate($code, $seedBatch = null)
     {
-        return true;
+        return preg_match('/^[A-Z0-9]{'.self::$length.'}$/', $code);
+    }
+
+    /**
+     * @return string
+     */
+    public static function getHelp()
+    {
+        return self::$length . " chars (upper case letters and/or digits)";
     }
 }

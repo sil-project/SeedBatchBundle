@@ -12,7 +12,7 @@ services:
             - [ setTemplate, [edit, LibrinfoSeedBatchBundle:OrganismAdmin:edit.html.twig]]
             - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
 
-    librinfo_seedfarm.admin.seedbatch:
+    librinfo_seedbatch.admin.seedfarm:
         class: Librinfo\SeedBatchBundle\Admin\SeedFarmAdminConcrete
         arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedFarm, LibrinfoCoreBundle:CRUD]
         tags:
@@ -24,7 +24,7 @@ services:
 
     librinfo_seedbatch.admin.seedbatch:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdminConcrete
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, LibrinfoSeedBatchBundle:SeedBatchAdmin]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, LibrinfoCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
                 manager_type: orm
@@ -34,7 +34,7 @@ services:
 
     librinfo_seedbatch.admin.seedbatch_embedded:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchEmbeddedAdmin
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, SonataAdminBundle:CRUD]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, LibrinfoCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
                 manager_type: orm

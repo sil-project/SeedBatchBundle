@@ -13,6 +13,7 @@ parameters:
                         '':
                             code:
                                 label: librinfo.label.seed_batch_code
+                            seedFarm: ~
                             variety: ~
                             producer:
                                 admin_code: librinfo_seedbatch.admin.organism
@@ -47,7 +48,12 @@ parameters:
                     form_group_general:
                         '':
                             code:
+                                type: librinfo_entitycode
                                 label: librinfo.label.seed_batch_code
+                            seedFarm:
+                                type: sonata_type_model_autocomplete
+                                property: [name, code]
+                                by_reference: false
                             variety:
                                 type: sonata_type_model_autocomplete
 #                                route: { name: searchable_admin_retrieve_autocomplete_items }
@@ -99,6 +105,7 @@ parameters:
                     code:
                         identifier: true
                         label: librinfo.label.seed_batch_code
+                    seedFarm: ~
                     variety: ~
                     producer:
                         admin_code: librinfo_seedbatch.admin.organism
@@ -108,6 +115,7 @@ parameters:
                 add:
                     code:
                         label: librinfo.label.seed_batch_code
+                    seedFarm.name: ~
                     producer.name: ~
 
 #######################
