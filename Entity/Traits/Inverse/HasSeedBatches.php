@@ -23,7 +23,7 @@ trait HasSeedBatches
     {
         $this->seedBatches[] = $seedBatch;
 
-        // TODO: create a trait in OuterExtensionBundle with a generic setter (setter name based on $this reflecionClass...)
+        // We could have used $this->setOwningSideRelation($seedBatch) but SeedBatch#setOrganism method does not exist
         $seedBatch->setProducer($this);
         return $this;
     }

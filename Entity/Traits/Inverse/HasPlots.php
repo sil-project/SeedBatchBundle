@@ -23,7 +23,7 @@ trait HasPlots
     {
         $this->plots[] = $plot;
 
-        // TODO: create a trait in OuterExtensionBundle with a generic setter (setter name based on $this reflecionClass...)
+        // We could have used $this->setOwningSideRelation($plot) but Plot#setOrganism method does not exist
         $plot->setProducer($this);
         return $this;
     }
