@@ -11,6 +11,10 @@ Librinfo\CRMBundle\Entity\Organism:
         seedBatches:
             targetEntity: Librinfo\SeedBatchBundle\Entity\SeedBatch
             mappedBy: producer
+            cascade: [ persist, remove ]
+            orphanRemoval: true
         plots:
             targetEntity: Librinfo\SeedBatchBundle\Entity\Plot
             mappedBy: producer
+            cascade: [ persist, remove ]
+            orphanRemoval: true

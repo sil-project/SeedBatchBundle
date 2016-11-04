@@ -22,6 +22,9 @@ trait HasSeedBatches
     public function addSeedBatch($seedBatch)
     {
         $this->seedBatches[] = $seedBatch;
+
+        // TODO: create a trait in OuterExtensionBundle with a generic setter (setter name based on $this reflecionClass...)
+        $seedBatch->setProducer($this);
         return $this;
     }
 

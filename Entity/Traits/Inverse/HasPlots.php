@@ -22,6 +22,9 @@ trait HasPlots
     public function addPlot($plot)
     {
         $this->plots[] = $plot;
+
+        // TODO: create a trait in OuterExtensionBundle with a generic setter (setter name based on $this reflecionClass...)
+        $plot->setProducer($this);
         return $this;
     }
 
