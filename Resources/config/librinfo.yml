@@ -14,7 +14,8 @@ parameters:
                             code:
                                 label: librinfo.label.seed_batch_code
                             seedFarm: ~
-                            variety: ~
+                            variety:
+                                admin_code: librinfo_varieties.admin.variety
                             producer:
                                 admin_code: librinfo_seedbatch.admin.organism
                                 associated_property: producerToString
@@ -106,7 +107,8 @@ parameters:
                         identifier: true
                         label: librinfo.label.seed_batch_code
                     seedFarm: ~
-                    variety: ~
+                    variety:
+                        admin_code: librinfo_varieties.admin.variety
                     producer:
                         admin_code: librinfo_seedbatch.admin.organism
                     productionYear: ~
@@ -132,7 +134,9 @@ parameters:
                         form_group_seedbatch:
                             code:
                                 label: librinfo.label.seed_batch_code
-                            variety: ~
+                            variety:
+                                _options:
+                                    admin_code: librinfo_varieties.admin.variety
                             producer:
                                 type: sonata_type_model_autocomplete
 #                                route: { name: searchable_admin_retrieve_autocomplete_items }
