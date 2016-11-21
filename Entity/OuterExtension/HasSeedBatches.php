@@ -1,6 +1,6 @@
 <?php
 
-namespace Librinfo\SeedBatchBundle\Entity\Traits\Inverse;
+namespace Librinfo\SeedBatchBundle\Entity\OuterExtension;
 
 use Doctrine\Common\Collections\Collection;
 use Librinfo\SeedBatchBundle\Entity\SeedBatch;

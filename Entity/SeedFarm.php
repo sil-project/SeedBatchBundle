@@ -2,7 +2,7 @@
 
 namespace Librinfo\SeedBatchBundle\Entity;
 
-use AppBundle\Entity\Extension\LibrinfoSeedBatchBundle\SeedFarmExtension;
+use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\SeedFarmExtension;
 use Librinfo\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
 use Librinfo\DoctrineBundle\Entity\Traits\BaseEntity;

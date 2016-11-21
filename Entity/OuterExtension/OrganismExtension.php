@@ -1,11 +1,11 @@
 <?php
 
-namespace Librinfo\SeedBatchBundle\Entity\Traits;
+namespace Librinfo\SeedBatchBundle\Entity\OuterExtension;
 
 trait OrganismExtension
 {
-    use Inverse\HasSeedBatches;
-    use Inverse\HasPlots;
+    use HasSeedBatches;
+    use HasPlots;
 
     /**
      * @var string
