@@ -2,7 +2,7 @@
 
 namespace Librinfo\SeedBatchBundle\Entity;
 
-use Librinfo\DoctrineBundle\Entity\SearchIndexEntity;
+use Librinfo\BaseEntitiesBundle\Entity\SearchIndexEntity;
 
 class PlotSearchIndex extends SearchIndexEntity
 {
