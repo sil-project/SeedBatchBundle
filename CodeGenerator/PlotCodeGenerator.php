@@ -3,8 +3,8 @@
 namespace Librinfo\SeedBatchBundle\CodeGenerator;
 
 use Doctrine\ORM\EntityManager;
-use Librinfo\CoreBundle\CodeGenerator\CodeGeneratorInterface;
-use Librinfo\CoreBundle\Exception\InvalidEntityCodeException;
+use Blast\CoreBundle\CodeGenerator\CodeGeneratorInterface;
+use Blast\CoreBundle\Exception\InvalidEntityCodeException;
 use Librinfo\SeedBatchBundle\Entity\Plot;
 
 class PlotCodeGenerator implements CodeGeneratorInterface

@@ -2,7 +2,7 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
-use Librinfo\CoreBundle\Admin\Traits\Base as BaseAdmin;
+use Blast\CoreBundle\Admin\Traits\Base as BaseAdmin;
 use Librinfo\SeedBatchBundle\Entity\Plot;
 use Sonata\CoreBundle\Validator\ErrorElement;
 

@@ -2,7 +2,7 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
-use Librinfo\CoreBundle\Admin\Traits\EmbeddedAdmin;
+use Blast\CoreBundle\Admin\Traits\EmbeddedAdmin;
 
 class PlotEmbeddedAdmin extends PlotAdmin
 {

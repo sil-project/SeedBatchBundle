@@ -14,7 +14,7 @@ services:
 
     librinfo_seedbatch.admin.seedfarm:
         class: Librinfo\SeedBatchBundle\Admin\SeedFarmAdminConcrete
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedFarm, LibrinfoCoreBundle:CRUD]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedFarm, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
                 manager_type: orm
@@ -24,7 +24,7 @@ services:
 
     librinfo_seedbatch.admin.seedbatch:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdminConcrete
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, LibrinfoCoreBundle:CRUD]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
                 manager_type: orm
@@ -34,7 +34,7 @@ services:
 
     librinfo_seedbatch.admin.seedbatch_embedded:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchEmbeddedAdmin
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, LibrinfoCoreBundle:CRUD]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
                 manager_type: orm
@@ -44,7 +44,7 @@ services:
 
     librinfo_seedbatch.admin.plot:
         class: Librinfo\SeedBatchBundle\Admin\PlotAdminConcrete
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, LibrinfoCoreBundle:CRUD]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
                 manager_type: orm
@@ -54,7 +54,7 @@ services:
 
     librinfo_seedbatch.admin.plot_embedded:
         class: Librinfo\SeedBatchBundle\Admin\PlotEmbeddedAdmin
-        arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, LibrinfoCoreBundle:CRUD]
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
                 manager_type: orm

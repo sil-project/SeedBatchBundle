@@ -2,7 +2,7 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
-use Librinfo\CoreBundle\Admin\CoreAdmin;
+use Blast\CoreBundle\Admin\CoreAdmin;
 use Librinfo\SeedBatchBundle\Entity\Plot;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;

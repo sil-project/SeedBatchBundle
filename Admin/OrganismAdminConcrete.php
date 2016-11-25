@@ -2,7 +2,7 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
-use Librinfo\CoreBundle\Admin\CoreAdmin;
+use Blast\CoreBundle\Admin\CoreAdmin;
 use Librinfo\CRMBundle\Entity\Organism;
 use Librinfo\EmailCRMBundle\Admin\OrganismAdminConcrete as BaseOrganismAdminConcrete;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
