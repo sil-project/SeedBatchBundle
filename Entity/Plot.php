@@ -3,7 +3,7 @@
 namespace Librinfo\SeedBatchBundle\Entity;
 
 use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\PlotExtension;
-use Librinfo\OuterExtensionBundle\Entity\Traits\OuterExtensible;
+use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
 use Librinfo\BaseEntitiesBundle\Entity\Traits\BaseEntity;
 use Librinfo\BaseEntitiesBundle\Entity\Traits\Addressable;

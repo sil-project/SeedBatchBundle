@@ -78,7 +78,7 @@ class OrganismAdminConcrete extends BaseOrganismAdminConcrete
         }
 
         else {
-            $registry = $container->get('librinfo_core.code_generators');
+            $registry = $container->get('blast_core.code_generators');
             $codeGenerator = $registry->getCodeGenerator(Organism::class, 'seedProducerCode');
             if ( !$codeGenerator->validate($code) )
                 $errorElement
