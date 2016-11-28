@@ -2,7 +2,7 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
-use Librinfo\CoreBundle\Admin\Traits\Base as BaseAdmin;
+use Blast\CoreBundle\Admin\Traits\Base as BaseAdmin;
 use Librinfo\SeedBatchBundle\Entity\Plot;
 use Sonata\CoreBundle\Validator\ErrorElement;
 
@@ -32,7 +32,7 @@ class PlotAdminConcrete extends PlotAdmin
     public function validateCode(ErrorElement $errorElement, $object)
     {
         $code = $object->getCode();
-        $registry = $this->getConfigurationPool()->getContainer()->get('librinfo_core.code_generators');
+        $registry = $this->getConfigurationPool()->getContainer()->get('blast_core.code_generators');
         $codeGenerator = $registry->getCodeGenerator(Plot::class);
         if ( !empty($code) && !$codeGenerator->validate($code) ) {
             $msg = 'Wrong format for plot code. It shoud be: ' . $codeGenerator::getHelp();

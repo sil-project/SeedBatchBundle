@@ -3,12 +3,12 @@
 namespace Librinfo\SeedBatchBundle\Entity;
 
 use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\SeedFarmExtension;
-use Librinfo\OuterExtensionBundle\Entity\Traits\OuterExtensible;
+use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
-use Librinfo\DoctrineBundle\Entity\Traits\BaseEntity;
-use Librinfo\DoctrineBundle\Entity\Traits\Addressable;
-use Librinfo\DoctrineBundle\Entity\Traits\Descriptible;
-use Librinfo\DoctrineBundle\Entity\Traits\Loggable;
+use Librinfo\BaseEntitiesBundle\Entity\Traits\BaseEntity;
+use Librinfo\BaseEntitiesBundle\Entity\Traits\Addressable;
+use Librinfo\BaseEntitiesBundle\Entity\Traits\Descriptible;
+use Librinfo\BaseEntitiesBundle\Entity\Traits\Loggable;
 use Librinfo\UserBundle\Entity\Traits\Traceable;
 
 /**
