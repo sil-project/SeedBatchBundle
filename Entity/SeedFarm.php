@@ -5,10 +5,10 @@ namespace Librinfo\SeedBatchBundle\Entity;
 use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\SeedFarmExtension;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
-use Librinfo\BaseEntitiesBundle\Entity\Traits\BaseEntity;
-use Librinfo\BaseEntitiesBundle\Entity\Traits\Addressable;
-use Librinfo\BaseEntitiesBundle\Entity\Traits\Descriptible;
-use Librinfo\BaseEntitiesBundle\Entity\Traits\Loggable;
+use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
+use Blast\BaseEntitiesBundle\Entity\Traits\Addressable;
+use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
+use Blast\BaseEntitiesBundle\Entity\Traits\Loggable;
 use Librinfo\UserBundle\Entity\Traits\Traceable;
 
 /**
