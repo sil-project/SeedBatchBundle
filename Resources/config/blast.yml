@@ -44,7 +44,8 @@ parameters:
                             - form_group_specifics
 
             Sonata\AdminBundle\Form\FormMapper:
-                remove: [description]
+                remove: 
+                    description: ~
                 add:
                     form_group_general:
                         '':
@@ -101,7 +102,8 @@ parameters:
                             - form_group_specifics
 
             Sonata\AdminBundle\Datagrid\ListMapper:
-                remove: [createdAt]
+                remove:
+                    createdAt: ~
                 add:
                     code:
                         identifier: true
@@ -162,7 +164,8 @@ parameters:
         Librinfo\SeedBatchBundle\Entity\Plot:
             Sonata\AdminBundle\Show\ShowMapper:
                 forceTabs: true
-                remove: [vcard_uid]
+                remove: 
+                    vcard_uid: ~
                 add:
                     form_group_general:
                         '':
@@ -170,7 +173,9 @@ parameters:
                             producer:
                                 admin_code: librinfo_seedbatch.admin.organism
             Sonata\AdminBundle\Form\FormMapper:
-                remove: [name, vcard_uid]
+                remove:
+                    name: ~
+                    vcard_uid: ~
                 add:
                     form_group_general:
                         '':
@@ -189,7 +194,11 @@ parameters:
                         tabsOrder:
 
             Sonata\AdminBundle\Datagrid\ListMapper:
-                remove: [name, createdAt, zip, country]
+                remove: 
+                    name: ~
+                    createdAt: ~
+                    zip: ~
+                    country: ~
                 add:
                     name:
                         identifier: true
@@ -214,7 +223,19 @@ parameters:
             Sonata\AdminBundle\Show\ShowMapper:
                 add: ~
             Sonata\AdminBundle\Form\FormMapper:
-                remove: [name, vcard_uid, description, address, zip, city, country, createdBy, createdAt, updatedAt, updatedBy, npai]
+                remove:
+                    name: ~
+                    vcard_uid: ~
+                    description: ~
+                    address: ~
+                    zip: ~
+                    city: ~
+                    country: ~
+                    createdBy: ~
+                    createdAt: ~
+                    updatedAt: ~
+                    updatedBy: ~
+                    npai: ~
                 add:
                     '':
                         form_group_plot:
@@ -238,7 +259,8 @@ parameters:
         Librinfo\SeedBatchBundle\Entity\SeedFarm:
             Sonata\AdminBundle\Show\ShowMapper:
                 forceTabs: true
-                remove: [vcard_uid]
+                remove:
+                    vcard_uid: ~
                 add:
                     form_group_general:
                         '':
@@ -247,7 +269,9 @@ parameters:
                             groupsOrder: ['', form_group_description, form_group_main_address]
 
             Sonata\AdminBundle\Form\FormMapper:
-                remove: [name, vcard_uid]
+                remove:
+                    name: ~
+                    vcard_uid: ~
                 add:
                     form_group_general:
                         '':
@@ -258,7 +282,11 @@ parameters:
                             groupsOrder: ['', form_group_description, form_group_main_address]
 
             Sonata\AdminBundle\Datagrid\ListMapper:
-                remove: [createdAt, zip, country, city]
+                remove: 
+                    createdAt: ~
+                    zip: ~
+                    country: ~
+                    city: ~
                 add:
                     name:
                         identifier: true
