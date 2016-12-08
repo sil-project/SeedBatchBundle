@@ -34,6 +34,7 @@
 'librinfo.label.producer_name': 'Producteur'
 'librinfo.label.seed_producer': 'Producteur de semences'
 'librinfo.link.seedbatch_list': 'Liste des lots'
+'librinfo.error.missing_seed_farm': 'Veuillez renseigne l''artisan semencier'
 'show_tab_plots': 'Parcelles'
 'form_tab_plots': 'Parcelles'
 'librinfo.label.plots': 'Parcelles'
