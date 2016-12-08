@@ -12,6 +12,7 @@
 'form_group_tkw': 'PMG'
 'librinfo.label.tkw_date': 'Date de la mesure'
 'form_group_delivery': 'Livraison'
+'librinfo.label.seed_batches': 'Lots'
 'librinfo.label.delivery_date': 'Date de livraison'
 'librinfo.label.delivery_note': 'Bon de livraison fourni'
 'librinfo.label.gross_producer_weight': 'Poids brut chez le producteur'
