@@ -1,16 +1,23 @@
 <?php
 
+/*
+ * Copyright (C) 2015-2016 Libre Informatique
+ *
+ * This file is licenced under the GNU GPL v3.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Librinfo\SeedBatchBundle\Entity;
 
 use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\PlotExtension;
-use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
-
-use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
 use Blast\BaseEntitiesBundle\Entity\Traits\Addressable;
+use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
 use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
 use Blast\BaseEntitiesBundle\Entity\Traits\Loggable;
 use Blast\BaseEntitiesBundle\Entity\Traits\Searchable;
-use Librinfo\UserBundle\Entity\Traits\Traceable;
+use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
+use Librinfo\UserBundle\Entity\Traits\Timestampable;
 
 /**
  * Plot
@@ -21,7 +28,7 @@ class Plot
         PlotExtension,
         OuterExtensible,
         Addressable,
-        Traceable,
+        Timestampable,
         Loggable,
         Descriptible,
         Searchable;
