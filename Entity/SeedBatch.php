@@ -15,8 +15,8 @@ use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
 use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
 use Blast\BaseEntitiesBundle\Entity\Traits\Loggable;
 use Blast\BaseEntitiesBundle\Entity\Traits\Searchable;
+use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
-use Librinfo\UserBundle\Entity\Traits\Timestampable;
 
 /**
  * SeedBatch
