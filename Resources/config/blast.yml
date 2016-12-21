@@ -332,7 +332,6 @@ parameters:
                     form_group_general:
                         form_group_organism:
                             seedProducer:
-                                mapped: false
                                 type: checkbox
                                 required: false
                             seedProducerCode:
