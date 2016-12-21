@@ -1,3 +1,5 @@
+
+
 parameters:
     blast:
 
@@ -192,7 +194,7 @@ parameters:
                                 type: sonata_type_model
                                 multiple: true
                     _options:
-                        tabsOrder:
+                        tabsOrder: [form_group_general, form_group_specifics]
 
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove: 
@@ -410,40 +412,101 @@ parameters:
         Librinfo\SeedBatchBundle\Entity\Certification:
             # SHOW
             Sonata\AdminBundle\Show\ShowMapper:
-                add:
-                    main_tab:
-                        main_group:
-                            certificationDate: ~
-                            expiryDate: ~
-                            code: ~
-                            createdAt: ~
-                            updatedAt: ~
-                            description: ~
-                            name: ~
-    
-            # FORM    
-            Sonata\AdminBundle\Form\FormMapper:
                 remove:
+                    name: ~
                     description: ~
                 add:
                     main_tab:
                         main_group:
-                            certificationDate: ~
-                            expiryDate: ~
+                            name: ~
                             code: ~
                             description: ~
-                            name: ~
+                            certificationDate:
+                                type: sonata_type_datepicker
+                            expiryDate: ~
+                    _options:
+                        tabsOrder: [main_tab, form_group_specifics]
+    
+            # FORM    
+            Sonata\AdminBundle\Form\FormMapper:
+                add:
+                    main_tab:
+                        main_group:
+                            certificationType:
+                                type: sonata_type_model
+                            certificationDate:
+                                type: sonata_type_date_picker
+                                required: true
+                            expiryDate:
+                                type: sonata_type_date_picker
+                    _options:
+                        tabsOrder: [main_tab, form_group_specifics]
     
             # LIST    
             Sonata\AdminBundle\Datagrid\ListMapper:
                 add:
+                    description: ~
                     certificationDate: ~
                     expiryDate: ~
-                    code: ~
-                    createdAt: ~
-                    updatedAt: ~
-                    description: ~
+    
+                    _actions:
+                        show: ~
+                        edit: ~
+                        delete: ~
+                        duplicate:
+                            template: BlastCoreBundle:CRUD:list__action_duplicate.html.twig
+            # FILTERS 
+            Sonata\AdminBundle\Datagrid\DatagridMapper:
+                add: 
+                    certificationDate: ~
+                    expiryDate: ~
+
+####################               
+# Certification type
+####################
+
+        Librinfo\SeedBatchBundle\Entity\CertificationType:
+            # SHOW
+            Sonata\AdminBundle\Show\ShowMapper:
+                remove:
                     name: ~
+                    description: ~
+                add:
+                    main_tab:
+                        main_group:
+                            name: ~
+                            code: ~
+                            logo: ~
+                            description: ~
+                    _options:
+                        tabsOrder: [main_tab, form_group_specifics]
+            # FORM    
+            Sonata\AdminBundle\Form\FormMapper:
+                remove:
+                    name: ~
+                    description: ~
+                add:
+                    main_tab:
+                        main_group:
+                            name:
+                                required: true
+                            code:
+                                required: true
+                            logo:
+                                type: librinfo_dropzone
+                                required: false
+                            description:
+                                type: textarea
+                                required: false
+                    _options:
+                        tabsOrder: [main_tab, form_group_specifics]
+            # LIST    
+            Sonata\AdminBundle\Datagrid\ListMapper:
+                add:
+                    name: ~
+                    code: ~
+                    logo: ~
+                    description: ~
     
                     _actions:
                         show: ~
@@ -454,10 +517,7 @@ parameters:
             # FILTERS 
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
-                    certificationDate: ~
-                    expiryDate: ~
-                    code: ~
-                    createdAt: ~
-                    updatedAt: ~
-                    description: ~
                     name: ~
+                    code: ~
+                    description: ~
+    

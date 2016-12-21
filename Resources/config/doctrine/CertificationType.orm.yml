@@ -1,0 +1,11 @@
+Librinfo\SeedBatchBundle\Entity\CertificationType:
+    type: entity
+    fields:
+        code:
+            type: string
+            length: 255
+            unique: true
+    
+    oneToOne:
+        logo:
+            targetEntity: Librinfo\MediaBundle\Entity\File

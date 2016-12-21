@@ -4,10 +4,9 @@ namespace Librinfo\SeedBatchBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
-use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
-use Blast\BaseEntitiesBundle\Entity\Traits\Nameable;
 use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
+use Librinfo\SeedBatchBundle\Entity\CertificationType;
 use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\CertificationExtension;
 
 /**
@@ -16,11 +15,10 @@ use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\CertificationExtensi
 class Certification
 {
     use BaseEntity,
-        Nameable,
         OuterExtensible,
         CertificationExtension,
-        Timestampable,
-        Descriptible;
+        Timestampable
+    ;
     
     /**
      * @var \DateTime
@@ -31,11 +29,12 @@ class Certification
      * @var \DateTime
      */
     private $expiryDate;
-
+    
     /**
-     * @var string
+     * @var \Librinfo\SeedBatchBundle\Entity\CertificationType
      */
-    private $code;
+    private $certificationType;
+
 
     /**
      * Constructor
@@ -103,27 +102,27 @@ class Certification
     {
         return $this->expiryDate;
     }
-
+    
     /**
-     * Set code
+     * Set certificationType
      *
-     * @param string $code
+     * @param \Librinfo\SeedBatchBundle\Entity\CertificationType $certificationType
      * @return Certification
      */
-    public function setCode($code)
+    public function setCertificationType(CertificationType $certificationType = null)
     {
-        $this->code = $code;
+        $this->certificationType = $certificationType;
 
         return $this;
     }
 
     /**
-     * Get code
+     * Get certificationType
      *
-     * @return string 
+     * @return \Librinfo\SeedBatchBundle\Entity\CertificationType 
      */
-    public function getCode()
+    public function getCertificationType()
     {
-        return $this->code;
+        return $this->certificationType;
     }
 }

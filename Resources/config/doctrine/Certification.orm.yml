@@ -9,8 +9,9 @@ Librinfo\SeedBatchBundle\Entity\Certification:
         expiryDate:
             type: date
             column: expiry_date
-        code:
-            type: string
-            length: 255
-            unique: true
     lifecycleCallbacks: {  }
+    
+    oneToOne:
+        certificationType:
+            targetEntity: Librinfo\SeedBatchBundle\Entity\CertificationType
+            
