@@ -139,6 +139,14 @@
             <trans-unit id="librinfo.label.certifications">
                 <source>librinfo.label.certifications</source>
                 <target>Certifications</target>
+            </trans-unit>    
+            <trans-unit id="form_tab_certifications">
+                <source>form_tab_certifications</source>
+                <target>Certifications</target>
+            </trans-unit>    
+            <trans-unit id="form_group_certifications">
+                <source>form_group_certifications</source>
+                <target>Certifications</target>
             </trans-unit>              
             
 <!-- SEED FARMS -->

@@ -190,11 +190,18 @@ parameters:
                                 type: sonata_type_model
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.seed_producer
+                    form_tab_certifications:
+                        form_group_certifications:
                             certifications:
-                                type: sonata_type_model
-                                multiple: true
+                                type: sonata_type_collection
+                                by_reference: false
+                                required: false
+                                label: false
+                                _options:
+                                    edit: inline
+                                    inline: table
                     _options:
-                        tabsOrder: [form_group_general, form_group_specifics]
+                        tabsOrder: [form_group_general, form_tab_certifications, form_group_specifics]
 
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove: 
