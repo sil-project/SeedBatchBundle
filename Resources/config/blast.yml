@@ -172,6 +172,7 @@ parameters:
                             code: ~
                             producer:
                                 admin_code: librinfo_seedbatch.admin.organism
+                            certifications: ~
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
                     name: ~
@@ -184,12 +185,12 @@ parameters:
                             code:
                                 type: librinfo_entitycode
                             producer:
-                                type: sonata_type_model_autocomplete
-#                                route: { name: searchable_admin_retrieve_autocomplete_items }
-                                by_reference: false
-                                property: name # not used but required
+                                type: sonata_type_model
                                 _options:
-                                    admin_code: librinfo_seedbatch.admin.organism
+                                    admin_code: librinfo_seedbatch.admin.seed_producer
+                            certifications:
+                                type: sonata_type_model
+                                multiple: true
                     _options:
                         tabsOrder:
 
@@ -402,3 +403,61 @@ parameters:
                 add: ~
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add: ~
+###############                
+# Certification
+###############
+
+        Librinfo\SeedBatchBundle\Entity\Certification:
+            # SHOW
+            Sonata\AdminBundle\Show\ShowMapper:
+                add:
+                    main_tab:
+                        main_group:
+                            certificationDate: ~
+                            expiryDate: ~
+                            code: ~
+                            createdAt: ~
+                            updatedAt: ~
+                            description: ~
+                            name: ~
+    
+            # FORM    
+            Sonata\AdminBundle\Form\FormMapper:
+                remove:
+                    description: ~
+                add:
+                    main_tab:
+                        main_group:
+                            certificationDate: ~
+                            expiryDate: ~
+                            code: ~
+                            description: ~
+                            name: ~
+    
+            # LIST    
+            Sonata\AdminBundle\Datagrid\ListMapper:
+                add:
+                    certificationDate: ~
+                    expiryDate: ~
+                    code: ~
+                    createdAt: ~
+                    updatedAt: ~
+                    description: ~
+                    name: ~
+    
+                    _actions:
+                        show: ~
+                        edit: ~
+                        delete: ~
+                        duplicate:
+                            template: BlastCoreBundle:CRUD:list__action_duplicate.html.twig
+            # FILTERS 
+            Sonata\AdminBundle\Datagrid\DatagridMapper:
+                add:
+                    certificationDate: ~
+                    expiryDate: ~
+                    code: ~
+                    createdAt: ~
+                    updatedAt: ~
+                    description: ~
+                    name: ~

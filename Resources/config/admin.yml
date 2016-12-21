@@ -75,3 +75,18 @@ services:
                 group: Seed Batches
                 label: librinfo.seedbatch.plot_admin.label
                 label_translator_strategy: blast_core.label.strategy.librinfo
+
+    librinfo_seed_batch.admin.certification:
+        class: Librinfo\SeedBatchBundle\Admin\CertificationAdmin
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\Certification, BlastCoreBundle:CRUD]
+        tags:
+            - name: sonata.admin
+              manager_type: orm
+              group: admin
+              label: Certification
+              label_translator_strategy: blast_core.label.strategy.librinfo
+        calls: 
+            - [ setTemplate, [ edit, BlastCoreBundle:CRUD:base_edit.html.twig ] ]
+            - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
+            - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
+            

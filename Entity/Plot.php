@@ -10,6 +10,7 @@
 
 namespace Librinfo\SeedBatchBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\PlotExtension;
 use Blast\BaseEntitiesBundle\Entity\Traits\Addressable;
 use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
@@ -47,13 +48,34 @@ class Plot
      * @var \Librinfo\CRMBundle\Entity\Organism
      */
     private $producer;
-
+    
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $certifications;
+    
+    
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->seedBatches = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->initCollections();
+        $this->initOuterExtendedClasses();
+    }
+
+    // implementation of __clone for duplication
+    public function __clone()
+    {
+        $this->id = null;
+        $this->code = null;
+        $this->initCollections();
+    }
+    
+    public function initCollections()
+    {
+        $this->seedBatches = new ArrayCollection();
+        $this->certifications = new ArrayCollection();
     }
 
     /**
@@ -138,6 +160,39 @@ class Plot
     public function getProducer()
     {
         return $this->producer;
+    }
+    
+    /**
+     * Add certifications
+     *
+     * @param \Librinfo\SeedBatchBundle\Entity\Certification $certifications
+     * @return Plot
+     */
+    public function addCertification(\Librinfo\SeedBatchBundle\Entity\Certification $certifications)
+    {
+        $this->certifications[] = $certifications;
+
+        return $this;
+    }
+
+    /**
+     * Remove certifications
+     *
+     * @param \Librinfo\SeedBatchBundle\Entity\Certification $certifications
+     */
+    public function removeCertification(\Librinfo\SeedBatchBundle\Entity\Certification $certifications)
+    {
+        $this->certifications->removeElement($certifications);
+    }
+
+    /**
+     * Get certifications
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCertifications()
+    {
+        return $this->certifications;
     }
 }
 

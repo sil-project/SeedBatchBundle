@@ -1,0 +1,16 @@
+Librinfo\SeedBatchBundle\Entity\Certification:
+    type: entity
+    blast:
+        loggable: true
+    fields:
+        certificationDate:
+            type: date
+            column: certification_date
+        expiryDate:
+            type: date
+            column: expiry_date
+        code:
+            type: string
+            length: 255
+            unique: true
+    lifecycleCallbacks: {  }

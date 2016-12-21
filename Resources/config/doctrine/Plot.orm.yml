@@ -1,6 +1,6 @@
 Librinfo\SeedBatchBundle\Entity\Plot:
     type: entity
-
+    
     fields:
         code:
             type:       string(255)
@@ -18,6 +18,18 @@ Librinfo\SeedBatchBundle\Entity\Plot:
             joinColumn:
                 name: producer_id
                 referencedColumnName: id
+    
+    manyToMany:
+        certifications:
+            targetEntity: Librinfo\SeedBatchBundle\Entity\Certification
+            joinTable:
+              name: plot_certifications
+              joinColumns:
+                plot_id:
+                  referencedColumnName: id
+              inverseJoinColumns:
+                certification_id:
+                  referencedColumnName: id
 
     uniqueConstraints:
         search_idx:

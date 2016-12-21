@@ -131,7 +131,15 @@
             <trans-unit id="librinfo.link.plot_list">
                 <source>librinfo.link.plot_list</source>
                 <target>Liste des parcelles</target>
-            </trans-unit>            
+            </trans-unit>     
+            <trans-unit id="librinfo.link.plot_create">
+                <source>librinfo.link.plot_create</source>
+                <target>Créer une parcelle</target>
+            </trans-unit>  
+            <trans-unit id="librinfo.label.certifications">
+                <source>librinfo.label.certifications</source>
+                <target>Certifications</target>
+            </trans-unit>              
             
 <!-- SEED FARMS -->
             <trans-unit id="librinfo.label.producer_name">
@@ -181,6 +189,32 @@
             <trans-unit id="librinfo.seedbatch.seed_form_admin.label">
                 <source>librinfo.seedbatch.seed_form_admin.label</source>
                 <target>Artisan Semencier</target>
+            </trans-unit>            
+
+<!-- CERTIFICATIONS -->
+            <trans-unit id="librinfo.label.certification_date">
+                <source>librinfo.label.certification_date</source>
+                <target>Date de certifiaction</target>
+            </trans-unit>            
+            <trans-unit id="librinfo.label.expiry_date">
+                <source>librinfo.label.expiry_date</source>
+                <target>Date d'expiration</target>
+            </trans-unit>            
+            <trans-unit id="librinfo.labegfdhl.certifications">
+                <source>librinfo.label.certifications</source>
+                <target>Certifications</target>
+            </trans-unit>            
+            <trans-unit id="librinfo.seedbatch.seed_form_dfgbadmin.label">
+                <source>librinfo.seedbatch.seed_form_admin.label</source>
+                <target>Artisan Semencier</target>
+            </trans-unit>            
+            <trans-unit id="librinfo.link.certification_list">
+                <source>librinfo.link.certification_list</source>
+                <target>Liste des certifications</target>
+            </trans-unit>           
+            <trans-unit id="librinfo.link.certification_create">
+                <source>librinfo.link.certification_create</source>
+                <target>Créer une certification</target>
             </trans-unit>            
         </body>
     </file>
