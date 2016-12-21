@@ -1,10 +1,18 @@
 <?php
 
+/*
+ * Copyright (C) 2015-2016 Libre Informatique
+ *
+ * This file is licenced under the GNU GPL v3.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Librinfo\SeedBatchBundle\Admin;
 
 use Blast\CoreBundle\Admin\CoreAdmin;
 use Librinfo\CRMBundle\Entity\Organism;
-use Librinfo\EmailCRMBundle\Admin\OrganismAdminConcrete as BaseOrganismAdminConcrete;
+use Librinfo\EmailCRMBundle\Admin\OrganismAdmin as BaseOrganismAdmin;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -12,7 +20,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\CoreBundle\Validator\ErrorElement;
 
-class OrganismAdminConcrete extends BaseOrganismAdminConcrete
+class OrganismAdmin extends BaseOrganismAdmin
 {
     protected $baseRouteName = 'admin_librinfo_seedbatch_organism';
     protected $baseRoutePattern = 'librinfo/seedbatch/organism';
