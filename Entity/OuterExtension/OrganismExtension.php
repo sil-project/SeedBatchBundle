@@ -11,6 +11,12 @@ trait OrganismExtension
      * @var string
      */
     private $seedProducerCode;
+    
+    /**
+     *
+     * @var boolean
+     */
+    private $seedProducer;
 
     /**
      * Set seedProducerCode
@@ -39,6 +45,18 @@ trait OrganismExtension
     public function producerToString()
     {
         return (string)$this;
+    }
+    
+    public function isSeedProducer()
+    {
+        return $this->seedProducer;
+    }
+    
+    public function setSeedProducer($seedProducer)
+    {
+        $this->seedProducer = $seedProducer;
+        
+        return $this;
     }
 
 }

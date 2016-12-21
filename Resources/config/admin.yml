@@ -11,6 +11,19 @@ services:
         calls:
             - [ setTemplate, [edit, LibrinfoSeedBatchBundle:OrganismAdmin:edit.html.twig]]
             - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
+            
+    librinfo_seedbatch.admin.seed_producer:
+        class: Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin
+        arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoSeedBatchBundle:OrganismAdmin]
+        tags:
+            -   name: sonata.admin
+                manager_type: orm
+                group: Customers Relationship Management
+                label: librinfo.crm.organism_admin.label
+                label_translator_strategy: blast_core.label.strategy.librinfo
+        calls:
+            - [ setTemplate, [edit, LibrinfoSeedBatchBundle:OrganismAdmin:edit.html.twig]]
+            - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
 
     librinfo_seedbatch.admin.seedfarm:
         class: Librinfo\SeedBatchBundle\Admin\SeedFarmAdminConcrete

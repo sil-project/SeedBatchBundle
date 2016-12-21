@@ -6,6 +6,10 @@ Librinfo\CRMBundle\Entity\Organism:
             type:       string
             length:     255
             nullable:   true
+        seedProducer:
+            type:        boolean
+            options:
+                default: false
 
     oneToMany:
         seedBatches:
