@@ -46,7 +46,7 @@ parameters:
                             - form_group_specifics
 
             Sonata\AdminBundle\Form\FormMapper:
-                remove: 
+                remove:
                     description: ~
                 add:
                     form_group_general:
@@ -70,7 +70,7 @@ parameters:
                                 type: sonata_type_model_autocomplete
                                 by_reference: false
                                 property: name
-                                callback: [Librinfo\SeedBatchBundle\Admin\OrganismAdminConcrete, producerAutocompleteCallback]
+                                callback: [Librinfo\SeedBatchBundle\Admin\OrganismAdmin, producerAutocompleteCallback]
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.organism
                             productionYear: ~
@@ -166,7 +166,7 @@ parameters:
         Librinfo\SeedBatchBundle\Entity\Plot:
             Sonata\AdminBundle\Show\ShowMapper:
                 forceTabs: true
-                remove: 
+                remove:
                     vcard_uid: ~
                 add:
                     form_group_general:
@@ -204,7 +204,7 @@ parameters:
                         tabsOrder: [form_group_general, form_tab_certifications, form_group_specifics]
 
             Sonata\AdminBundle\Datagrid\ListMapper:
-                remove: 
+                remove:
                     name: ~
                     createdAt: ~
                     zip: ~
@@ -292,7 +292,7 @@ parameters:
                             groupsOrder: ['', form_group_description, form_group_main_address]
 
             Sonata\AdminBundle\Datagrid\ListMapper:
-                remove: 
+                remove:
                     createdAt: ~
                     zip: ~
                     country: ~
@@ -316,7 +316,7 @@ parameters:
 # ORGANISM
 ############
 
-        Librinfo\SeedBatchBundle\Admin\OrganismAdminConcrete:
+        Librinfo\SeedBatchBundle\Admin\OrganismAdmin:
             Sonata\AdminBundle\Show\ShowMapper:
                 add:
                     show_tab_plots:

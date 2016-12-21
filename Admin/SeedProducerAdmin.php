@@ -1,11 +1,19 @@
 <?php
 
+/*
+ * Copyright (C) 2015-2016 Libre Informatique
+ *
+ * This file is licenced under the GNU GPL v3.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Librinfo\SeedBatchBundle\Admin;
 
 use Doctrine\ORM\EntityManager;
-use Librinfo\SeedBatchBundle\Admin\OrganismAdminConcrete as BaseOrganismAdminConcrete;
+use Librinfo\SeedBatchBundle\Admin\OrganismAdmin as BaseOrganismAdmin;
 
-class SeedProducerAdmin extends BaseOrganismAdminConcrete
+class SeedProducerAdmin extends BaseOrganismAdmin
 {
     /**
      *
@@ -24,7 +32,7 @@ class SeedProducerAdmin extends BaseOrganismAdminConcrete
         $query = parent::createQuery($context);
 
         $query->andWhere('o.seedProducer = true');
-        
+
         return $query;
     }
     
