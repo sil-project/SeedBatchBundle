@@ -39,6 +39,17 @@ class OrganismAdminConcrete extends BaseOrganismAdminConcrete
     protected function configureFormFields(FormMapper $mapper)
     {
         CoreAdmin::configureFormFields($mapper);
+        
+        if( $this->subject )
+            if( !$this->subject->isSeedProducer() )
+            {
+                $tabs = $mapper->getadmin()->getFormTabs();
+                unset($tabs['form_tab_plots']);
+                unset($tabs['form_tab_seedbatches']);
+                $mapper->getAdmin()->setFormTabs($tabs);
+                $mapper->remove('plots');
+                $mapper->remove('seedBatches');
+            }
     }
 
     /**
@@ -47,6 +58,17 @@ class OrganismAdminConcrete extends BaseOrganismAdminConcrete
     protected function configureShowFields(ShowMapper $mapper)
     {
         CoreAdmin::configureShowFields($mapper);
+        
+        if( $this->subject )
+            if( !$this->subject->isSeedProducer() )
+            {
+                $tabs = $mapper->getadmin()->getShowTabs();
+                unset($tabs['show_tab_plots']);
+                unset($tabs['show_tab_seedbatches']);
+                $mapper->getAdmin()->setShowTabs($tabs);
+                $mapper->remove('plots');
+                $mapper->remove('seedBatches');
+            }
     }
 
     public function validate(ErrorElement $errorElement, $object)
