@@ -436,16 +436,37 @@ parameters:
     
             # FORM    
             Sonata\AdminBundle\Form\FormMapper:
+                remove: 
+                    createdAt: ~
+                    updatedAt: ~
+                    updatedBy: ~
+                    createdBy: ~
                 add:
                     main_tab:
                         main_group:
                             certificationType:
                                 type: sonata_type_model
+                                attr: 
+                                    class: inline-block
+                                    width: 30
+                            certificationBody:
+                                type: blast_custom_choice
+                                choices_field: certification.certification_body
+                                attr: 
+                                    class: inline-block
+                                    width: 30
                             certificationDate:
                                 type: sonata_type_date_picker
                                 required: true
+                                attr: 
+                                    class: inline-block
+                                    width: 30
                             expiryDate:
+                                required: false
                                 type: sonata_type_date_picker
+                                attr: 
+                                    class: inline-block
+                                    width: 30
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
     

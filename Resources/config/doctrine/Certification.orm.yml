@@ -3,6 +3,9 @@ Librinfo\SeedBatchBundle\Entity\Certification:
     blast:
         loggable: true
     fields:
+        certificationBody:
+            type: text
+            column: certification_body
         certificationDate:
             type: date
             column: certification_date

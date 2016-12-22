@@ -3,7 +3,6 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
             
-
 <!-- SEED BATCHES -->            
             <trans-unit id="librinfo.seedbatch.seedbatch_admin.label">
                 <source>librinfo.seedbatch.seedbatch_admin.label</source>
@@ -220,9 +219,13 @@
                 <source>librinfo.link.certification_create</source>
                 <target>Créer une certification</target>
             </trans-unit>     
-             <trans-unit id="librinfo.label.certification_type">
+            <trans-unit id="librinfo.label.certification_type">
                 <source>librinfo.label.certification_type</source>
                 <target>Certification</target>
+            </trans-unit>    
+            <trans-unit id="librinfo.label.certification_body">
+                <source>librinfo.label.certification_body</source>
+                <target>Organisme certificateur</target>
             </trans-unit>     
             
 <!-- CERTIFICATION TYPE -->    
@@ -236,6 +239,10 @@
             </trans-unit>
             <trans-unit id="librinfo.link.certification_type_list">
                 <source>librinfo.link.certification_type_list</source>
+                <target>Liste des certifications</target>
+            </trans-unit>
+            <trans-unit id="librinfo.link.certificationtype_list">
+                <source>librinfo.link.certificationtype_list</source>
                 <target>Liste des certifications</target>
             </trans-unit>
         </body>

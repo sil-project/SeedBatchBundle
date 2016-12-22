@@ -21,6 +21,11 @@ class Certification
     ;
     
     /**
+     * @var string
+     */
+    private $certificationBody;
+    
+    /**
      * @var \DateTime
      */
     private $certificationDate;
@@ -55,6 +60,29 @@ class Certification
     
     public function initCollections()
     {
+    }
+    
+    /**
+     * Set certificationBody
+     *
+     * @param string $certificationBody
+     * @return Certification
+     */
+    public function setCertificationBody($certificationBody)
+    {
+        $this->certificationBody = $certificationBody;
+
+        return $this;
+    }
+
+    /**
+     * Get certificationBody
+     *
+     * @return string 
+     */
+    public function getCertificationBody()
+    {
+        return $this->certificationBody;
     }
 
     /**
