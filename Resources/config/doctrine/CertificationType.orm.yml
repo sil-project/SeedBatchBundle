@@ -9,3 +9,9 @@ Librinfo\SeedBatchBundle\Entity\CertificationType:
     oneToOne:
         logo:
             targetEntity: Librinfo\MediaBundle\Entity\File
+            joinColumn: 
+                name: logo_id
+                referencedColumnName: id
+                nullable: true
+            cascade: [persist, remove]
+            oprhanRemoval: true
