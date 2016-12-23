@@ -30,6 +30,7 @@ Librinfo\SeedBatchBundle\Entity\Plot:
               inverseJoinColumns:
                 certification_id:
                   referencedColumnName: id
+                  unique: true
             cascade: [persist, remove]
 
     uniqueConstraints:
