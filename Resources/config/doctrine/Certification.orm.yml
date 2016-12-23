@@ -14,8 +14,7 @@ Librinfo\SeedBatchBundle\Entity\Certification:
             column: expiry_date
     lifecycleCallbacks: {  }
     
-    oneToOne:
+    manyToOne:
         certificationType:
             targetEntity: Librinfo\SeedBatchBundle\Entity\CertificationType
-            cascade: [persist]
             
