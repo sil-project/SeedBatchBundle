@@ -17,4 +17,5 @@ Librinfo\SeedBatchBundle\Entity\Certification:
     oneToOne:
         certificationType:
             targetEntity: Librinfo\SeedBatchBundle\Entity\CertificationType
+            cascade: [persist]
             
