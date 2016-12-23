@@ -147,6 +147,10 @@
                 <source>form_group_certifications</source>
                 <target>Certifications</target>
             </trans-unit>              
+            <trans-unit id="show_tab_certifications">
+                <source>show_tab_certifications</source>
+                <target>Certifications</target>
+            </trans-unit>              
             
 <!-- SEED FARMS -->
             <trans-unit id="librinfo.label.producer_name">
