@@ -84,11 +84,21 @@ class CertificationType
      * @param \Librinfo\MediaBundle\Entity\File $logo
      * @return CertificationType
      */
-    public function setLogo(File $logo = null)
+    public function setLogo($logo = null)
     {
         $this->logo = $logo;
 
         return $this;
+    }
+    
+    /**
+     * alias for LibrinfoMediaBundle/CRUDController::handleFiles()
+     *
+     * @param \Librinfo\MediaBundle\Entity\File $logo
+     */
+    public function setLibrinfoFile(File $logo = null)
+    {
+        $this->setLogo($logo);
     }
 
     /**
@@ -99,5 +109,10 @@ class CertificationType
     public function getLogo()
     {
         return $this->logo;
+    }
+    
+    public function getLibrinfoFile()
+    {
+        return $this->getLogo();
     }
 }
