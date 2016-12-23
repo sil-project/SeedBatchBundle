@@ -174,7 +174,10 @@ parameters:
                             code: ~
                             producer:
                                 admin_code: librinfo_seedbatch.admin.organism
-                            certifications: ~
+                    show_tab_certifications:
+                        show_group_certifications:
+                            certifications:
+                                template: LibrinfoSeedBatchBundle:PlotAdmin:show_field_certifications.html.twig
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
                     name: ~
@@ -195,7 +198,7 @@ parameters:
                             certifications:
                                 type: sonata_type_collection
                                 by_reference: false
-                                required: false
+                                required: true
                                 label: false
                                 _options:
                                     edit: inline
@@ -436,7 +439,7 @@ parameters:
     
             # FORM    
             Sonata\AdminBundle\Form\FormMapper:
-                remove: 
+                remove:
                     createdAt: ~
                     updatedAt: ~
                     updatedBy: ~
@@ -446,6 +449,7 @@ parameters:
                         main_group:
                             certificationType:
                                 type: sonata_type_model
+                                btn_add: false
                                 attr: 
                                     class: inline-block
                                     width: 30
@@ -458,31 +462,22 @@ parameters:
                             certificationDate:
                                 type: sonata_type_date_picker
                                 required: true
-                                attr: 
-                                    class: inline-block
-                                    width: 30
+                                
                             expiryDate:
                                 required: false
                                 type: sonata_type_date_picker
-                                attr: 
-                                    class: inline-block
-                                    width: 30
+                                
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
     
             # LIST    
             Sonata\AdminBundle\Datagrid\ListMapper:
+                remove:
+                    _actions: [duplicate]
                 add:
                     description: ~
                     certificationDate: ~
                     expiryDate: ~
-    
-                    _actions:
-                        show: ~
-                        edit: ~
-                        delete: ~
-                        duplicate:
-                            template: BlastCoreBundle:CRUD:list__action_duplicate.html.twig
             # FILTERS 
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add: 
@@ -530,18 +525,13 @@ parameters:
                         tabsOrder: [main_tab, form_group_specifics]
             # LIST    
             Sonata\AdminBundle\Datagrid\ListMapper:
+                remove:
+                    _actions: [duplicate]
                 add:
                     name: ~
                     code: ~
                     logo: ~
                     description: ~
-    
-                    _actions:
-                        show: ~
-                        edit: ~
-                        delete: ~
-                        duplicate:
-                            template: BlastCoreBundle:CRUD:list__action_duplicate.html.twig
             # FILTERS 
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
