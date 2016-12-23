@@ -174,10 +174,10 @@ parameters:
                             code: ~
                             producer:
                                 admin_code: librinfo_seedbatch.admin.organism
-                    show_tab_certifications:
-                        show_group_certifications:
                             certifications:
                                 template: LibrinfoSeedBatchBundle:PlotAdmin:show_field_certifications.html.twig
+                    _options:
+                        tabsOrder: [form_group_general, form_group_specifics]
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
                     name: ~
@@ -431,6 +431,7 @@ parameters:
                             name: ~
                             code: ~
                             description: ~
+                            certificationBody: ~
                             certificationDate:
                                 type: sonata_type_datepicker
                             expiryDate: ~
