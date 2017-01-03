@@ -20,7 +20,7 @@ class SeedProducerAdmin extends BaseOrganismAdmin
      * @var EntityManager
      */
     private $manager;
-    
+
     protected $baseRouteName = 'admin_librinfo_seedbatch_seedProducer';
     protected $baseRoutePattern = 'librinfo/seedbatch/seed-producer';
 
@@ -35,22 +35,23 @@ class SeedProducerAdmin extends BaseOrganismAdmin
 
         return $query;
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function getNewInstance()
     {
         $object = parent::getNewInstance();
-       
+
         $object->setSeedProducer(true);
-        $object->addCircle($this->manager->getRepository('LibrinfoCRMBundle:Circle')->find('b907691c-963f-4a7c-9098-5a95335cf21d'));
-        
+        $seed_producers_circle = $this->getConfigurationPool()->getContainer()->get('librinfo_crm.app_circles')->getCircle('seed_producers');
+        $object->addCircle($seed_producers_circle);
+
         return $object;
     }
-    
+
     /**
-     * 
+     *
      * @param EntityManager $manager
      */
     public function setManager(EntityManager $manager)
