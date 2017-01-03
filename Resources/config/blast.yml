@@ -415,8 +415,29 @@ parameters:
                 add: ~
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add: ~
-###############                
-# Certification
+
+        Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin:
+            Sonata\AdminBundle\Datagrid\ListMapper:
+                remove:
+                    customerCode: ~
+                    supplierCode: ~
+                add:
+                    name:
+                        label: librinfo.label.list_seed_producer_name
+                        identifier: true
+                    seedProducerCode: ~
+                    _options:
+                        fieldsOrder:
+                            - name
+                            - seedProducerCode
+                            - city
+                            - category.name
+                            - circles
+                            - alert
+                            - active
+
+###############
+# CERTIFICATION
 ###############
 
         Librinfo\SeedBatchBundle\Entity\Certification:
@@ -437,8 +458,8 @@ parameters:
                             expiryDate: ~
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
-    
-            # FORM    
+
+            # FORM
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
                     createdAt: ~
@@ -451,27 +472,27 @@ parameters:
                             certificationType:
                                 type: sonata_type_model
                                 btn_add: false
-                                attr: 
+                                attr:
                                     class: inline-block
                                     width: 30
                             certificationBody:
                                 type: blast_custom_choice
                                 choices_field: certification.certification_body
-                                attr: 
+                                attr:
                                     class: inline-block
                                     width: 30
                             certificationDate:
                                 type: sonata_type_date_picker
                                 required: true
-                                
+
                             expiryDate:
                                 required: false
                                 type: sonata_type_date_picker
-                                
+
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
-    
-            # LIST    
+
+            # LIST
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove:
                     _actions: [duplicate]
@@ -479,14 +500,14 @@ parameters:
                     description: ~
                     certificationDate: ~
                     expiryDate: ~
-            # FILTERS 
+            # FILTERS
             Sonata\AdminBundle\Datagrid\DatagridMapper:
-                add: 
+                add:
                     certificationDate: ~
                     expiryDate: ~
 
-####################               
-# Certification type
+####################
+# CERTIFICATION TYPE
 ####################
 
         Librinfo\SeedBatchBundle\Entity\CertificationType:
@@ -504,7 +525,7 @@ parameters:
                             description: ~
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
-            # FORM    
+            # FORM
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
                     name: ~
@@ -524,7 +545,7 @@ parameters:
                                 required: false
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
-            # LIST    
+            # LIST
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove:
                     _actions: [duplicate]
@@ -533,10 +554,10 @@ parameters:
                     code: ~
                     logo: ~
                     description: ~
-            # FILTERS 
+            # FILTERS
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
                     name: ~
                     code: ~
                     description: ~
-    
+

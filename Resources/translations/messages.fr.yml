@@ -27,6 +27,7 @@ librinfo:
         germination_date: Date de la mesure
         gross_delivered_weight: Poids brut livré
         gross_producer_weight: Poids brut chez le producteur
+        list_seed_producer_name: Producteur
         logo: Logo
         menu.plots: Parcelles
         menu.seed_batches: Lots
@@ -35,9 +36,11 @@ librinfo:
         plot_name: Nom de la parcelle
         plots: Parcelles
         producer: Producteur
+        seed_producer_code: Code producteur
         producer_name: Producteur
         production_year: Année de production
         seed_batch_code: Code Lot
+        seed_batches: Lots
         seed_farm: Artisan semencier
         seed_producer: Producteur de semences
         seedbatches: Lots
