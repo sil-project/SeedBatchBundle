@@ -23,6 +23,12 @@ class SeedProducerAdmin extends BaseOrganismAdmin
 
     protected $baseRouteName = 'admin_librinfo_seedbatch_seedProducer';
     protected $baseRoutePattern = 'librinfo/seedbatch/seed-producer';
+    
+    /**
+     * The label class name  (used in the title/breadcrumb ...).
+     * @var string
+     */
+    protected $classnameLabel = 'SeedProducer';
 
     /**
      * {@inheritdoc}

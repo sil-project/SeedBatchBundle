@@ -1,46 +1,70 @@
 
-'librinfo.seedbatch.seedbatch_admin.label': 'Lot'
-'form_tab_stocks': 'Stocks'
-'librinfo.label.production_year': 'Année de production'
-'librinfo.label.batch_number': 'Lot N°'
-'librinfo.label.seed_batch_code': 'Code Lot'
-'librinfo.label.plot': 'Parcelle'
-'librinfo.label.variety': 'Variété'
-'librinfo.label.producer': 'Producteur'
-'form_group_germination_rate': 'Taux de germination'
-'librinfo.label.germination_date': 'Date de la mesure'
-'form_group_tkw': 'PMG'
-'librinfo.label.tkw_date': 'Date de la mesure'
-'form_group_delivery': 'Livraison'
-'librinfo.label.seed_batches': 'Lots'
-'librinfo.label.delivery_date': 'Date de livraison'
-'librinfo.label.delivery_note': 'Bon de livraison fourni'
-'librinfo.label.gross_producer_weight': 'Poids brut chez le producteur'
-'librinfo.label.gross_delivered_weight': 'Poids brud livré'
-'librinfo.label.net_screened_weight': 'Poids net trié'
-'librinfo.label.to_screen_weight': 'Poids restant à trier'
-'librinfo.seedbatch.seed_batch_admin.label': 'Lot'
-'librinfo.link.seed_batch_list': 'Liste des lots'
-'librinfo.label.menu.seed_batches': 'Lots'
-'form_group_seedbatch': 'Lot'
-'librinfo.label.generate_seedbatch_code': 'Générer code'
-'librinfo.link.seed_batch_create': 'Nouveau Lot'
-'librinfo.label.seed_farm': 'Artisan semencier'
-'librinfo.seedbatch.plot_admin.label': 'Parcelle'
-'librinfo.label.plot_name': 'Nom de la parcelle'
-'form_group_plot': 'Parcelle'
-'librinfo.label.menu.plots': 'Parcelles'
-'librinfo.link.plot_list': 'Liste des parcelles'
-'librinfo.label.producer_name': 'Producteur'
-'librinfo.label.seed_producer': 'Producteur de semences'
-'librinfo.link.seedbatch_list': 'Liste des lots'
-'librinfo.error.missing_seed_farm': 'Veuillez renseigne l''artisan semencier'
-'show_tab_plots': 'Parcelles'
-'form_tab_plots': 'Parcelles'
-'librinfo.label.plots': 'Parcelles'
-'show_tab_seedbatches': 'Lots'
-'librinfo.label.seedbatches': 'Lots'
-'form_tab_seedbatches': 'Lots'
-'librinfo.placeholder.seed_producer_code': 'Code producteur'
-'librinfo.link.seed_farm_list': 'Liste des Artisans Semenciers'
-'librinfo.seedbatch.seed_form_admin.label': 'Artisan Semencier'
+form_group_certifications: Certifications
+form_group_delivery: Livraison
+form_group_germination_rate: Taux de germination
+form_group_plot: Parcelle
+form_group_seedbatch: Lot
+form_group_tkw: PMG
+form_tab_certifications: Certifications
+form_tab_plots: Parcelles
+form_tab_seedbatches: Lots
+form_tab_stocks: Stocks
+show_tab_certifications: Certifications
+show_tab_plots: Parcelles
+show_tab_seedbatches: Lots
+
+librinfo:
+    label:
+        batch_number: Lot N°
+        certification_body: Organisme certificateur
+        certification_date: Date de certification
+        certification_type: Certification
+        certifications: Certifications
+        delivery_date: Date de livraison
+        delivery_note: Bon de livraison fourni
+        expiry_date: Date d'expiration
+        generate_seedbatch_code: Générer code
+        germination_date: Date de la mesure
+        gross_delivered_weight: Poids brut livré
+        gross_producer_weight: Poids brut chez le producteur
+        logo: Logo
+        menu.plots: Parcelles
+        menu.seed_batches: Lots
+        net_screened_weight: Poids net trié
+        plot: Parcelle
+        plot_name: Nom de la parcelle
+        plots: Parcelles
+        producer: Producteur
+        producer_name: Producteur
+        production_year: Année de production
+        seed_batch_code: Code Lot
+        seed_farm: Artisan semencier
+        seed_producer: Producteur de semences
+        seedbatches: Lots
+        tkw_date: Date de la mesure
+        to_screen_weight: Poids restant à trier
+        variety: Variété
+    link:
+        certification_create: Créer une certification
+        certification_list: Liste des certifications
+        certification_type_create: Créer une certification
+        certification_type_list: Liste des certifications
+        certificationtype_list: Liste des certifications
+        plot_create: Créer une parcelle
+        plot_list: Liste des parcelles
+        seedproducer_list: Liste des producteurs
+        seed_producer_list: Liste des producteurs
+        seed_batch_create: Nouveau Lot
+        seed_batch_list: Liste des lots
+        seed_farm_list: Liste des Artisans Semenciers
+    placeholder:
+        seed_producer_code: Code producteur
+    seedbatch:
+        plot_admin:
+            label: Parcelle
+        seed_batch_admin:
+            label: Lot
+        seed_form_admin:
+            label: Artisan Semencier
+        seedbatch_admin:
+            label: Lot
