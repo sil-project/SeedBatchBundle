@@ -11,7 +11,7 @@ services:
         calls:
             - [ setTemplate, [edit, LibrinfoSeedBatchBundle:OrganismAdmin:edit.html.twig]]
             - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
-            
+
     librinfo_seedbatch.admin.seed_producer:
         class: Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin
         arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoSeedBatchBundle:OrganismAdmin]
@@ -57,7 +57,7 @@ services:
                 label_translator_strategy: blast_core.label.strategy.librinfo
 
     librinfo_seedbatch.admin.plot:
-        class: Librinfo\SeedBatchBundle\Admin\PlotAdminConcrete
+        class: Librinfo\SeedBatchBundle\Admin\PlotAdmin
         arguments: [~, Librinfo\SeedBatchBundle\Entity\Plot, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
@@ -85,7 +85,7 @@ services:
               group: admin
               label: Certification
               label_translator_strategy: blast_core.label.strategy.librinfo
-        calls: 
+        calls:
             - [ setTemplate, [ edit, BlastCoreBundle:CRUD:base_edit.html.twig ] ]
             - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
             - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
@@ -99,8 +99,8 @@ services:
               group: admin
               label: CertificationType
               label_translator_strategy: blast_core.label.strategy.librinfo
-        calls: 
+        calls:
             - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
             - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
             - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
-            
+

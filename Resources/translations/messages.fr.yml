@@ -58,6 +58,7 @@ librinfo:
         seedproducer_list: Liste des producteurs
         seed_producer_list: Liste des producteurs
         seed_batch_create: Nouveau Lot
+        seedbatch_list: Liste des lots
         seed_batch_list: Liste des lots
         seed_farm_list: Liste des Artisans Semenciers
     placeholder:

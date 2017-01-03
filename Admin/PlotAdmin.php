@@ -1,50 +1,25 @@
 <?php
 
+/*
+ * Copyright (C) 2015-2016 Libre Informatique
+ *
+ * This file is licenced under the GNU GPL v3.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Librinfo\SeedBatchBundle\Admin;
 
 use Blast\CoreBundle\Admin\CoreAdmin;
+use Blast\CoreBundle\Admin\Traits\Base as BaseAdmin;
 use Librinfo\SeedBatchBundle\Entity\Plot;
-use Sonata\AdminBundle\Datagrid\DatagridMapper;
-use Sonata\AdminBundle\Datagrid\ListMapper;
-use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Show\ShowMapper;
+use Sonata\CoreBundle\Validator\ErrorElement;
 
 class PlotAdmin extends CoreAdmin
 {
-    /**
-     * @param DatagridMapper $datagridMapper
-     */
-    protected function configureDatagridFilters(DatagridMapper $datagridMapper)
-    {
-
-    }
+    use BaseAdmin;
 
     /**
-     * @param ListMapper $listMapper
-     */
-    protected function configureListFields(ListMapper $listMapper)
-    {
-
-    }
-
-    /**
-     * @param FormMapper $formMapper
-     */
-    protected function configureFormFields(FormMapper $formMapper)
-    {
-
-    }
-
-    /**
-     * @param ShowMapper $showMapper
-     */
-    protected function configureShowFields(ShowMapper $showMapper)
-    {
-
-    }
-
-    /**
-     *
      * @param Plot $plot
      * @param string $property  (not used)
      * @return string
@@ -52,5 +27,38 @@ class PlotAdmin extends CoreAdmin
     public static function autocompleteToString(Plot $plot, $property)
     {
         return sprintf('%s [%s] [%s]', $plot->getName(), $plot->getCode(), $plot->getProducer()->getName());
+    }
+
+    /**
+     * @param ErrorElement $errorElement
+     * @param Plot         $object
+     *
+     * @deprecated this feature cannot be stable, use a custom validator,
+     *             the feature will be removed with Symfony 2.2
+     */
+    public function validate(ErrorElement $errorElement, $object)
+    {
+        $this->validateCode($errorElement, $object);
+    }
+
+    /**
+     * Plot code validator
+     *
+     * @param ErrorElement $errorElement
+     * @param Plot $object
+     */
+    public function validateCode(ErrorElement $errorElement, $object)
+    {
+        $code = $object->getCode();
+        $registry = $this->getConfigurationPool()->getContainer()->get('blast_core.code_generators');
+        $codeGenerator = $registry->getCodeGenerator(Plot::class);
+        if ( !empty($code) && !$codeGenerator->validate($code) ) {
+            $msg = 'Wrong format for plot code. It shoud be: ' . $codeGenerator::getHelp();
+            $errorElement
+                ->with('code')
+                    ->addViolation($msg)
+                ->end()
+            ;
+        }
     }
 }
