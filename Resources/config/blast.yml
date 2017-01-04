@@ -189,10 +189,18 @@ parameters:
                                 label: librinfo.label.plot_name
                             code:
                                 type: librinfo_entitycode
+#                            producer:
+#                                type: sonata_type_model
+#                                _options:
+#                                    admin_code: librinfo_seedbatch.admin.seed_producer
                             producer:
-                                type: sonata_type_model
+                                type: sonata_type_model_autocomplete
+#                                route: { name: searchable_admin_retrieve_autocomplete_items }
+                                by_reference: false
+                                property: name
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.seed_producer
+                                    translation_domain: messages                                    
                     form_tab_certifications:
                         form_group_certifications:
                             certifications:
