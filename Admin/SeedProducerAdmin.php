@@ -11,9 +11,8 @@
 namespace Librinfo\SeedBatchBundle\Admin;
 
 use Doctrine\ORM\EntityManager;
-use Librinfo\SeedBatchBundle\Admin\OrganismAdmin as BaseOrganismAdmin;
 
-class SeedProducerAdmin extends BaseOrganismAdmin
+class SeedProducerAdmin extends OrganismAdmin
 {
     /**
      *
@@ -36,12 +35,10 @@ class SeedProducerAdmin extends BaseOrganismAdmin
     public function createQuery($context = 'list')
     {
         $query = parent::createQuery($context);
-
         $query->andWhere('o.seedProducer = true');
-
         return $query;
     }
-
+    
     /**
      * {@inheritdoc}
      */

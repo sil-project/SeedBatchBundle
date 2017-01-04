@@ -185,22 +185,17 @@ parameters:
                 add:
                     form_group_general:
                         '':
+                            producer:
+                                type: sonata_type_model_autocomplete
+                                by_reference: false
+                                property: name  # the query is built in PlotAdmin::configureFormFields
+                                _options:
+                                    admin_code: librinfo_seedbatch.admin.seed_producer
+                                    translation_domain: messages                                    
                             name:
                                 label: librinfo.label.plot_name
                             code:
                                 type: librinfo_entitycode
-#                            producer:
-#                                type: sonata_type_model
-#                                _options:
-#                                    admin_code: librinfo_seedbatch.admin.seed_producer
-                            producer:
-                                type: sonata_type_model_autocomplete
-#                                route: { name: searchable_admin_retrieve_autocomplete_items }
-                                by_reference: false
-                                property: name
-                                _options:
-                                    admin_code: librinfo_seedbatch.admin.seed_producer
-                                    translation_domain: messages                                    
                     form_tab_certifications:
                         form_group_certifications:
                             certifications:
@@ -443,6 +438,9 @@ parameters:
                             - circles
                             - alert
                             - active
+            Sonata\AdminBundle\Datagrid\DatagridMapper:
+                add:
+                    seedProducerCode: ~
 
 ###############
 # CERTIFICATION
