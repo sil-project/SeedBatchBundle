@@ -21,26 +21,6 @@ class PlotAdmin extends CoreAdmin
     use BaseAdmin;
     
     /**
-     * @param FormMapper $mapper
-     */
-    protected function configureFormFields(FormMapper $mapper)
-    {
-        parent::configureFormFields($mapper);
-        
-        //
-        $mapper->get('producer')->setAttribute('callback', function($admin, $property, $value) {
-            $datagrid = $admin->getDatagrid();
-            $qb = $datagrid->getQuery();
-            $qb->andWhere($qb->expr()->orX(
-                $qb->getRootAlias() . '.name LIKE :value',
-                $qb->getRootAlias() . '.seedProducerCode LIKE :value'
-            )); 
-            $qb->setParameter('value', "%$value%");
-            $datagrid->setValue('seeProducerCode', null, $value);            
-        });
-    }       
-
-    /**
      * @param Plot $plot
      * @param string $property  (not used)
      * @return string

@@ -11,6 +11,7 @@
 namespace Librinfo\SeedBatchBundle\Admin;
 
 use Doctrine\ORM\EntityManager;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 
 class SeedProducerAdmin extends OrganismAdmin
 {
@@ -61,5 +62,26 @@ class SeedProducerAdmin extends OrganismAdmin
     {
         $this->manager = $manager;
     }
+    
+    /**
+     * This is used as callback in admin autocomplete producer (organism) fields
+     * It restricts the query to seed producers
+     *
+     * @param AbstractAdmin $admin
+     * @param string|array $property
+     * @param string $value
+     */
+    public static function producerAutocompleteCallback(AbstractAdmin $admin, $property, $value)
+    {
+        $datagrid = $admin->getDatagrid();
+        $qb = $datagrid->getQuery();
+        $qb->andWhere($qb->expr()->orX(
+            $qb->getRootAlias() . '.name LIKE :value',
+            $qb->getRootAlias() . '.seedProducerCode LIKE :value'
+        )); 
+        $qb->setParameter('value', "%$value%");
+        $datagrid->setValue('name', null, $value);   
+        $datagrid->setValue('seeProducerCode', null, $value);   
+    }    
 
 }

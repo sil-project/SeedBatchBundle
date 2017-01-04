@@ -119,25 +119,5 @@ class OrganismAdmin extends BaseOrganismAdmin
         }
     }
 
-    /**
-     * This is used as callback in admin autocomplete producer (organism) fields
-     * It restricts the query to seed producers
-     *
-     * @param AbstractAdmin $admin
-     * @param string $property
-     * @param string $value
-     */
-    public static function producerAutocompleteCallback(AbstractAdmin $admin, $property, $value)
-    {
-        $producersCircle = $admin->getConfigurationPool()->getContainer()->get('librinfo_crm.app_circles')->getCircle('seed_producers');
 
-        $datagrid = $admin->getDatagrid();
-        $queryBuilder = $datagrid->getQuery();
-        $queryBuilder
-            ->leftJoin($queryBuilder->getRootAlias() . '.circles',  'cir')
-            ->andWhere('cir.id = :producersCircle')
-            ->setParameter('producersCircle', $producersCircle['id'])
-        ;
-        $datagrid->setValue($property, null, $value);
-    }
 }
