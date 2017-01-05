@@ -19,12 +19,7 @@ class Certification
         CertificationExtension,
         Timestampable
     ;
-    
-    /**
-     * @var string
-     */
-    private $certificationBody;
-    
+
     /**
      * @var \DateTime
      */
@@ -34,11 +29,22 @@ class Certification
      * @var \DateTime
      */
     private $expiryDate;
-    
+
     /**
      * @var \Librinfo\SeedBatchBundle\Entity\CertificationType
      */
     private $certificationType;
+
+
+    /**
+     * @var \Librinfo\SeedBatchBundle\Entity\CertifyingBody
+     */
+    private $certifyingBody;
+
+    /**
+     * @var \Librinfo\SeedBatchBundle\Entity\Plot
+     */
+    private $plot;
 
 
     /**
@@ -57,32 +63,9 @@ class Certification
         $this->code = null;
         $this->initCollections();
     }
-    
+
     public function initCollections()
     {
-    }
-    
-    /**
-     * Set certificationBody
-     *
-     * @param string $certificationBody
-     * @return Certification
-     */
-    public function setCertificationBody($certificationBody)
-    {
-        $this->certificationBody = $certificationBody;
-
-        return $this;
-    }
-
-    /**
-     * Get certificationBody
-     *
-     * @return string 
-     */
-    public function getCertificationBody()
-    {
-        return $this->certificationBody;
     }
 
     /**
@@ -101,7 +84,7 @@ class Certification
     /**
      * Get certificationDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCertificationDate()
     {
@@ -124,13 +107,13 @@ class Certification
     /**
      * Get expiryDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getExpiryDate()
     {
         return $this->expiryDate;
     }
-    
+
     /**
      * Set certificationType
      *
@@ -147,10 +130,56 @@ class Certification
     /**
      * Get certificationType
      *
-     * @return \Librinfo\SeedBatchBundle\Entity\CertificationType 
+     * @return \Librinfo\SeedBatchBundle\Entity\CertificationType
      */
     public function getCertificationType()
     {
         return $this->certificationType;
+    }
+
+    /**
+     * Set plot
+     *
+     * @param \Librinfo\SeedBatchBundle\Entity\Plot $plot
+     * @return Certification
+     */
+    public function setPlot(\Librinfo\SeedBatchBundle\Entity\Plot $plot = null)
+    {
+        $this->plot = $plot;
+
+        return $this;
+    }
+
+    /**
+     * Get plot
+     *
+     * @return \Librinfo\SeedBatchBundle\Entity\Plot
+     */
+    public function getPlot()
+    {
+        return $this->plot;
+    }
+
+    /**
+     * Set certifyingBody
+     *
+     * @param \Librinfo\SeedBatchBundle\Entity\CertifyingBody $certifyingBody
+     * @return Certification
+     */
+    public function setCertifyingBody(\Librinfo\SeedBatchBundle\Entity\CertifyingBody $certifyingBody = null)
+    {
+        $this->certifyingBody = $certifyingBody;
+
+        return $this;
+    }
+
+    /**
+     * Get certifyingBody
+     *
+     * @return \Librinfo\SeedBatchBundle\Entity\CertifyingBody
+     */
+    public function getCertifyingBody()
+    {
+        return $this->certifyingBody;
     }
 }

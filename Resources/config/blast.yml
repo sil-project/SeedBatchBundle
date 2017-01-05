@@ -19,7 +19,7 @@ parameters:
                             variety:
                                 admin_code: librinfo_varieties.admin.variety
                             producer:
-                                admin_code: librinfo_seedbatch.admin.seed_producer        
+                                admin_code: librinfo_seedbatch.admin.seed_producer
                                 associated_property: producerToString
                             productionYear: ~
                             batchNumber: ~
@@ -111,7 +111,7 @@ parameters:
                     variety:
                         admin_code: librinfo_varieties.admin.variety
                     producer:
-                        admin_code: librinfo_seedbatch.admin.seed_producer        
+                        admin_code: librinfo_seedbatch.admin.seed_producer
                     productionYear: ~
 
             Sonata\AdminBundle\Datagrid\DatagridMapper:
@@ -170,7 +170,7 @@ parameters:
                         '':
                             code: ~
                             producer:
-                                admin_code: librinfo_seedbatch.admin.seed_producer        
+                                admin_code: librinfo_seedbatch.admin.seed_producer
                             certifications:
                                 template: LibrinfoSeedBatchBundle:PlotAdmin:show_field_certifications.html.twig
                     _options:
@@ -188,7 +188,7 @@ parameters:
                                 property: name
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
                                 _options:
-                                    admin_code: librinfo_seedbatch.admin.seed_producer                                  
+                                    admin_code: librinfo_seedbatch.admin.seed_producer
                             name:
                                 label: librinfo.label.plot_name
                             code:
@@ -217,7 +217,7 @@ parameters:
                         identifier: true
                     code: ~
                     producer:
-                        admin_code: librinfo_seedbatch.admin.seed_producer        
+                        admin_code: librinfo_seedbatch.admin.seed_producer
                     city: ~
                     _options:
                         fieldsOrder: [name, code, producer, city]
@@ -455,7 +455,7 @@ parameters:
                             name: ~
                             code: ~
                             description: ~
-                            certificationBody: ~
+                            certifyingBody: ~
                             certificationDate:
                                 type: sonata_type_datepicker
                             expiryDate: ~
@@ -478,16 +478,14 @@ parameters:
                                 attr:
                                     class: inline-block
                                     width: 30
-                            certificationBody:
-                                type: blast_custom_choice
-                                choices_field: certification.certification_body
+                            certifyingBody:
+                                type: sonata_type_model
                                 attr:
                                     class: inline-block
                                     width: 30
                             certificationDate:
                                 type: sonata_type_date_picker
                                 required: true
-
                             expiryDate:
                                 required: false
                                 type: sonata_type_date_picker
@@ -556,6 +554,69 @@ parameters:
                     name: ~
                     code: ~
                     logo: ~
+                    description: ~
+            # FILTERS
+            Sonata\AdminBundle\Datagrid\DatagridMapper:
+                add:
+                    name: ~
+                    code: ~
+                    description: ~
+
+####################
+# CERTIFYING BODY
+####################
+
+        Librinfo\SeedBatchBundle\Entity\CertifyingBody:
+            # SHOW
+            Sonata\AdminBundle\Show\ShowMapper:
+                forceTabs: true
+                remove:
+                    name: ~
+                    description: ~
+                    vcard_uid: ~
+                add:
+                    form_group_general:
+                        '':
+                            name: ~
+                            code: ~
+                            description: ~
+                            url:
+                                type: url
+                    _options:
+                        tabsOrder: [form_group_general, form_group_specifics]
+            # FORM
+            Sonata\AdminBundle\Form\FormMapper:
+                remove:
+                    name: ~
+                    description: ~
+                    vcard_uid: ~
+                add:
+                    form_group_general:
+                        '':
+                            name:
+                                required: true
+                            code:
+                                required: true
+                            url: ~
+                            description:
+                                type: textarea
+                                required: false
+                    _options:
+                        tabsOrder: [form_group_general, form_group_specifics]
+            # LIST
+            Sonata\AdminBundle\Datagrid\ListMapper:
+                remove:
+                    zip: ~
+                    city: ~
+                    country: ~
+                    createdAt: ~
+                    _actions: [duplicate]
+                add:
+                    name:
+                        identifier: true
+                    code: ~
+                    url:
+                        type: url
                     description: ~
             # FILTERS
             Sonata\AdminBundle\Datagrid\DatagridMapper:

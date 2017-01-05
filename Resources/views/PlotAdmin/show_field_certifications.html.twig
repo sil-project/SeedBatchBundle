@@ -3,7 +3,6 @@
 
 {% block field %}
     {% for certification in value %}
-        {% dump(certification) %}
         <div>
             <div class="box box-primary">
                 <table class="table li-plot-certification">
@@ -22,7 +21,7 @@
                                 {{ 'librinfo.label.certification_body'|trans() }}
                             </th>
                             <td>
-                                {{ certification.certificationBody }}
+                                {{ certification.certifyingBody }}
                             </td>
                         </tr>
                         <tr class="sonata-ba-view-container">
@@ -30,7 +29,7 @@
                                 {{ 'librinfo.label.certification_date'|trans() }}
                             </th>
                             <td>
-                                {{ certification.certificationDate|format_date }}
+                                {{ certification.certificationDate ? certification.certificationDate|format_date : '' }}
                             </td>
                         </tr>
                         <tr class="sonata-ba-view-container">
@@ -38,7 +37,7 @@
                                 {{ 'librinfo.label.expiry_date'|trans() }}
                             </th>
                             <td>
-                                {{ certification.expiryDate|format_date }}
+                                {{ certification.expiryDate ? certification.expiryDate|format_date : '' }}
                             </td>
                         </tr>
                     </tbody>

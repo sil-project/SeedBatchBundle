@@ -34,6 +34,7 @@ librinfo:
         certification_date: Date de certification
         certification_type: Certification
         certifications: Certifications
+        certifying_body: Organisme certificateur
         delivery_date: Date de livraison
         delivery_note: Bon de livraison fourni
         expiry_date: Date d'expiration
@@ -67,6 +68,8 @@ librinfo:
         certification_type_create: Créer une certification
         certification_type_list: Liste des certifications
         certificationtype_list: Liste des certifications
+        certifyingbody_list: Liste des organismes certificateurs
+        certifying_body_list: Liste des organismes certificateurs
         plot_create: Créer une parcelle
         plot_list: Liste des parcelles
         seedproducer_list: Liste des producteurs
@@ -82,7 +85,9 @@ librinfo:
             label: Parcelle
         seed_batch_admin:
             label: Lot
-        seed_form_admin:
+        seed_farm_admin:
             label: Artisan Semencier
         seedbatch_admin:
             label: Lot
+        certifying_body_admin:
+            label: Organisme certificateur

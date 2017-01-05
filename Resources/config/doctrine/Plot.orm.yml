@@ -1,6 +1,6 @@
 Librinfo\SeedBatchBundle\Entity\Plot:
     type: entity
-    
+
     fields:
         code:
             type:       string(255)
@@ -10,6 +10,9 @@ Librinfo\SeedBatchBundle\Entity\Plot:
         seedBatches:
             targetEntity: Librinfo\SeedBatchBundle\Entity\SeedBatch
             mappedBy: plot
+        certifications:
+            targetEntity: Librinfo\SeedBatchBundle\Entity\Certification
+            mappedBy: plot
 
     manyToOne:
         producer:
@@ -18,20 +21,6 @@ Librinfo\SeedBatchBundle\Entity\Plot:
             joinColumn:
                 name: producer_id
                 referencedColumnName: id
-    
-    manyToMany:
-        certifications:
-            targetEntity: Librinfo\SeedBatchBundle\Entity\Certification
-            joinTable:
-              name: plot_certifications
-              joinColumns:
-                plot_id:
-                  referencedColumnName: id
-              inverseJoinColumns:
-                certification_id:
-                  referencedColumnName: id
-                  unique: true
-            cascade: [persist, remove]
 
     uniqueConstraints:
         search_idx:

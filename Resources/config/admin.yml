@@ -104,3 +104,17 @@ services:
             - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
             - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
 
+    librinfo_seed_batch.admin.certifying_body:
+        class: Librinfo\SeedBatchBundle\Admin\CertifyingBodyAdmin
+        arguments: [~, Librinfo\SeedBatchBundle\Entity\CertifyingBody, LibrinfoMediaBundle:CRUD]
+        tags:
+            - name: sonata.admin
+              manager_type: orm
+              group: admin
+              label: librinfo.seedbatch.certifying_body_admin.label
+              label_translator_strategy: blast_core.label.strategy.librinfo
+        calls:
+            - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
+            - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
+            - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
+

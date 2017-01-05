@@ -11,28 +11,26 @@
 namespace Librinfo\SeedBatchBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\PlotExtension;
+use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\CertifyingBodyExtension;
 use Blast\BaseEntitiesBundle\Entity\Traits\Addressable;
 use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
 use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
 use Blast\BaseEntitiesBundle\Entity\Traits\Loggable;
-use Blast\BaseEntitiesBundle\Entity\Traits\Searchable;
 use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
 /**
- * Plot
+ * CertifyingBody
  */
-class Plot
+class CertifyingBody
 {
     use BaseEntity,
-        PlotExtension,
+        CertifyingBodyExtension,
         OuterExtensible,
         Addressable,
         Timestampable,
         Loggable,
-        Descriptible,
-        Searchable;
+        Descriptible;
 
     /**
      * @var string
@@ -40,14 +38,9 @@ class Plot
     private $code;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var string
      */
-    private $seedBatches;
-
-    /**
-     * @var \Librinfo\CRMBundle\Entity\Organism
-     */
-    private $producer;
+    private $url;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -72,9 +65,13 @@ class Plot
         $this->initCollections();
     }
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     public function initCollections()
     {
-        $this->seedBatches = new ArrayCollection();
         $this->certifications = new ArrayCollection();
     }
 
@@ -102,64 +99,28 @@ class Plot
         return $this->code;
     }
 
+
     /**
-     * Add seedBatch
+     * Set url
      *
-     * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
-     *
-     * @return Plot
+     * @param string $url
+     * @return CertifyingBody
      */
-    public function addSeedBatch(\Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch)
+    public function setUrl($url)
     {
-        $this->seedBatches[] = $seedBatch;
+        $this->url = $url;
 
         return $this;
     }
 
     /**
-     * Remove seedBatch
+     * Get url
      *
-     * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     * @return string
      */
-    public function removeSeedBatch(\Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch)
+    public function getUrl()
     {
-        return $this->seedBatches->removeElement($seedBatch);
-    }
-
-    /**
-     * Get seedBatches
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getSeedBatches()
-    {
-        return $this->seedBatches;
-    }
-
-    /**
-     * Set producer
-     *
-     * @param \Librinfo\CRMBundle\Entity\Organism $producer
-     *
-     * @return Plot
-     */
-    public function setProducer(\Librinfo\CRMBundle\Entity\Organism $producer = null)
-    {
-        $this->producer = $producer;
-
-        return $this;
-    }
-
-    /**
-     * Get producer
-     *
-     * @return \Librinfo\CRMBundle\Entity\Organism
-     */
-    public function getProducer()
-    {
-        return $this->producer;
+        return $this->url;
     }
 
     /**
