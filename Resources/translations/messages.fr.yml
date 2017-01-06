@@ -30,9 +30,12 @@ librinfo:
         missing_variety_code: Le champ "Code variété" est vide
     label:
         batch_number: Lot N°
+        certification_code: Code certificat
         certification_body: Organisme certificateur
         certification_date: Date de certification
+        certification_start_date: Début de validité
         certification_type: Certification
+        certification_url: URL du certificat
         certifications: Certifications
         certifying_body: Organisme certificateur
         delivery_date: Date de livraison

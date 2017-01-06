@@ -1,13 +1,21 @@
 <?php
 
+/*
+ * Copyright (C) 2015-2016 Libre Informatique
+ *
+ * This file is licenced under the GNU GPL v3.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Librinfo\SeedBatchBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\CertificationExtension;
 use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
+use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
 use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 use Librinfo\SeedBatchBundle\Entity\CertificationType;
-use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\CertificationExtension;
 
 /**
  * Certification
@@ -17,8 +25,14 @@ class Certification
     use BaseEntity,
         OuterExtensible,
         CertificationExtension,
-        Timestampable
+        Timestampable,
+        Descriptible
     ;
+
+    /**
+     * @var string
+     */
+    private $code;
 
     /**
      * @var \DateTime
@@ -28,7 +42,17 @@ class Certification
     /**
      * @var \DateTime
      */
+    private $startDate;
+
+    /**
+     * @var \DateTime
+     */
     private $expiryDate;
+
+    /**
+     * @var string
+     */
+    private $url;
 
     /**
      * @var \Librinfo\SeedBatchBundle\Entity\CertificationType
@@ -69,6 +93,29 @@ class Certification
     }
 
     /**
+     * Set code
+     *
+     * @param string $code
+     * @return Certification
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+
+        return $this;
+    }
+
+    /**
+     * Get code
+     *
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
      * Set certificationDate
      *
      * @param \DateTime $certificationDate
@@ -92,6 +139,29 @@ class Certification
     }
 
     /**
+     * Set startDate
+     *
+     * @param \DateTime $startDate
+     * @return Certification
+     */
+    public function setStartDate($startDate)
+    {
+        $this->startDate = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return \DateTime
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
      * Set expiryDate
      *
      * @param \DateTime $expiryDate
@@ -112,6 +182,29 @@ class Certification
     public function getExpiryDate()
     {
         return $this->expiryDate;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     * @return Certification
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 
     /**

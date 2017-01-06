@@ -447,65 +447,83 @@ parameters:
             # SHOW
             Sonata\AdminBundle\Show\ShowMapper:
                 remove:
-                    name: ~
                     description: ~
                 add:
                     main_tab:
                         main_group:
-                            name: ~
                             code: ~
                             description: ~
                             certifyingBody: ~
                             certificationDate:
                                 type: sonata_type_datepicker
-                            expiryDate: ~
+                            startDate:
+                                type: sonata_type_datepicker
+                            expiryDate:
+                                type: sonata_type_datepicker
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
 
             # FORM
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
-                    createdAt: ~
-                    updatedAt: ~
-                    updatedBy: ~
-                    createdBy: ~
+                    description: ~
                 add:
-                    main_tab:
-                        main_group:
+                    form_group_general:
+                        '':
+                            code:
+                                label: librinfo.label.certification_code
+                            plot:
+                                _options:
+                                    admin_code: librinfo_seedbatch.admin.plot
                             certificationType:
                                 type: sonata_type_model
                                 btn_add: false
                                 attr:
-                                    class: inline-block
                                     width: 30
                             certifyingBody:
                                 type: sonata_type_model
+                                btn_add: false
                                 attr:
-                                    class: inline-block
                                     width: 30
                             certificationDate:
                                 type: sonata_type_date_picker
-                                required: true
-                            expiryDate:
                                 required: false
+                            startDate:
                                 type: sonata_type_date_picker
+                                required: false
+                                label: librinfo.label.certification_start_date
+                            expiryDate:
+                                type: sonata_type_date_picker
+                                required: false
+                            url:
+                                label: librinfo.label.certification_url
+                            description: ~
 
                     _options:
-                        tabsOrder: [main_tab, form_group_specifics]
+                        tabsOrder: [form_group_general, form_group_specifics]
 
             # LIST
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove:
                     _actions: [duplicate]
                 add:
-                    description: ~
+                    plot.producer: ~
+                    plot: ~
+                    certificationType: ~
                     certificationDate: ~
+                    startDate: ~
                     expiryDate: ~
+                    description: ~
             # FILTERS
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
+                    plot.producer: ~
+                    plot: ~
+                    certificationType: ~
                     certificationDate: ~
+                    startDate: ~
                     expiryDate: ~
+                    description: ~
 
 ####################
 # CERTIFICATION TYPE

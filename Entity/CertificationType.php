@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * Copyright (C) 2015-2016 Libre Informatique
+ *
+ * This file is licenced under the GNU GPL v3.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Librinfo\SeedBatchBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
@@ -22,18 +30,18 @@ class CertificationType
         CertificationTypeExtension,
         Timestampable,
         Descriptible;
-    
+
     /**
      * @var string
      */
     private $code;
-    
+
     /**
      * @var \Librinfo\MediaBundle\Entity\File
      */
     private $logo;
 
-    
+
     /**
      * Constructor
      */
@@ -50,11 +58,11 @@ class CertificationType
         $this->code = null;
         $this->initCollections();
     }
-    
+
     public function initCollections()
     {
     }
-    
+
     /**
      * Set code
      *
@@ -71,13 +79,13 @@ class CertificationType
     /**
      * Get code
      *
-     * @return string 
+     * @return string
      */
     public function getCode()
     {
         return $this->code;
     }
-    
+
     /**
      * Set logo
      *
@@ -90,7 +98,7 @@ class CertificationType
 
         return $this;
     }
-    
+
     /**
      * alias for LibrinfoMediaBundle/CRUDController::handleFiles()
      *
@@ -104,13 +112,13 @@ class CertificationType
     /**
      * Get logo
      *
-     * @return \Librinfo\MediaBundle\Entity\File 
+     * @return \Librinfo\MediaBundle\Entity\File
      */
     public function getLogo()
     {
         return $this->logo;
     }
-    
+
     public function getLibrinfoFile()
     {
         return $this->getLogo();
