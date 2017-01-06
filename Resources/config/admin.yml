@@ -27,7 +27,7 @@ services:
             - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
 
     librinfo_seedbatch.admin.seedfarm:
-        class: Librinfo\SeedBatchBundle\Admin\SeedFarmAdminConcrete
+        class: Librinfo\SeedBatchBundle\Admin\SeedFarmAdmin
         arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedFarm, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
@@ -37,7 +37,7 @@ services:
                 label_translator_strategy: blast_core.label.strategy.librinfo
 
     librinfo_seedbatch.admin.seedbatch:
-        class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdminConcrete
+        class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdmin
         arguments: [~, Librinfo\SeedBatchBundle\Entity\SeedBatch, BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
