@@ -58,14 +58,12 @@ parameters:
                                 type: sonata_type_model
                             variety:
                                 type: sonata_type_model_autocomplete
-                                by_reference: false
                                 property: name
                                 _options:
                                     admin_code: librinfo_varieties.admin.variety
                                     translation_domain: messages
                             producer:
                                 type: sonata_type_model_autocomplete
-                                by_reference: false
                                 property: name
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
                                 _options:
@@ -75,20 +73,25 @@ parameters:
                             plot:
                                 type: sonata_type_model_autocomplete
                                 property: [name, code, producer.name]  # TODO: producer.name has no effect, WHY ???
-                                by_reference: false
                                 to_string_callback: Librinfo\SeedBatchBundle\Admin\PlotAdmin::autocompleteToString
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.plot
                             description: ~
                         form_group_germination_rate:
                             germinationRate: ~
-                            germinationDate: ~
+                            germinationDate:
+                                type: sonata_type_date_picker
+                                required: false
                         form_group_tkw:
                             tkw: ~
-                            tkwDate: ~
+                            tkwDate:
+                                type: sonata_type_date_picker
+                                required: false
                     form_tab_stocks:
                         form_group_delivery:
-                            deliveryDate: ~
+                            deliveryDate:
+                                type: sonata_type_date_picker
+                                required: false
                             deliveryNote: ~
                             grossProducerWeight: ~
                             grossDeliveredWeight: ~
@@ -202,7 +205,6 @@ parameters:
                                 label: false
                                 _options:
                                     edit: inline
-                                    inline: table
                     _options:
                         tabsOrder: [form_group_general, form_tab_certifications, form_group_specifics]
 
@@ -467,14 +469,15 @@ parameters:
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
                     description: ~
+                    createdAt: ~
+                    createdBy: ~
+                    updatedAt: ~
+                    updatedBy: ~
                 add:
-                    form_group_general:
+                    form_tab_general:
                         '':
                             code:
                                 label: librinfo.label.certification_code
-                            plot:
-                                _options:
-                                    admin_code: librinfo_seedbatch.admin.plot
                             certificationType:
                                 type: sonata_type_model
                                 btn_add: false
@@ -507,8 +510,10 @@ parameters:
                 remove:
                     _actions: [duplicate]
                 add:
-                    plot.producer: ~
-                    plot: ~
+                    plot.producer: 
+                        admin_code: librinfo_seedbatch.admin.seed_producer
+                    plot:
+                        admin_code: librinfo_seedbatch.admin.plot
                     certificationType: ~
                     certificationDate: ~
                     startDate: ~
@@ -517,8 +522,10 @@ parameters:
             # FILTERS
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add:
-                    plot.producer: ~
-                    plot: ~
+                    plot.producer:
+                        admin_code: librinfo_seedbatch.admin.seed_producer
+                    plot:
+                        admin_code: librinfo_seedbatch.admin.plot
                     certificationType: ~
                     certificationDate: ~
                     startDate: ~
