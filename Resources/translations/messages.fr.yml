@@ -1,15 +1,15 @@
-
-form_group_certifications: Certifications
+form_tab_general.: ''
+form_group_certifications: Certificats
 form_group_delivery: Livraison
 form_group_germination_rate: Taux de germination
 form_group_plot: Parcelle
 form_group_seedbatch: Lot
 form_group_tkw: PMG
-form_tab_certifications: Certifications
+form_tab_certifications: Certificats
 form_tab_plots: Parcelles
 form_tab_seedbatches: Lots
 form_tab_stocks: Stocks
-show_tab_certifications: Certifications
+show_tab_certifications: Certificats
 show_tab_plots: Parcelles
 show_tab_seedbatches: Lots
 
@@ -22,7 +22,7 @@ librinfo:
         missing_seed_farm: Le champ "Artisan semencier" est vide
         missing_seed_farm_code: Le champ "Code artisan semencier" est vide
         missing_seed_farm_name: Le champ "Nom de l'artisan semencier" est vide
-        missing_seed_prodcer: Le champ "Producteur" est vide
+        missing_producer: Le champ "Producteur" est vide
         missing_seed_producer_code: Le champ "Code producteur" est vide
         missing_species: Le champ "Espèce" est vide
         missing_species_code: Le champ "Code espèce" est vide
