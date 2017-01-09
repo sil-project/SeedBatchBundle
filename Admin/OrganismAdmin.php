@@ -13,7 +13,6 @@ namespace Librinfo\SeedBatchBundle\Admin;
 use Blast\CoreBundle\Admin\CoreAdmin;
 use Librinfo\CRMBundle\Entity\Organism;
 use Librinfo\EmailCRMBundle\Admin\OrganismAdmin as BaseOrganismAdmin;
-use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
