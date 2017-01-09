@@ -12,15 +12,12 @@ namespace Librinfo\SeedBatchBundle\Admin;
 
 use Sonata\CoreBundle\Validator\ErrorElement;
 use Blast\CoreBundle\Admin\CoreAdmin;
-use Blast\CoreBundle\Admin\Traits\Base as BaseAdmin;
 use Blast\CoreBundle\Admin\Traits\HandlesRelationsAdmin;
 use Librinfo\SeedBatchBundle\Entity\Plot;
 
 class PlotAdmin extends CoreAdmin
 {
-
-    use HandlesRelationsAdmin    
-        ;
+    use HandlesRelationsAdmin;
     
     /**
      * @param Plot $plot

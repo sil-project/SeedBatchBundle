@@ -29,6 +29,7 @@ Librinfo\SeedBatchBundle\Entity\Certification:
         plot:
             targetEntity: Librinfo\SeedBatchBundle\Entity\Plot
             inversedBy: certifications
+            cascade: [ persist ]
         certificationType:
             targetEntity: Librinfo\SeedBatchBundle\Entity\CertificationType
         certifyingBody:

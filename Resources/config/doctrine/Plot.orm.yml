@@ -13,7 +13,9 @@ Librinfo\SeedBatchBundle\Entity\Plot:
         certifications:
             targetEntity: Librinfo\SeedBatchBundle\Entity\Certification
             mappedBy: plot
-
+            cascade: [ persist, remove ]
+            orphanRemoval: true
+            
     manyToOne:
         producer:
             targetEntity: Librinfo\CRMBundle\Entity\Organism
