@@ -10,17 +10,10 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
-use Doctrine\ORM\EntityManager;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 
 class SeedProducerAdmin extends OrganismAdmin
 {
-    /**
-     *
-     * @var EntityManager
-     */
-    private $manager;
-
     protected $baseRouteName = 'admin_librinfo_seedbatch_seedProducer';
     protected $baseRoutePattern = 'librinfo/seedbatch/seed-producer';
     
@@ -37,6 +30,7 @@ class SeedProducerAdmin extends OrganismAdmin
     {
         $query = parent::createQuery($context);
         $query->andWhere('o.seedProducer = true');
+        
         return $query;
     }
     
@@ -46,21 +40,12 @@ class SeedProducerAdmin extends OrganismAdmin
     public function getNewInstance()
     {
         $object = parent::getNewInstance();
+        $seedProducersCircle = $this->getConfigurationPool()->getContainer()->get('librinfo_crm.app_circles')->getCircle('seed_producers');
 
         $object->setSeedProducer(true);
-        $seed_producers_circle = $this->getConfigurationPool()->getContainer()->get('librinfo_crm.app_circles')->getCircle('seed_producers');
-        $object->addCircle($seed_producers_circle);
+        $object->addCircle($seedProducersCircle);
 
         return $object;
-    }
-
-    /**
-     *
-     * @param EntityManager $manager
-     */
-    public function setManager(EntityManager $manager)
-    {
-        $this->manager = $manager;
     }
     
     /**
