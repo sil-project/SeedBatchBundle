@@ -84,10 +84,6 @@ services:
               group: admin
               label: Certification
               label_translator_strategy: blast_core.label.strategy.librinfo
-        calls:
-            - [ setTemplate, [ edit, BlastCoreBundle:CRUD:base_edit.html.twig ] ]
-            - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
-            - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
 
     librinfo_seed_batch.admin.certification_type:
         class: Librinfo\SeedBatchBundle\Admin\CertificationTypeAdmin
@@ -98,10 +94,6 @@ services:
               group: admin
               label: CertificationType
               label_translator_strategy: blast_core.label.strategy.librinfo
-        calls:
-            - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
-            - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
-            - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
 
     librinfo_seed_batch.admin.certifying_body:
         class: Librinfo\SeedBatchBundle\Admin\CertifyingBodyAdmin
@@ -114,6 +106,4 @@ services:
               label_translator_strategy: blast_core.label.strategy.librinfo
         calls:
             - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
-            - [ setTemplate, [ list, BlastCoreBundle:CRUD:base_list.html.twig ] ]
-            - [ setTemplate, [ show, BlastCoreBundle:CRUD:base_show.html.twig ] ]
 
