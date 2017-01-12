@@ -123,6 +123,12 @@ parameters:
                         label: librinfo.label.seed_batch_code
                     seedFarm.name: ~
                     producer.name: ~
+                    plot.name: ~
+                    productionYear:
+                        type: doctrine_orm_date
+                        field_type: sonata_type_date_picker
+                        field_options:                          
+                           dp_view_mode: years
 
 #######################
 # SEED BATCH EMBEDDED
