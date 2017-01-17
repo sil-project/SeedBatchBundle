@@ -47,8 +47,9 @@ librinfo:
         gross_producer_weight: Poids brut chez le producteur
         list_seed_producer_name: Producteur
         logo: Logo
-        menu.plots: Parcelles
-        menu.seed_batches: Lots
+        menu:
+            plots: Parcelles
+            seed_batches: Lots
         net_screened_weight: Poids net trié
         plot: Parcelle
         plot_name: Nom de la parcelle
@@ -60,6 +61,7 @@ librinfo:
         seed_batch_code: Code Lot
         seed_batches: Lots
         seed_farm: Artisan semencier
+        seed_farm_name: Artisan semencier
         seed_producer: Producteur de semences
         seedbatches: Lots
         tkw_date: Date de la mesure
