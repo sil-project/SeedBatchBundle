@@ -44,6 +44,8 @@ services:
                 group: Seed Batches
                 label: librinfo.seedbatch.seed_batch_admin.label
                 label_translator_strategy: blast_core.label.strategy.librinfo
+        calls:
+            - [ setTemplate, [edit, LibrinfoSeedBatchBundle:SeedBatchAdmin:edit.html.twig]]
 
     librinfo_seedbatch.admin.seedbatch_embedded:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchEmbeddedAdmin
