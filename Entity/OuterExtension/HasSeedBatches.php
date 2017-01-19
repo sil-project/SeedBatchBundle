@@ -25,7 +25,7 @@ trait HasSeedBatches
      *
      * @param SeedBatch $seedBatch
      *
-     * @return this
+     * @return self
      */
     public function addSeedBatch($seedBatch)
     {

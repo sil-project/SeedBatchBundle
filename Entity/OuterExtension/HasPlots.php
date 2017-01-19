@@ -25,7 +25,7 @@ trait HasPlots
      *
      * @param Plot $plot
      *
-     * @return this
+     * @return self
      */
     public function addPlot($plot)
     {
