@@ -1,4 +1,4 @@
-form_tab_general.: ''
+form_tab_general: 'Général'
 form_group_certifications: Certificats
 form_group_delivery: Livraison
 form_group_germination_rate: Taux de germination
@@ -67,6 +67,8 @@ librinfo:
         tkw_date: Date de la mesure
         to_screen_weight: Poids restant à trier
         variety: Variété
+        plot_producer: Producteur
+        start_date: Date de mise en vigueur
     link:
         certification_create: Créer une certification
         certification_list: Liste des certifications
