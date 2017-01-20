@@ -121,13 +121,18 @@ parameters:
                 add:
                     code:
                         label: librinfo.label.seed_batch_code
+                    variety:
+                        type: doctrine_orm_model_autocomplete
+                        field_options:
+                            property: [name, code]
+                        admin_code: librinfo_varieties.admin.variety
                     seedFarm.name: ~
                     producer.name: ~
                     plot.name: ~
                     productionYear:
                         type: doctrine_orm_date
                         field_type: sonata_type_date_picker
-                        field_options:                          
+                        field_options:
                            dp_view_mode: years
 
 #######################
@@ -516,7 +521,7 @@ parameters:
                 remove:
                     _actions: [duplicate]
                 add:
-                    plot.producer: 
+                    plot.producer:
                         admin_code: librinfo_seedbatch.admin.seed_producer
                     plot:
                         admin_code: librinfo_seedbatch.admin.plot
