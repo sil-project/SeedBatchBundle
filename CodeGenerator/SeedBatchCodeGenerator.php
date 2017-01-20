@@ -1,4 +1,11 @@
 <?php
+/*
+ * Copyright (C) 2015-2016 Libre Informatique
+ *
+ * This file is licenced under the GNU GPL v3.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Librinfo\SeedBatchBundle\CodeGenerator;
 
@@ -31,9 +38,6 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
      */
     public static function generate($seedBatch)
     {
-        // TODO...
-        $seedFarmCode = 'LIB';
-
         if (!$seedFarm = $seedBatch->getSeedFarm())
             throw new InvalidEntityCodeException('librinfo.error.missing_seed_farm');
         if (!$seedFarmCode = $seedFarm->getCode())
@@ -54,7 +58,7 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
         $producer = $seedBatch->getProducer();
         if (!$producer)
             throw new InvalidEntityCodeException('librinfo.error.missing_producer');
-        if (!$producerCode = $producer->getSupplierCode())
+        if (!$producerCode = $producer->getSeedProducerCode())
             throw new InvalidEntityCodeException('librinfo.error.missing_producer_code');
 
         $productionYear = (int)$seedBatch->getProductionYear();
