@@ -24,7 +24,7 @@ trait OrganismExtension
      *
      * @var boolean
      */
-    private $seedProducer;
+    private $seedProducer = false;
 
     /**
      * Set seedProducerCode
