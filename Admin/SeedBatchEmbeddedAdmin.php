@@ -2,9 +2,10 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
+use Blast\CoreBundle\Admin\CoreAdmin;
 use Blast\CoreBundle\Admin\Traits\EmbeddedAdmin;
 
-class SeedBatchEmbeddedAdmin extends SeedBatchAdmin
+class SeedBatchEmbeddedAdmin extends CoreAdmin
 {
     use EmbeddedAdmin;
 
