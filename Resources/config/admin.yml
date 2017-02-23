@@ -32,7 +32,7 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Seed Batches
-                label: librinfo.seedbatch.seed_form_admin.label
+                label: librinfo.seedbatch.seed_farm_admin.label
                 label_translator_strategy: blast_core.label.strategy.librinfo
 
     librinfo_seedbatch.admin.seedbatch:
