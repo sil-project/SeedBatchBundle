@@ -52,7 +52,7 @@ parameters:
                     form_group_general:
                         '':
                             code:
-                                type: librinfo_entitycode
+                                type: Blast\CoreBundle\Form\Type\EntityCodeType
                                 label: librinfo.label.seed_batch_code
                             seedFarm:
                                 type: sonata_type_model
@@ -207,7 +207,7 @@ parameters:
                             name:
                                 label: librinfo.label.plot_name
                             code:
-                                type: librinfo_entitycode
+                                type: Blast\CoreBundle\Form\Type\EntityCodeType
                     form_tab_certifications:
                         form_group_certifications:
                             certifications:
@@ -304,7 +304,7 @@ parameters:
                         '':
                             name: ~
                             code:
-                                type: librinfo_entitycode
+                                type: Blast\CoreBundle\Form\Type\EntityCodeType
                         _options:
                             groupsOrder: ['', form_group_description, form_group_main_address]
 
@@ -362,7 +362,7 @@ parameters:
                                 type: checkbox
                                 required: false
                             seedProducerCode:
-                                type: librinfo_entitycode
+                                type: Blast\CoreBundle\Form\Type\EntityCodeType
                                 attr:
                                     placeholder: librinfo.placeholder.seed_producer_code
                             _options:
@@ -576,7 +576,7 @@ parameters:
                             code:
                                 required: true
                             logo:
-                                type: librinfo_dropzone
+                                type: Librinfo\MediaBundle\Form\Type\DropzoneType
                                 required: false
                             description:
                                 type: textarea
