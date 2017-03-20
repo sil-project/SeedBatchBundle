@@ -155,7 +155,6 @@ parameters:
                                     admin_code: librinfo_varieties.admin.variety
                             producer:
                                 type: sonata_type_model_autocomplete
-                                by_reference: false
                                 property: name
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
                                 _options:
@@ -199,7 +198,6 @@ parameters:
                         '':
                             producer:
                                 type: sonata_type_model_autocomplete
-                                by_reference: false
                                 property: name
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
                                 _options:
