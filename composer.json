@@ -3,8 +3,8 @@
     "type": "symfony-bundle",
     "description": "Seed batch Bundle for Symfony",
     "require": {
-        "php": ">=5.6.0",
-        "symfony/symfony": "2.8.*",
+        "php": "^5.6|^7.0",
+        "symfony/symfony": "3.2.*",
         "libre-informatique/varieties-bundle": "dev-master",
         "blast-project/utils-bundle": "dev-master"
     },
