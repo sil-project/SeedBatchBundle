@@ -442,7 +442,6 @@ parameters:
                         fieldsOrder:
                             - name
                             - seedProducerCode
-                            - city
                             - category.name
                             - circles
                             - alert
