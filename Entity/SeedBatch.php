@@ -123,7 +123,7 @@ class SeedBatch
 
     public function __toString()
     {
-        return $this->code ? $this->code : $this->id;
+        return (string)($this->code ? $this->code : $this->id) ;
     }
 
     /**
