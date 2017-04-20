@@ -8,13 +8,18 @@
         "libre-informatique/varieties-bundle": "dev-master",
         "blast-project/utils-bundle": "dev-master"
     },
-    "license":  "GPL-3.0",
-    "keywords": ["e-venement", "libio", "sonata", "symfony"],
+    "license": "GPL-3.0",
+    "keywords": [
+        "e-venement",
+        "libio",
+        "sonata",
+        "symfony"
+    ],
     "homepage": "https://github.com/libre-informatique/SymfonyLibrinfoSeedBatchBundle",
     "authors": [
         {
-           "name": "Marcos BEZERRA DE MENEZES",
-           "email": "marcos.bezerra@libre-informatique.fr"
+            "name": "Marcos BEZERRA DE MENEZES",
+            "email": "marcos.bezerra@libre-informatique.fr"
         },
         {
             "name": "Libre Informatique",
@@ -22,6 +27,9 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Librinfo\\SeedBatchBundle\\": "" }
+        "psr-4": {
+            "Librinfo\\SeedBatchBundle\\": "src/",
+            "Librinfo\\SeedBatchBundle\\Tests\\": "tests/"
+        }
     }
 }
