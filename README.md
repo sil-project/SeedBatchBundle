@@ -9,7 +9,4 @@
 [![Total Downloads](https://poser.pugx.org/libre-informatique/seed-batch-bundle/downloads)](https://packagist.org/packages/libre-informatique/seed-batch-bundle)
 
 
-
-
-
 Bundle for seed batches management
