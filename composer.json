@@ -5,8 +5,11 @@
     "require": {
         "php": "^5.6|^7.0",
         "symfony/symfony": "3.2.*",
-        "libre-informatique/varieties-bundle": "dev-master",
-        "blast-project/utils-bundle": "dev-master"
+        "libre-informatique/varieties-bundle": "^0.4",
+        "blast-project/utils-bundle": "^0.4"
+    },
+    "require-dev": {
+	"symfony/phpunit-bridge": "3.2.*"
     },
     "license": "GPL-3.0",
     "keywords": [
