@@ -346,7 +346,7 @@ parameters:
                         tabsOrder:
                             - form_group_general
                             - form_tab_info
-                            - form_group_contacts
+                            - form_tab_individuals
                             - show_tab_plots
                             - show_tab_seedbatches
                             - show_tab_emails
@@ -354,7 +354,7 @@ parameters:
 
             Sonata\AdminBundle\Form\FormMapper:
                 add:
-                    form_group_general:
+                    form_tab_general:
                         form_group_organism:
                             seedProducer:
                                 type: checkbox
@@ -368,22 +368,22 @@ parameters:
                                     - active
                                     - title
                                     - firstname
+                                    - lastname
                                     - name
+                                    - email
+                                    - emailNpai
+                                    - emailNoNewsletter
+                                    - alert
                                     - customer
                                     - customerCode
                                     - supplier
                                     - supplierCode
                                     - seedProducer
                                     - seedProducerCode
-                                    - circles
-                                    - category
-                                    - alert
-                                    - description
-                                    - administrativeNumber
-                                    - email
-                                    - emailNpai
-                                    - emailNoNewsletter
-                                    - url
+#                                    - circles
+#                                    - category
+#                                    - description
+#                                    - url
                     form_tab_plots:
                         '':
                             plots:
@@ -416,17 +416,21 @@ parameters:
                                     admin_code: librinfo_seedbatch.admin.seedbatch_embedded
                     _options:
                         tabsOrder:
-                            - form_group_general
-                            - form_tab_info
-                            - form_group_contacts
+                            - form_tab_general
+                            - form_tab_individuals
                             - form_tab_plots
                             - form_tab_seedbatches
+                            - form_tab_info
                             - form_group_specifics
 
             Sonata\AdminBundle\Datagrid\ListMapper:
                 add: ~
             Sonata\AdminBundle\Datagrid\DatagridMapper:
                 add: ~
+
+################
+# SEED PRODUCER
+################
 
         Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin:
             Sonata\AdminBundle\Datagrid\ListMapper:

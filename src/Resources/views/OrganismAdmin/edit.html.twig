@@ -64,13 +64,14 @@ file that was distributed with this source code.
 
             // Move things around...
             var seedProducer_container = $('#sonata-ba-field-container-' + prefix + 'seedProducer');
-            seedProducer_container.wrap('<div class="form-inline">');
-            seedProducer_container.find('.sonata-ba-field').css({display: 'inline-block', minWidth: '180px'});
-            seedProducer_container.find('label').css('margin-left', '0').css('margin-right', '1em');
+            seedProducer_container.addClass('form-inline');
+            seedProducer_container.find('.sonata-ba-field').css({display: 'inline-block', minWidth: '200px'});
+            seedProducer_container.find('label').css({'margin-left': '0', 'margin-right': '1em'});
             var seedProducer_code_container = $('#sonata-ba-field-container-' + prefix + 'seedProducerCode');
-            seedProducer_code_container.find('input').appendTo(seedProducer_container);
+            seedProducer_code_container.find('input').css({display: 'inline-block'}).appendTo(seedProducer_container);
             seedProducer_code_container.find('a').appendTo(seedProducer_container);
-            seedProducer_code_container.find('label').remove();
+            seedProducer_code_container.find('div.loader').appendTo(seedProducer_container);
+            seedProducer_code_container.remove();
 
             function toggleSeedProducerCode(){
                 var $code = $('#' + prefix + 'seedProducerCode');
