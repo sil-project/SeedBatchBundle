@@ -45,8 +45,8 @@ class OrganismAdmin extends BaseOrganismAdmin
      */
     protected function configureFormFields(FormMapper $mapper)
     {
-        CoreAdmin::configureFormFields($mapper);
-        
+        parent::configureFormFields($mapper);
+
         if( $this->subject )
             if( !$this->subject->isSeedProducer() )
             {
@@ -65,7 +65,7 @@ class OrganismAdmin extends BaseOrganismAdmin
     protected function configureShowFields(ShowMapper $mapper)
     {
         CoreAdmin::configureShowFields($mapper);
-        
+
         if( $this->subject )
             if( !$this->subject->isSeedProducer() )
             {
