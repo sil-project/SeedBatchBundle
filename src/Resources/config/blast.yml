@@ -344,13 +344,15 @@ parameters:
                                 admin_code: librinfo_seedbatch.admin.seedbatch_embedded
                     _options:
                         tabsOrder:
-                            - form_group_general
-                            - form_tab_info
-                            - form_tab_individuals
+                            - show_tab_general
+                            - show_tab_phones
+                            - show_tab_addresses
+                            - show_tab_individuals
                             - show_tab_plots
                             - show_tab_seedbatches
+                            - show_tab_info
                             - show_tab_emails
-                            - default
+                            - form_group_specifics
 
             Sonata\AdminBundle\Form\FormMapper:
                 add:
