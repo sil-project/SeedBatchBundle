@@ -96,6 +96,8 @@ services:
               group: admin
               label: CertificationType
               label_translator_strategy: blast_core.label.strategy.librinfo
+        calls:
+            - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
 
     librinfo_seed_batch.admin.certifying_body:
         class: Librinfo\SeedBatchBundle\Admin\CertifyingBodyAdmin
@@ -108,4 +110,3 @@ services:
               label_translator_strategy: blast_core.label.strategy.librinfo
         calls:
             - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
-

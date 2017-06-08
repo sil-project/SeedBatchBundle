@@ -333,6 +333,7 @@ parameters:
 
         Librinfo\SeedBatchBundle\Admin\OrganismAdmin:
             Sonata\AdminBundle\Show\ShowMapper:
+                titleTemplate: LibrinfoSeedBatchBundle:OrganismAdmin:show_title.html.twig
                 add:
                     show_tab_plots:
                         '':
@@ -664,4 +665,3 @@ parameters:
                     name: ~
                     code: ~
                     description: ~
-

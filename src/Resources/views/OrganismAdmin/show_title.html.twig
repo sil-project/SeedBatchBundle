@@ -1,0 +1,3 @@
+<a class="navbar-brand" href="#">
+    {% if object.isIndividual() %}{{ 'librinfo.label.individual'|trans() }}: {{ object.firstName }} {{ object.lastName }}{% else %}{{ 'librinfo.label.organization'|trans() }}: {{ object.name }}{% endif %}
+</a>
