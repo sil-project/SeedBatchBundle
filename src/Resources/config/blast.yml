@@ -298,13 +298,16 @@ parameters:
                     name: ~
                     vcard_uid: ~
                 add:
-                    form_group_general:
-                        '':
+                    form_tab_general:
+                        form_group_general:
                             name: ~
                             code:
                                 type: Blast\CoreBundle\Form\Type\EntityCodeType
+                            description: ~
                         _options:
-                            groupsOrder: ['', form_group_description, form_group_main_address]
+                            groupsOrder: [form_group_general, form_group_main_address]
+                    _options:
+                        tabsOrder: [form_tab_general, form_tab_history]
 
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove:
