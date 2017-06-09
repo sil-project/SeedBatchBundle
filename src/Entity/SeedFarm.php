@@ -46,6 +46,7 @@ class SeedFarm
      */
     public function __construct()
     {
+        $this->country = 'FR';
         $this->seedBatches = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -109,4 +110,3 @@ class SeedFarm
         return $this->seedBatches;
     }
 }
-

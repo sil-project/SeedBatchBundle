@@ -10,9 +10,11 @@ parameters:
         Librinfo\SeedBatchBundle\Entity\SeedBatch:
             Sonata\AdminBundle\Show\ShowMapper:
                 forceTabs: true
+                remove:
+                    description: ~
                 add:
-                    form_group_general:
-                        '':
+                    form_tab_general:
+                        form_group_general:
                             code:
                                 label: librinfo.label.seed_batch_code
                             seedFarm: ~
@@ -25,6 +27,7 @@ parameters:
                             batchNumber: ~
                             plot:
                                 admin_code: librinfo_seedbatch.admin.plot
+                            description: ~
                         form_group_germination_rate:
                             germinationRate: ~
                             germinationDate: ~
@@ -41,9 +44,9 @@ parameters:
                             toScreenWeight: ~
                     _options:
                         tabsOrder:
-                            - form_group_general
+                            - form_tab_general
                             - form_tab_stocks
-                            - form_group_specifics
+                            - form_tab_history
 
             Sonata\AdminBundle\Form\FormMapper:
                 remove:
