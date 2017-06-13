@@ -41,7 +41,7 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
         if ($organism->isIndividual()) {
             $positions = $organism->getPositions();
             if ($positions) {
-                $contact = $positions[0]->getContact();
+                $contact = (is_array($positions) ? $positions[0]->getContact() : $positions->getContact());
                 if ($contact->getName())
                     $name = $contact->getName();
                 else if ($contact->getFirstname())
