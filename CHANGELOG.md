@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.4.3](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.3) (2017-06-13)
+[Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.2...0.4.3)
+
+**Merged pull requests:**
+
+- DevKit updates for SeedBatchBundle [\#7](https://github.com/libre-informatique/SeedBatchBundle/pull/7) ([BlastCI](https://github.com/BlastCI))
+- DevKit updates for SeedBatchBundle [\#6](https://github.com/libre-informatique/SeedBatchBundle/pull/6) ([BlastCI](https://github.com/BlastCI))
+- DevKit updates for SeedBatchBundle [\#5](https://github.com/libre-informatique/SeedBatchBundle/pull/5) ([BlastCI](https://github.com/BlastCI))
+- DevKit updates for SeedBatchBundle [\#3](https://github.com/libre-informatique/SeedBatchBundle/pull/3) ([BlastCI](https://github.com/BlastCI))
+
 ## [0.4.2](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.2) (2017-05-05)
 [Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.2...0.4.2)
 
