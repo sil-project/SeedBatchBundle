@@ -148,6 +148,9 @@ parameters:
             Sonata\AdminBundle\Form\FormMapper:
                 forceTabs: false
                 remove:
+                    producer: ~
+                    seedFarm: ~
+                    description: ~
                     code: ~
                     germinationRate: ~
                     germinationDate: ~
@@ -171,6 +174,8 @@ parameters:
                             variety:
                                 _options:
                                     admin_code: librinfo_varieties.admin.variety
+                            seedFarm:
+                                type: sonata_type_model
                             producer:
                                 type: sonata_type_model_autocomplete
                                 property: name
@@ -182,6 +187,7 @@ parameters:
                             plot:
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.plot_embedded
+                            description: ~
                         form_group_germination_rate:
                             germinationRate: ~
                             germinationDate:
@@ -338,7 +344,7 @@ parameters:
                     npai: ~
                     certifications: ~
                 add:
-                    form_tab_general:
+                    '':
                         form_group_plot:
                             name:
                                 label: librinfo.label.plot_name
