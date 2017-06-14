@@ -60,6 +60,7 @@ class Plot
      */
     public function __construct()
     {
+        $this->country = 'FR';
         $this->initCollections();
         $this->initOuterExtendedClasses();
     }
@@ -195,4 +196,3 @@ class Plot
         return $this->certifications;
     }
 }
-
