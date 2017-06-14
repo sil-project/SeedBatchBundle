@@ -729,8 +729,8 @@ parameters:
                     description: ~
                     vcard_uid: ~
                 add:
-                    form_group_general:
-                        '':
+                    form_tab_general:
+                        form_group_general:
                             name:
                                 required: true
                             code:
@@ -739,8 +739,10 @@ parameters:
                             description:
                                 type: textarea
                                 required: false
+                        _options:
+                            groupsOrder: [form_group_general, form_group_main_address]
                     _options:
-                        tabsOrder: [form_group_general, form_group_specifics]
+                        tabsOrder: [form_tab_general, form_tab_history]
             # LIST
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove:
