@@ -12,6 +12,9 @@ form_tab_stocks: Stocks
 show_tab_certifications: Certificats
 show_tab_plots: Parcelles
 show_tab_seedbatches: Lots
+form_tab_general.form_group_certifications: Certificats
+form_tab_general.form_group_plot: Parcelle
+form_tab_general.form_group_general: Général
 
 librinfo:
     error:
