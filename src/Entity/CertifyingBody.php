@@ -53,6 +53,7 @@ class CertifyingBody
      */
     public function __construct()
     {
+        $this->country = 'FR';
         $this->initCollections();
         $this->initOuterExtendedClasses();
     }
@@ -156,4 +157,3 @@ class CertifyingBody
         return $this->certifications;
     }
 }
-
