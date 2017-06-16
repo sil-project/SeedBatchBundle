@@ -570,11 +570,11 @@ parameters:
                             description: ~
                             certifyingBody: ~
                             certificationDate:
-                                type: sonata_type_datepicker
+                                type: date
                             startDate:
-                                type: sonata_type_datepicker
+                                type: date
                             expiryDate:
-                                type: sonata_type_datepicker
+                                type: date
                     _options:
                         tabsOrder: [main_tab, form_group_specifics]
 
