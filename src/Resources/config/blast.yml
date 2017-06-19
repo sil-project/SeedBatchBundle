@@ -432,6 +432,21 @@ parameters:
             Sonata\AdminBundle\Show\ShowMapper:
                 titleTemplate: LibrinfoSeedBatchBundle:OrganismAdmin:show_title.html.twig
                 add:
+                    show_tab_general:
+                        '':
+                            isSeedProducer:
+                                template: 'LibrinfoCRMBundle:CRUD:show_field_seedProducer.html.twig'
+                            _options:
+                                fieldsOrder:
+                                    - fulltextName
+                                    - isCustomer
+                                    - isSupplier
+                                    - isSeedProducer
+                                    - circles
+                                    - description
+                                    - email
+                                    - category.name
+                                    - active
                     show_tab_plots:
                         '':
                             plots:

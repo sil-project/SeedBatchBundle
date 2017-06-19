@@ -10,6 +10,8 @@
 
 namespace Librinfo\SeedBatchBundle\Admin;
 
+use Sonata\AdminBundle\Form\FormMapper;
+
 // use Blast\CoreBundle\Admin\Traits\EmbeddedAdmin;
 
 class PlotEmbeddedAdmin extends PlotAdmin
@@ -18,5 +20,10 @@ class PlotEmbeddedAdmin extends PlotAdmin
 
     protected $baseRouteName = 'admin_librinfo_seedbatch_plot_embedded';
     protected $baseRoutePattern = 'librinfo/seedbatch/plot_embedded';
+
+    public function configureFormFields(FormMapper $mapper) {
+        parent::configureFormFields($mapper);
+        $mapper->remove('producer');
+    }
 
 }

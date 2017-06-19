@@ -57,7 +57,7 @@ trait OrganismExtension
 
     public function isSeedProducer()
     {
-        return $this->seedProducer;
+        return (bool)$this->seedProducer;
     }
 
     public function setSeedProducer($seedProducer)
