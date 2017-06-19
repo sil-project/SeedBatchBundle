@@ -69,6 +69,8 @@ librinfo:
         variety: Variété
         plot_producer: Producteur
         start_date: Date de mise en vigueur
+        is_seed_producer: Producteur
+        seedproducercode: Code producteur
     link:
         certification_create: Créer une certification
         certification_list: Liste des certifications
