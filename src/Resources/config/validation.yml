@@ -1,0 +1,6 @@
+Librinfo\SeedBatchBundle\Entity\Plot:
+    properties:
+        producer:
+            - NotNull: ~
+        code:
+            - NotNull: ~

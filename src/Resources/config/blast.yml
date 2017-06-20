@@ -283,6 +283,8 @@ parameters:
                                 label: librinfo.label.plot_name
                             code:
                                 type: Blast\CoreBundle\Form\Type\EntityCodeType
+                                attr:
+                                    required: true
                             description: ~
 
                         _options:
@@ -602,8 +604,8 @@ parameters:
                     updatedAt: ~
                     updatedBy: ~
                 add:
-                    form_tab_general:
-                        form_group_general:
+                    '':
+                        '':
                             code:
                                 label: librinfo.label.certification_code
                             certificationType:
