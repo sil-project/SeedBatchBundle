@@ -5,8 +5,11 @@
     "require": {
         "php": ">=5.6",
         "symfony/symfony": ">=3.2",
-        "libre-informatique/varieties-bundle": "dev-wip-lisem",
-        "blast-project/utils-bundle": "dev-wip-lisem"
+        "blast-project/core-bundle": "dev-wip-lisem",
+        "blast-project/utils-bundle": "dev-wip-lisem",
+        "blast-project/base-entities-bundle": "dev-wip-lisem",
+        "libre-informatique/media-bundle": "dev-wip-lisem",
+        "libre-informatique/varieties-bundle": "dev-wip-lisem"
     },
     "require-dev": {
 	"symfony/phpunit-bridge": ">=3.2"
