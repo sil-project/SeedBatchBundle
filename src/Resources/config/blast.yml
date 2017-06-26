@@ -276,6 +276,7 @@ parameters:
                             producer:
                                 type: sonata_type_model_autocomplete
                                 property: name
+                                required: true
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.seed_producer
@@ -294,13 +295,11 @@ parameters:
                             certifications:
                                 type: sonata_type_collection
                                 by_reference: false
-                                required: true
                                 label: false
                                 _options:
                                     edit: inline
                     _options:
                         tabsOrder: [form_tab_general, form_tab_certifications, form_tab_history]
-
             Sonata\AdminBundle\Datagrid\ListMapper:
                 remove:
                     name: ~
@@ -608,13 +607,16 @@ parameters:
                         '':
                             code:
                                 label: librinfo.label.certification_code
+                                required: true
                             certificationType:
                                 type: sonata_type_model
+                                required: true
                                 btn_add: false
                                 attr:
                                     width: 30
                             certifyingBody:
                                 type: sonata_type_model
+                                required: true
                                 btn_add: false
                                 attr:
                                     width: 30
