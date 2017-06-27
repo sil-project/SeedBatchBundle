@@ -57,11 +57,14 @@ parameters:
                             code:
                                 type: Blast\CoreBundle\Form\Type\EntityCodeType
                                 label: librinfo.label.seed_batch_code
+                                required: true
                             seedFarm:
                                 type: sonata_type_model
+                                required: true
                             variety:
                                 type: sonata_type_model_autocomplete
                                 property: name
+                                required: true
                                 _options:
                                     admin_code: librinfo_varieties.admin.variety
                                     translation_domain: messages
@@ -69,14 +72,19 @@ parameters:
                                 type: sonata_type_model_autocomplete
                                 property: name
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
+                                required: true
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.seed_producer
-                            productionYear: ~
-                            batchNumber: ~
+                            productionYear:
+                                required: true
+                            batchNumber:
+                                required: true
+                                help: librinfo.help.batchNumber
                             plot:
                                 type: sonata_type_model_autocomplete
                                 property: [name, code, producer.name]  # TODO: producer.name has no effect, WHY ???
                                 to_string_callback: Librinfo\SeedBatchBundle\Admin\PlotAdmin::autocompleteToString
+                                required: true
                                 _options:
                                     admin_code: librinfo_seedbatch.admin.plot
                             description: ~

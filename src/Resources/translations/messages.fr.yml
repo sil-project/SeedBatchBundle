@@ -88,6 +88,8 @@ librinfo:
         seed_batch_list: Liste des lots
         seed_farm_list: Liste des Artisans Semenciers
         seed_producer_create: Créer un producteur
+    help:
+        batchNumber: Nombre entre 1 et 99
     placeholder:
         seed_producer_code: Code producteur
     seedbatch:
