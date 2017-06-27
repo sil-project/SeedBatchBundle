@@ -79,6 +79,7 @@ librinfo:
         certificationtype_list: Liste des certifications
         certifyingbody_list: Liste des organismes certificateurs
         certifying_body_list: Liste des organismes certificateurs
+        certifying_body_create: Créer un organisme certificateur
         plot_create: Créer une parcelle
         plot_list: Liste des parcelles
         seedproducer_list: Liste des producteurs
