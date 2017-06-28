@@ -104,10 +104,22 @@ parameters:
                                 type: sonata_type_date_picker
                                 required: false
                             deliveryNote: ~
-                            grossProducerWeight: ~
-                            grossDeliveredWeight: ~
-                            netScreenedWeight: ~
-                            toScreenWeight: ~
+                            grossProducerWeight:
+                                attr:
+                                    class: inline-block
+                                    width: 50
+                            grossDeliveredWeight:
+                                attr:
+                                    class: inline-block
+                                    width: 50
+                            netScreenedWeight:
+                                attr:
+                                    class: inline-block
+                                    width: 50
+                            toScreenWeight:
+                                attr:
+                                    class: inline-block
+                                    width: 50
                     _options:
                         tabsOrder:
                             - form_tab_general
