@@ -40,8 +40,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Librinfo\\SeedBatchBundle\\": "src/",
-            "Librinfo\\SeedBatchBundle\\Tests\\": "tests/"
+            "Librinfo\\SeedBatchBundle\\": "src/"
         }
     }
 }
