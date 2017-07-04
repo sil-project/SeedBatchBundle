@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -15,10 +17,9 @@ use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
 use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
 use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
-use Librinfo\SeedBatchBundle\Entity\CertificationType;
 
 /**
- * Certification
+ * Certification.
  */
 class Certification
 {
@@ -59,7 +60,6 @@ class Certification
      */
     private $certificationType;
 
-
     /**
      * @var \Librinfo\SeedBatchBundle\Entity\CertifyingBody
      */
@@ -70,9 +70,8 @@ class Certification
      */
     private $plot;
 
-
     /**
-     * Constructor
+     * Constructor.
      */
     public function __construct()
     {
@@ -93,9 +92,10 @@ class Certification
     }
 
     /**
-     * Set code
+     * Set code.
      *
      * @param string $code
+     *
      * @return Certification
      */
     public function setCode($code)
@@ -106,7 +106,7 @@ class Certification
     }
 
     /**
-     * Get code
+     * Get code.
      *
      * @return string
      */
@@ -116,9 +116,10 @@ class Certification
     }
 
     /**
-     * Set certificationDate
+     * Set certificationDate.
      *
      * @param \DateTime $certificationDate
+     *
      * @return Certification
      */
     public function setCertificationDate($certificationDate)
@@ -129,7 +130,7 @@ class Certification
     }
 
     /**
-     * Get certificationDate
+     * Get certificationDate.
      *
      * @return \DateTime
      */
@@ -139,9 +140,10 @@ class Certification
     }
 
     /**
-     * Set startDate
+     * Set startDate.
      *
      * @param \DateTime $startDate
+     *
      * @return Certification
      */
     public function setStartDate($startDate)
@@ -152,7 +154,7 @@ class Certification
     }
 
     /**
-     * Get startDate
+     * Get startDate.
      *
      * @return \DateTime
      */
@@ -162,9 +164,10 @@ class Certification
     }
 
     /**
-     * Set expiryDate
+     * Set expiryDate.
      *
      * @param \DateTime $expiryDate
+     *
      * @return Certification
      */
     public function setExpiryDate($expiryDate)
@@ -175,7 +178,7 @@ class Certification
     }
 
     /**
-     * Get expiryDate
+     * Get expiryDate.
      *
      * @return \DateTime
      */
@@ -185,9 +188,10 @@ class Certification
     }
 
     /**
-     * Set url
+     * Set url.
      *
      * @param string $url
+     *
      * @return Certification
      */
     public function setUrl($url)
@@ -198,7 +202,7 @@ class Certification
     }
 
     /**
-     * Get url
+     * Get url.
      *
      * @return string
      */
@@ -208,9 +212,10 @@ class Certification
     }
 
     /**
-     * Set certificationType
+     * Set certificationType.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\CertificationType $certificationType
+     *
      * @return Certification
      */
     public function setCertificationType(CertificationType $certificationType = null)
@@ -221,7 +226,7 @@ class Certification
     }
 
     /**
-     * Get certificationType
+     * Get certificationType.
      *
      * @return \Librinfo\SeedBatchBundle\Entity\CertificationType
      */
@@ -231,9 +236,10 @@ class Certification
     }
 
     /**
-     * Set plot
+     * Set plot.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\Plot $plot
+     *
      * @return Certification
      */
     public function setPlot(\Librinfo\SeedBatchBundle\Entity\Plot $plot = null)
@@ -244,7 +250,7 @@ class Certification
     }
 
     /**
-     * Get plot
+     * Get plot.
      *
      * @return \Librinfo\SeedBatchBundle\Entity\Plot
      */
@@ -254,9 +260,10 @@ class Certification
     }
 
     /**
-     * Set certifyingBody
+     * Set certifyingBody.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\CertifyingBody $certifyingBody
+     *
      * @return Certification
      */
     public function setCertifyingBody(\Librinfo\SeedBatchBundle\Entity\CertifyingBody $certifyingBody = null)
@@ -267,7 +274,7 @@ class Certification
     }
 
     /**
-     * Get certifyingBody
+     * Get certifyingBody.
      *
      * @return \Librinfo\SeedBatchBundle\Entity\CertifyingBody
      */

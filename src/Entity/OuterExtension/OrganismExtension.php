@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -21,13 +23,12 @@ trait OrganismExtension
     private $seedProducerCode;
 
     /**
-     *
-     * @var boolean
+     * @var bool
      */
     private $seedProducer = false;
 
     /**
-     * Set seedProducerCode
+     * Set seedProducerCode.
      *
      * @param string $seedProducerCode
      *
@@ -41,7 +42,7 @@ trait OrganismExtension
     }
 
     /**
-     * Get seedProducerCode
+     * Get seedProducerCode.
      *
      * @return string
      */
@@ -52,12 +53,12 @@ trait OrganismExtension
 
     public function producerToString()
     {
-        return (string)$this;
+        return (string) $this;
     }
 
     public function isSeedProducer()
     {
-        return (bool)$this->seedProducer;
+        return (bool) $this->seedProducer;
     }
 
     public function setSeedProducer($seedProducer)
@@ -66,5 +67,4 @@ trait OrganismExtension
 
         return $this;
     }
-
 }

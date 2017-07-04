@@ -1,9 +1,12 @@
 <?php
+
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -32,48 +35,57 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
     }
 
     /**
-     * @param  SeedBatch $seedBatch
+     * @param SeedBatch $seedBatch
+     *
      * @return string
+     *
      * @throws InvalidEntityCodeException
      */
     public static function generate($seedBatch)
     {
-        if (!$seedFarm = $seedBatch->getSeedFarm())
+        if (!$seedFarm = $seedBatch->getSeedFarm()) {
             throw new InvalidEntityCodeException('librinfo.error.missing_seed_farm');
-        if (!$seedFarmCode = $seedFarm->getCode())
+        }
+        if (!$seedFarmCode = $seedFarm->getCode()) {
             throw new InvalidEntityCodeException('librinfo.error.missing_seed_farm_code');
-
+        }
         $variety = $seedBatch->getVariety();
-        if (!$variety)
+        if (!$variety) {
             throw new InvalidEntityCodeException('librinfo.error.missing_variety');
-        if (!$varietyCode = $variety->getCode())
+        }
+        if (!$varietyCode = $variety->getCode()) {
             throw new InvalidEntityCodeException('librinfo.error.missing_variety_code');
-
+        }
         $species = $variety->getSpecies();
-        if (!$species)
+        if (!$species) {
             throw new InvalidEntityCodeException('librinfo.error.missing_species');
-        if (!$speciesCode = $species->getCode())
+        }
+        if (!$speciesCode = $species->getCode()) {
             throw new InvalidEntityCodeException('librinfo.error.missing_species_code');
-
+        }
         $producer = $seedBatch->getProducer();
-        if (!$producer)
+        if (!$producer) {
             throw new InvalidEntityCodeException('librinfo.error.missing_producer');
-        if (!$producerCode = $producer->getSeedProducerCode())
+        }
+        if (!$producerCode = $producer->getSeedProducerCode()) {
             throw new InvalidEntityCodeException('librinfo.error.missing_producer_code');
-
-        $productionYear = (int)$seedBatch->getProductionYear();
-        if (!$productionYear)
+        }
+        $productionYear = (int) $seedBatch->getProductionYear();
+        if (!$productionYear) {
             throw new InvalidEntityCodeException('librinfo.error.missing_production_year');
-        if ($productionYear < 2000 || $productionYear > 2099)
+        }
+        if ($productionYear < 2000 || $productionYear > 2099) {
             throw new InvalidEntityCodeException('librinfo.error.invalid_production_year');
+        }
         // TODO: test if year is too far in the future ?
 
         $batchNumber = $seedBatch->getBatchNumber();
-        if (!$batchNumber)
+        if (!$batchNumber) {
             throw new InvalidEntityCodeException('librinfo.error.missing_batch_number');
-        if ($batchNumber < 1 || $batchNumber > 99)
+        }
+        if ($batchNumber < 1 || $batchNumber > 99) {
             throw new InvalidEntityCodeException('librinfo.error.invalid_batch_number');
-
+        }
         return sprintf('%s-%s%s-%s-%02d-%02d',
             $seedFarmCode,
             $speciesCode,
@@ -85,9 +97,10 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
     }
 
     /**
-     * @param string    $code
-     * @param SeedFarm  $seedBatch
-     * @return          boolean
+     * @param string   $code
+     * @param SeedFarm $seedBatch
+     *
+     * @return bool
      */
     public static function validate($code, $seedBatch = null)
     {
@@ -99,6 +112,6 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
      */
     public static function getHelp()
     {
-        return self::$length . " chars (upper case letters and/or digits)";
+        return self::$length.' chars (upper case letters and/or digits)';
     }
 }

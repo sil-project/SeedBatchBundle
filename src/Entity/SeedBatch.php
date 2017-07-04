@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -19,7 +21,7 @@ use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
 /**
- * SeedBatch
+ * SeedBatch.
  */
 class SeedBatch
 {
@@ -123,11 +125,11 @@ class SeedBatch
 
     public function __toString()
     {
-        return (string)($this->code ? $this->code : $this->id) ;
+        return (string) ($this->code ? $this->code : $this->id);
     }
 
     /**
-     * Set code
+     * Set code.
      *
      * @param string $code
      *
@@ -141,7 +143,7 @@ class SeedBatch
     }
 
     /**
-     * Get code
+     * Get code.
      *
      * @return string
      */
@@ -151,7 +153,7 @@ class SeedBatch
     }
 
     /**
-     * Set batchNumber
+     * Set batchNumber.
      *
      * @param int $batchNumber
      *
@@ -165,7 +167,7 @@ class SeedBatch
     }
 
     /**
-     * Get batchNumber
+     * Get batchNumber.
      *
      * @return int
      */
@@ -175,7 +177,7 @@ class SeedBatch
     }
 
     /**
-     * Set productionYear
+     * Set productionYear.
      *
      * @param int $productionYear
      *
@@ -189,7 +191,7 @@ class SeedBatch
     }
 
     /**
-     * Get productionYear
+     * Get productionYear.
      *
      * @return int
      */
@@ -199,7 +201,7 @@ class SeedBatch
     }
 
     /**
-     * Set germinationRate
+     * Set germinationRate.
      *
      * @param float $germinationRate
      *
@@ -213,7 +215,7 @@ class SeedBatch
     }
 
     /**
-     * Get germinationRate
+     * Get germinationRate.
      *
      * @return float
      */
@@ -223,7 +225,7 @@ class SeedBatch
     }
 
     /**
-     * Set germinationDate
+     * Set germinationDate.
      *
      * @param \DateTime $germinationDate
      *
@@ -237,7 +239,7 @@ class SeedBatch
     }
 
     /**
-     * Get germinationDate
+     * Get germinationDate.
      *
      * @return \DateTime
      */
@@ -247,7 +249,7 @@ class SeedBatch
     }
 
     /**
-     * Set tkw
+     * Set tkw.
      *
      * @param float $tkw
      *
@@ -261,7 +263,7 @@ class SeedBatch
     }
 
     /**
-     * Get tkw
+     * Get tkw.
      *
      * @return float
      */
@@ -271,7 +273,7 @@ class SeedBatch
     }
 
     /**
-     * Set tkwDate
+     * Set tkwDate.
      *
      * @param \DateTime $tkwDate
      *
@@ -285,7 +287,7 @@ class SeedBatch
     }
 
     /**
-     * Get tkwDate
+     * Get tkwDate.
      *
      * @return \DateTime
      */
@@ -295,7 +297,7 @@ class SeedBatch
     }
 
     /**
-     * Set seedFarm
+     * Set seedFarm.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\SeedFarm $seedFarm
      *
@@ -309,7 +311,7 @@ class SeedBatch
     }
 
     /**
-     * Get seedFarm
+     * Get seedFarm.
      *
      * @return \Librinfo\SeedBatchBundle\Entity\SeedFarm
      */
@@ -319,7 +321,7 @@ class SeedBatch
     }
 
     /**
-     * Set variety
+     * Set variety.
      *
      * @param \Librinfo\VarietiesBundle\Entity\Variety $variety
      *
@@ -333,7 +335,7 @@ class SeedBatch
     }
 
     /**
-     * Get variety
+     * Get variety.
      *
      * @return \Librinfo\VarietiesBundle\Entity\Variety
      */
@@ -343,7 +345,7 @@ class SeedBatch
     }
 
     /**
-     * Set producer
+     * Set producer.
      *
      * @param \Librinfo\CRMBundle\Entity\Organism $producer
      *
@@ -357,7 +359,7 @@ class SeedBatch
     }
 
     /**
-     * Get producer
+     * Get producer.
      *
      * @return \Librinfo\CRMBundle\Entity\Organism
      */
@@ -367,7 +369,7 @@ class SeedBatch
     }
 
     /**
-     * Set plot
+     * Set plot.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\Plot $plot
      *
@@ -381,7 +383,7 @@ class SeedBatch
     }
 
     /**
-     * Get plot
+     * Get plot.
      *
      * @return \Librinfo\SeedBatchBundle\Entity\Plot
      */
@@ -391,7 +393,7 @@ class SeedBatch
     }
 
     /**
-     * Set certifications
+     * Set certifications.
      *
      * @param string $certifications
      *
@@ -405,7 +407,7 @@ class SeedBatch
     }
 
     /**
-     * Get certifications
+     * Get certifications.
      *
      * @return string
      */
@@ -415,7 +417,7 @@ class SeedBatch
     }
 
     /**
-     * Set grossProducerWeight
+     * Set grossProducerWeight.
      *
      * @param int $grossProducerWeight
      *
@@ -429,7 +431,7 @@ class SeedBatch
     }
 
     /**
-     * Get grossProducerWeight
+     * Get grossProducerWeight.
      *
      * @return int
      */
@@ -439,7 +441,7 @@ class SeedBatch
     }
 
     /**
-     * Set grossDeliveredWeight
+     * Set grossDeliveredWeight.
      *
      * @param int $grossDeliveredWeight
      *
@@ -453,7 +455,7 @@ class SeedBatch
     }
 
     /**
-     * Get grossDeliveredWeight
+     * Get grossDeliveredWeight.
      *
      * @return int
      */
@@ -463,7 +465,7 @@ class SeedBatch
     }
 
     /**
-     * Set netScreenedWeight
+     * Set netScreenedWeight.
      *
      * @param int $netScreenedWeight
      *
@@ -477,7 +479,7 @@ class SeedBatch
     }
 
     /**
-     * Get netScreenedWeight
+     * Get netScreenedWeight.
      *
      * @return int
      */
@@ -487,7 +489,7 @@ class SeedBatch
     }
 
     /**
-     * Set toScreenWeight
+     * Set toScreenWeight.
      *
      * @param int $toScreenWeight
      *
@@ -501,7 +503,7 @@ class SeedBatch
     }
 
     /**
-     * Get toScreenWeight
+     * Get toScreenWeight.
      *
      * @return int
      */
@@ -511,7 +513,7 @@ class SeedBatch
     }
 
     /**
-     * Set deliveryDate
+     * Set deliveryDate.
      *
      * @param \DateTime $deliveryDate
      *
@@ -525,7 +527,7 @@ class SeedBatch
     }
 
     /**
-     * Get deliveryDate
+     * Get deliveryDate.
      *
      * @return \DateTime
      */
@@ -535,7 +537,7 @@ class SeedBatch
     }
 
     /**
-     * Set deliveryNote
+     * Set deliveryNote.
      *
      * @param bool $deliveryNote
      *
@@ -549,7 +551,7 @@ class SeedBatch
     }
 
     /**
-     * Get deliveryNote
+     * Get deliveryNote.
      *
      * @return bool
      */
@@ -558,4 +560,3 @@ class SeedBatch
         return $this->deliveryNote;
     }
 }
-

@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -21,7 +23,7 @@ trait HasPlots
     private $plots;
 
     /**
-     * Add plot
+     * Add plot.
      *
      * @param Plot $plot
      *
@@ -33,15 +35,16 @@ trait HasPlots
 
         // We could have used $this->setOwningSideRelation($plot) but Plot#setOrganism method does not exist
         $plot->setProducer($this);
+
         return $this;
     }
 
     /**
-     * Remove plot
+     * Remove plot.
      *
      * @param Plot $plot
      *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     * @return bool tRUE if this collection contained the specified element, FALSE otherwise
      */
     public function removePlot($plot)
     {
@@ -49,7 +52,7 @@ trait HasPlots
     }
 
     /**
-     * Get plots
+     * Get plots.
      *
      * @return Collection
      */
@@ -57,5 +60,4 @@ trait HasPlots
     {
         return $this->plots;
     }
-
 }

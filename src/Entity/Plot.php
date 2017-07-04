@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -21,7 +23,7 @@ use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
 /**
- * Plot
+ * Plot.
  */
 class Plot
 {
@@ -54,9 +56,8 @@ class Plot
      */
     private $certifications;
 
-
     /**
-     * Constructor
+     * Constructor.
      */
     public function __construct()
     {
@@ -80,7 +81,7 @@ class Plot
     }
 
     /**
-     * Set code
+     * Set code.
      *
      * @param string $code
      *
@@ -94,7 +95,7 @@ class Plot
     }
 
     /**
-     * Get code
+     * Get code.
      *
      * @return string
      */
@@ -104,7 +105,7 @@ class Plot
     }
 
     /**
-     * Add seedBatch
+     * Add seedBatch.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
      *
@@ -118,11 +119,11 @@ class Plot
     }
 
     /**
-     * Remove seedBatch
+     * Remove seedBatch.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
      *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     * @return bool tRUE if this collection contained the specified element, FALSE otherwise
      */
     public function removeSeedBatch(\Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch)
     {
@@ -130,7 +131,7 @@ class Plot
     }
 
     /**
-     * Get seedBatches
+     * Get seedBatches.
      *
      * @return \Doctrine\Common\Collections\Collection
      */
@@ -140,7 +141,7 @@ class Plot
     }
 
     /**
-     * Set producer
+     * Set producer.
      *
      * @param \Librinfo\CRMBundle\Entity\Organism $producer
      *
@@ -154,7 +155,7 @@ class Plot
     }
 
     /**
-     * Get producer
+     * Get producer.
      *
      * @return \Librinfo\CRMBundle\Entity\Organism
      */
@@ -164,9 +165,10 @@ class Plot
     }
 
     /**
-     * Add certifications
+     * Add certifications.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\Certification $certifications
+     *
      * @return Plot
      */
     public function addCertification(\Librinfo\SeedBatchBundle\Entity\Certification $certifications)
@@ -177,7 +179,7 @@ class Plot
     }
 
     /**
-     * Remove certification
+     * Remove certification.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\Certification $certification
      */
@@ -187,7 +189,7 @@ class Plot
     }
 
     /**
-     * Get certifications
+     * Get certifications.
      *
      * @return \Doctrine\Common\Collections\Collection
      */

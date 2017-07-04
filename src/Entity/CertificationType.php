@@ -1,16 +1,17 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
 namespace Librinfo\SeedBatchBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Blast\BaseEntitiesBundle\Entity\Traits\BaseEntity;
 use Blast\BaseEntitiesBundle\Entity\Traits\Descriptible;
 use Blast\BaseEntitiesBundle\Entity\Traits\Nameable;
@@ -20,7 +21,7 @@ use Librinfo\MediaBundle\Entity\File;
 use AppBundle\Entity\OuterExtension\LibrinfoSeedBatchBundle\CertificationTypeExtension;
 
 /**
- * CertificationType
+ * CertificationType.
  */
 class CertificationType
 {
@@ -41,9 +42,8 @@ class CertificationType
      */
     private $logo;
 
-
     /**
-     * Constructor
+     * Constructor.
      */
     public function __construct()
     {
@@ -64,9 +64,10 @@ class CertificationType
     }
 
     /**
-     * Set code
+     * Set code.
      *
      * @param string $code
+     *
      * @return CertificationType
      */
     public function setCode($code)
@@ -77,7 +78,7 @@ class CertificationType
     }
 
     /**
-     * Get code
+     * Get code.
      *
      * @return string
      */
@@ -87,9 +88,10 @@ class CertificationType
     }
 
     /**
-     * Set logo
+     * Set logo.
      *
      * @param \Librinfo\MediaBundle\Entity\File $logo
+     *
      * @return CertificationType
      */
     public function setLogo($logo = null)
@@ -100,7 +102,7 @@ class CertificationType
     }
 
     /**
-     * alias for LibrinfoMediaBundle/CRUDController::handleFiles()
+     * alias for LibrinfoMediaBundle/CRUDController::handleFiles().
      *
      * @param \Librinfo\MediaBundle\Entity\File $logo
      */
@@ -110,7 +112,7 @@ class CertificationType
     }
 
     /**
-     * Get logo
+     * Get logo.
      *
      * @return \Librinfo\MediaBundle\Entity\File
      */

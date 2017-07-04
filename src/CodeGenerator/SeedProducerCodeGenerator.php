@@ -1,9 +1,12 @@
 <?php
+
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -31,7 +34,8 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
     }
 
     /**
-     * @param  Organism $organism
+     * @param Organism $organism
+     *
      * @return string
      */
     public static function generate($organism)
@@ -42,10 +46,11 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
             $positions = $organism->getPositions();
             if ($positions && $positions->count() > 0) {
                 $contact = $positions[0]->getContact();
-                if ($contact->getName())
+                if ($contact->getName()) {
                     $name = $contact->getName();
-                else if ($contact->getFirstname())
+                } elseif ($contact->getFirstname()) {
                     $name = $contact->getFirstname();
+                }
             }
         }
 
@@ -61,30 +66,34 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
         // first chars of name, right padded with "X" if necessary
         $code = str_pad(substr($cleaned, 0, $length), $length, 'X');
 
-        if (self::isCodeUnique($code, $organism))
+        if (self::isCodeUnique($code, $organism)) {
             return $code;
+        }
 
         // XX1 ... XX9
-        for($i = 1; $i < 10; $i++) {
-            $code = sprintf('%s%d', substr($code, 0, $length-1), $i);
-            if (self::isCodeUnique($code, $organism))
+        for ($i = 1; $i < 10; ++$i) {
+            $code = sprintf('%s%d', substr($code, 0, $length - 1), $i);
+            if (self::isCodeUnique($code, $organism)) {
                 return $code;
+            }
         }
 
         // X01 ... X99
-        for($i = 1; $i < 100; $i++) {
-            $code = sprintf('%s%02d', substr($code, 0, $length-2), $i);
-            if (self::isCodeUnique($code, $organism))
+        for ($i = 1; $i < 100; ++$i) {
+            $code = sprintf('%s%02d', substr($code, 0, $length - 2), $i);
+            if (self::isCodeUnique($code, $organism)) {
                 return $code;
+            }
         }
 
         return '';
     }
 
     /**
-     * @param string    $code
-     * @param Organism  $organism
-     * @return          boolean
+     * @param string   $code
+     * @param Organism $organism
+     *
+     * @return bool
      */
     public static function validate($code, $organism = null)
     {
@@ -96,13 +105,14 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
      */
     public static function getHelp()
     {
-        return self::$length . " chars (upper case letters and/or digits)";
+        return self::$length.' chars (upper case letters and/or digits)';
     }
 
     /**
-     * @param string $code
+     * @param string   $code
      * @param Organism $organism
-     * @return boolean
+     *
+     * @return bool
      */
     private static function isCodeUnique($code, Organism $organism)
     {
@@ -110,9 +120,11 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
         $query = $repo->createQueryBuilder('o')
             ->where('o.seedProducerCode = :code')
             ->setParameters(['code' => $code]);
-        if ($organism->getId())
-            $query->andWhere('o.id != :id')->setParameter ('id', $organism->getId());
+        if ($organism->getId()) {
+            $query->andWhere('o.id != :id')->setParameter('id', $organism->getId());
+        }
         $result = $query->getQuery()->setMaxResults(1)->getOneOrNullResult();
+
         return $result == null;
     }
 }

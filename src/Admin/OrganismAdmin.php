@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -47,9 +49,8 @@ class OrganismAdmin extends BaseOrganismAdmin
     {
         parent::configureFormFields($mapper);
 
-        if( $this->subject )
-            if( !$this->subject->isSeedProducer() )
-            {
+        if ($this->subject) {
+            if (!$this->subject->isSeedProducer()) {
                 $tabs = $mapper->getadmin()->getFormTabs();
                 unset($tabs['form_tab_plots']);
                 unset($tabs['form_tab_seedbatches']);
@@ -57,6 +58,7 @@ class OrganismAdmin extends BaseOrganismAdmin
                 $mapper->remove('plots');
                 $mapper->remove('seedBatches');
             }
+        }
     }
 
     /**
@@ -66,9 +68,8 @@ class OrganismAdmin extends BaseOrganismAdmin
     {
         CoreAdmin::configureShowFields($mapper);
 
-        if( $this->subject )
-            if( !$this->subject->isSeedProducer() )
-            {
+        if ($this->subject) {
+            if (!$this->subject->isSeedProducer()) {
                 $tabs = $mapper->getadmin()->getShowTabs();
                 unset($tabs['show_tab_plots']);
                 unset($tabs['show_tab_seedbatches']);
@@ -76,6 +77,7 @@ class OrganismAdmin extends BaseOrganismAdmin
                 $mapper->remove('plots');
                 $mapper->remove('seedBatches');
             }
+        }
     }
 
     public function validate(ErrorElement $errorElement, $object)
@@ -85,38 +87,36 @@ class OrganismAdmin extends BaseOrganismAdmin
     }
 
     /**
-     * Seed producer code validator
+     * Seed producer code validator.
      *
      * @param ErrorElement $errorElement
-     * @param Organism $object
+     * @param Organism     $object
      */
     public function validateSeedProducerCode(ErrorElement $errorElement, $object)
     {
         $code = $object->getSeedProducerCode();
         $container = $this->getConfigurationPool()->getContainer();
 
-        if ( empty($code) ) {
+        if (empty($code)) {
             // Check if organism is a seed producer (belongs to the seed_producers app circle)
             $app_circles = $container->get('librinfo_crm.app_circles');
-            if ($app_circles->isInCircle($object, 'seed_producers'))
+            if ($app_circles->isInCircle($object, 'seed_producers')) {
                 $errorElement
                     ->with('seedProducerCode')
                         ->addViolation('A seed producer code is required for seed producers')
                     ->end()
                 ;
-        }
-
-        else {
+            }
+        } else {
             $registry = $container->get('blast_core.code_generators');
             $codeGenerator = $registry->getCodeGenerator(Organism::class, 'seedProducerCode');
-            if ( !$codeGenerator->validate($code) )
+            if (!$codeGenerator->validate($code)) {
                 $errorElement
                     ->with('seedProducerCode')
-                        ->addViolation('Wrong format for seed producer code. It shoud be: ' . $codeGenerator::getHelp())
+                        ->addViolation('Wrong format for seed producer code. It shoud be: '.$codeGenerator::getHelp())
                     ->end()
                 ;
+            }
         }
     }
-
-
 }

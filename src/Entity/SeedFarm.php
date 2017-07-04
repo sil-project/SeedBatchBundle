@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -19,7 +21,7 @@ use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
 /**
- * SeedFarm
+ * SeedFarm.
  */
 class SeedFarm
 {
@@ -42,7 +44,7 @@ class SeedFarm
     private $seedBatches;
 
     /**
-     * Constructor
+     * Constructor.
      */
     public function __construct()
     {
@@ -51,7 +53,7 @@ class SeedFarm
     }
 
     /**
-     * Set code
+     * Set code.
      *
      * @param string $code
      *
@@ -65,7 +67,7 @@ class SeedFarm
     }
 
     /**
-     * Get code
+     * Get code.
      *
      * @return string
      */
@@ -75,7 +77,7 @@ class SeedFarm
     }
 
     /**
-     * Add seedBatch
+     * Add seedBatch.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
      *
@@ -89,11 +91,11 @@ class SeedFarm
     }
 
     /**
-     * Remove seedBatch
+     * Remove seedBatch.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch
      *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     * @return bool tRUE if this collection contained the specified element, FALSE otherwise
      */
     public function removeSeedBatch(\Librinfo\SeedBatchBundle\Entity\SeedBatch $seedBatch)
     {
@@ -101,7 +103,7 @@ class SeedFarm
     }
 
     /**
-     * Get seedBatches
+     * Get seedBatches.
      *
      * @return \Doctrine\Common\Collections\Collection
      */

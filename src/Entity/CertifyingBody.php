@@ -1,10 +1,12 @@
 <?php
 
 /*
- * Copyright (C) 2015-2016 Libre Informatique
+ * This file is part of the Blast Project package.
  *
- * This file is licenced under the GNU GPL v3.
- * For the full copyright and license information, please view the LICENSE
+ * Copyright (C) 2015-2017 Libre Informatique
+ *
+ * This file is licenced under the GNU LGPL v3.
+ * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
@@ -20,7 +22,7 @@ use Blast\BaseEntitiesBundle\Entity\Traits\Timestampable;
 use Blast\OuterExtensionBundle\Entity\Traits\OuterExtensible;
 
 /**
- * CertifyingBody
+ * CertifyingBody.
  */
 class CertifyingBody
 {
@@ -47,9 +49,8 @@ class CertifyingBody
      */
     private $certifications;
 
-
     /**
-     * Constructor
+     * Constructor.
      */
     public function __construct()
     {
@@ -77,7 +78,7 @@ class CertifyingBody
     }
 
     /**
-     * Set code
+     * Set code.
      *
      * @param string $code
      *
@@ -91,7 +92,7 @@ class CertifyingBody
     }
 
     /**
-     * Get code
+     * Get code.
      *
      * @return string
      */
@@ -100,11 +101,11 @@ class CertifyingBody
         return $this->code;
     }
 
-
     /**
-     * Set url
+     * Set url.
      *
      * @param string $url
+     *
      * @return CertifyingBody
      */
     public function setUrl($url)
@@ -115,7 +116,7 @@ class CertifyingBody
     }
 
     /**
-     * Get url
+     * Get url.
      *
      * @return string
      */
@@ -125,9 +126,10 @@ class CertifyingBody
     }
 
     /**
-     * Add certifications
+     * Add certifications.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\Certification $certifications
+     *
      * @return Plot
      */
     public function addCertification(\Librinfo\SeedBatchBundle\Entity\Certification $certifications)
@@ -138,7 +140,7 @@ class CertifyingBody
     }
 
     /**
-     * Remove certification
+     * Remove certification.
      *
      * @param \Librinfo\SeedBatchBundle\Entity\Certification $certification
      */
@@ -148,7 +150,7 @@ class CertifyingBody
     }
 
     /**
-     * Get certifications
+     * Get certifications.
      *
      * @return \Doctrine\Common\Collections\Collection
      */
