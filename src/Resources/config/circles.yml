@@ -1,9 +1,9 @@
 seed_producers:
     id: b907691c-963f-4a7c-9098-5a95335cf21d
-    name: Seed Producers
-    code: PROD
+    name: Producteur de semences
+    code: PRO
     color: blue
-    description: Seed producers
+    description: Producteur de semences
     translatable: true
 organic_certificator:
     id: d474c5df-49fa-460b-8951-dafff97bbfc4
