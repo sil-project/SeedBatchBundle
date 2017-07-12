@@ -40,7 +40,7 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
      */
     public static function generate($organism)
     {
-        if(!$organism->isSeedProducer()) {
+        if (!$organism->isSeedProducer()) {
             return null;
         }
 
