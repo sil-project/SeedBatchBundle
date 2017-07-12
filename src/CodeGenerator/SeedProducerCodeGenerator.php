@@ -40,6 +40,10 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
      */
     public static function generate($organism)
     {
+        if(!$organism->isSeedProducer()) {
+            return null;
+        }
+
         $length = self::$length;
         $name = $organism->getName();
         if ($organism->isIndividual()) {
