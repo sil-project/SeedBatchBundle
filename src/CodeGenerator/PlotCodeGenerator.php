@@ -61,7 +61,7 @@ class PlotCodeGenerator implements CodeGeneratorInterface
         ;
         $max = $res ? (int) $res[0]['code'] : 0;
 
-        return sprintf('%0'.self::$length.'d', $max + 1);
+        return sprintf('%0' . self::$length . 'd', $max + 1);
     }
 
     /**
@@ -72,7 +72,7 @@ class PlotCodeGenerator implements CodeGeneratorInterface
      */
     public static function validate($code, $plot = null)
     {
-        return preg_match('/^[A-Z0-9]{'.self::$length.'}$/', $code);
+        return preg_match('/^[A-Z0-9]{' . self::$length . '}$/', $code);
     }
 
     /**
@@ -80,7 +80,7 @@ class PlotCodeGenerator implements CodeGeneratorInterface
      */
     public static function getHelp()
     {
-        return self::$length.' chars (upper case letters and/or digits)';
+        return self::$length . ' chars (upper case letters and/or digits)';
     }
 
     /**

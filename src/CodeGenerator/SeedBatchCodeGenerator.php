@@ -86,6 +86,7 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
         if ($batchNumber < 1 || $batchNumber > 99) {
             throw new InvalidEntityCodeException('librinfo.error.invalid_batch_number');
         }
+
         return sprintf('%s-%s%s-%s-%02d-%02d',
             $seedFarmCode,
             $speciesCode,
@@ -104,7 +105,7 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
      */
     public static function validate($code, $seedBatch = null)
     {
-        return preg_match('/^[A-Z0-9]{'.self::$length.'}$/', $code);
+        return preg_match('/^[A-Z0-9]{' . self::$length . '}$/', $code);
     }
 
     /**
@@ -112,6 +113,6 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
      */
     public static function getHelp()
     {
-        return self::$length.' chars (upper case letters and/or digits)';
+        return self::$length . ' chars (upper case letters and/or digits)';
     }
 }
