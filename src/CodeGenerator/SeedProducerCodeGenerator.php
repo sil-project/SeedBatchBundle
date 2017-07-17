@@ -101,7 +101,7 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
      */
     public static function validate($code, $organism = null)
     {
-        return preg_match('/^[A-Z0-9]{'.self::$length.'}$/', $code);
+        return preg_match('/^[A-Z0-9]{' . self::$length . '}$/', $code);
     }
 
     /**
@@ -109,7 +109,7 @@ class SeedProducerCodeGenerator implements CodeGeneratorInterface
      */
     public static function getHelp()
     {
-        return self::$length.' chars (upper case letters and/or digits)';
+        return self::$length . ' chars (upper case letters and/or digits)';
     }
 
     /**

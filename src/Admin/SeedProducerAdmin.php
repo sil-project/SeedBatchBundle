@@ -64,8 +64,8 @@ class SeedProducerAdmin extends OrganismAdmin
         $datagrid = $admin->getDatagrid();
         $qb = $datagrid->getQuery();
         $qb->andWhere($qb->expr()->orX(
-            $qb->getRootAlias().'.name LIKE :value',
-            $qb->getRootAlias().'.seedProducerCode LIKE :value'
+            $qb->getRootAlias() . '.name LIKE :value',
+            $qb->getRootAlias() . '.seedProducerCode LIKE :value'
         ));
         $qb->setParameter('value', "%$value%");
         $datagrid->setValue('name', null, $value);

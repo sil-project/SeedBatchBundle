@@ -56,7 +56,7 @@ class PlotAdmin extends CoreAdmin
         $registry = $this->getConfigurationPool()->getContainer()->get('blast_core.code_generators');
         $codeGenerator = $registry->getCodeGenerator(Plot::class);
         if (!empty($code) && !$codeGenerator->validate($code)) {
-            $msg = 'Wrong format for plot code. It shoud be: '.$codeGenerator::getHelp();
+            $msg = 'Wrong format for plot code. It shoud be: ' . $codeGenerator::getHelp();
             $errorElement
                 ->with('code')
                     ->addViolation($msg)

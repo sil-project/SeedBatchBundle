@@ -114,7 +114,7 @@ class OrganismAdmin extends BaseOrganismAdmin
             if (!$codeGenerator->validate($code)) {
                 $errorElement
                     ->with('seedProducerCode')
-                        ->addViolation('Wrong format for seed producer code. It shoud be: '.$codeGenerator::getHelp())
+                        ->addViolation('Wrong format for seed producer code. It shoud be: ' . $codeGenerator::getHelp())
                     ->end()
                 ;
             }

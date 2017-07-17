@@ -34,7 +34,7 @@ class LibrinfoSeedBatchExtension extends BlastCoreExtension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
         $loader->load('admin.yml');
 
@@ -51,14 +51,14 @@ class LibrinfoSeedBatchExtension extends BlastCoreExtension
             $loader->load('datafixtures.yml');
         }
 
-        $this->mergeParameter('blast', $container, __DIR__.'/../Resources/config');
+        $this->mergeParameter('blast', $container, __DIR__ . '/../Resources/config');
 
         if (class_exists('\Librinfo\SecurityBundle\Configurator\SecurityConfigurator')) {
-            \Librinfo\SecurityBundle\Configurator\SecurityConfigurator::getInstance($container)->loadSecurityYml(__DIR__.'/../Resources/config/security.yml');
+            \Librinfo\SecurityBundle\Configurator\SecurityConfigurator::getInstance($container)->loadSecurityYml(__DIR__ . '/../Resources/config/security.yml');
         }
 
         $configSonataAdmin = Yaml::parse(
-            file_get_contents(__DIR__.'/../Resources/config/bundles/sonata_admin.yml')
+            file_get_contents(__DIR__ . '/../Resources/config/bundles/sonata_admin.yml')
         );
         DefaultParameters::getInstance($container)
             ->defineDefaultConfiguration(
