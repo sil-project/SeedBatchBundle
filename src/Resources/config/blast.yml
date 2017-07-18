@@ -499,6 +499,7 @@ parameters:
                                 type: Blast\CoreBundle\Form\Type\EntityCodeType
                                 attr:
                                     placeholder: librinfo.placeholder.seed_producer_code
+                                only_not_new: true
                             _options:
                                 fieldsOrder:
                                     - active

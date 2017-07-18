@@ -96,11 +96,12 @@ class OrganismAdmin extends BaseOrganismAdmin
     {
         $code = $object->getSeedProducerCode();
         $container = $this->getConfigurationPool()->getContainer();
+        $is_new = empty($object->getId());
 
         if (empty($code)) {
             // Check if organism is a seed producer (belongs to the seed_producers app circle)
             $app_circles = $container->get('librinfo_crm.app_circles');
-            if ($app_circles->isInCircle($object, 'seed_producers')) {
+            if ($app_circles->isInCircle($object, 'seed_producers') && !$is_new) {
                 $errorElement
                     ->with('seedProducerCode')
                         ->addViolation('A seed producer code is required for seed producers')
