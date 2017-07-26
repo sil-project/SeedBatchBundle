@@ -31,7 +31,7 @@ class OrganismAdmin extends BaseOrganismAdmin
      */
     protected function configureDatagridFilters(DatagridMapper $mapper)
     {
-        CoreAdmin::configureDatagridFilters($mapper);
+        parent::configureDatagridFilters($mapper);
     }
 
     /**
@@ -39,7 +39,7 @@ class OrganismAdmin extends BaseOrganismAdmin
      */
     protected function configureListFields(ListMapper $mapper)
     {
-        CoreAdmin::configureListFields($mapper);
+        parent::configureListFields($mapper);
     }
 
     /**
@@ -66,7 +66,7 @@ class OrganismAdmin extends BaseOrganismAdmin
      */
     protected function configureShowFields(ShowMapper $mapper)
     {
-        CoreAdmin::configureShowFields($mapper);
+        parent::configureShowFields($mapper);
 
         if ($this->subject) {
             if (!$this->subject->isSeedProducer()) {
