@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/libre-informatique/SeedBatchBundle/tree/HEAD)
+
+[Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.5...HEAD)
+
+**Merged pull requests:**
+
+- Lisem fix & features [\#16](https://github.com/libre-informatique/SeedBatchBundle/pull/16) ([FanchTheSystem](https://github.com/FanchTheSystem))
+
 ## [0.4.5](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.5) (2017-07-26)
 [Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.4...0.4.5)
 
