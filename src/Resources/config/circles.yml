@@ -5,6 +5,7 @@ seed_producers:
     color: blue
     description: Producteur de semences
     translatable: true
+    type: Producteur
 organic_certificator:
     id: d474c5df-49fa-460b-8951-dafff97bbfc4
     name: Organic Certificator
@@ -12,3 +13,4 @@ organic_certificator:
     color: ~
     description: librinfo.circle_description.organic_certificator
     translatable: true
+    type: Autres
