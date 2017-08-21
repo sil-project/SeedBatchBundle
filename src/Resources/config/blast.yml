@@ -583,7 +583,7 @@ parameters:
                         fieldsOrder:
                             - name
                             - seedProducerCode
-                            - category.name
+                            # - category.name
                             - circles
                             - alert
                             - active
