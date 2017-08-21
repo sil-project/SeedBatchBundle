@@ -154,8 +154,8 @@ class Plot
         return $this;
     }
 
-     /**
-     * Set Organisme (Producer in fact).
+    /**
+     * Set Organism (Producer in fact).
      *
      * @param \Librinfo\CRMBundle\Entity\Organism $producer
      *
@@ -167,8 +167,7 @@ class Plot
 
         return $this;
     }
-    
-    
+
     /**
      * Get producer.
      *
