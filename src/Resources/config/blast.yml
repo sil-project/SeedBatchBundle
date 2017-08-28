@@ -70,7 +70,7 @@ parameters:
                                     translation_domain: messages
                             producer:
                                 type: sonata_type_model_autocomplete
-                                property: name
+                                property: fulltextName
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
                                 required: true
                                 _options:
@@ -575,13 +575,13 @@ parameters:
                     customerCode: ~
                     supplierCode: ~
                 add:
-                    name:
+                    fulltextName:
                         label: librinfo.label.list_seed_producer_name
                         identifier: true
                     seedProducerCode: ~
                     _options:
                         fieldsOrder:
-                            - name
+                            - fulltextName
                             - seedProducerCode
                             # - category.name
                             - circles
