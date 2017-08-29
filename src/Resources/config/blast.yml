@@ -69,7 +69,7 @@ parameters:
                                     admin_code: librinfo_varieties.admin.variety
                                     translation_domain: messages
                             producer:
-                                type: sonata_type_model_autocomplete
+                                type: Blast\BaseEntitiesBundle\Form\Type\SearchIndexAutocompleteType
                                 property: fulltextName
                                 callback: [Librinfo\SeedBatchBundle\Admin\SeedProducerAdmin, producerAutocompleteCallback]
                                 required: true
