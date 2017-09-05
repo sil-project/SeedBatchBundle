@@ -155,6 +155,20 @@ class Plot
     }
 
     /**
+     * Set Organism (Producer in fact).
+     *
+     * @param \Librinfo\CRMBundle\Entity\Organism $producer
+     *
+     * @return Plot
+     */
+    public function setOrganism(\Librinfo\CRMBundle\Entity\Organism $producer = null)
+    {
+        $this->setProducer($producer);
+
+        return $this;
+    }
+
+    /**
      * Get producer.
      *
      * @return \Librinfo\CRMBundle\Entity\Organism
