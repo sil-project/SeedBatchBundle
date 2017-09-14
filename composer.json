@@ -5,11 +5,11 @@
     "require": {
         "php": ">=5.6",
         "symfony/symfony": ">=3.2",
-        "blast-project/core-bundle": "dev-wip-lisem",
-        "blast-project/utils-bundle": "dev-wip-lisem",
-        "blast-project/base-entities-bundle": "dev-wip-lisem",
-        "libre-informatique/media-bundle": "dev-wip-lisem",
-        "libre-informatique/varieties-bundle": "dev-wip-lisem"
+        "blast-project/core-bundle": "self.version",
+        "blast-project/utils-bundle": "self.version",
+        "blast-project/base-entities-bundle": "self.version",
+        "libre-informatique/media-bundle": "self.version",
+        "libre-informatique/varieties-bundle": "self.version"
     },
     "require-dev": {
 	"symfony/phpunit-bridge": ">=3.2"
