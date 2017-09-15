@@ -368,10 +368,10 @@ class SeedBatch
     public function setOrganism(\Librinfo\CRMBundle\Entity\Organism $producer = null)
     {
         $this->setProducer($producer);
-        
+
         return $this;
     }
-        
+
     /**
      * Get producer.
      *
