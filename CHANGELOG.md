@@ -1,25 +1,21 @@
 # Change Log
 
-## [Unreleased](https://github.com/libre-informatique/SeedBatchBundle/tree/HEAD)
-
-[Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.5...HEAD)
+## [0.5.1](https://github.com/libre-informatique/SeedBatchBundle/tree/0.5.1) (2017-09-15)
+[Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.5...0.5.1)
 
 **Merged pull requests:**
 
-- Lisem fix & features [\#16](https://github.com/libre-informatique/SeedBatchBundle/pull/16) ([FanchTheSystem](https://github.com/FanchTheSystem))
+- Lisem fix & features [\#19](https://github.com/libre-informatique/SeedBatchBundle/pull/19) ([FanchTheSystem](https://github.com/FanchTheSystem))
+- Lisem fix & features [\#18](https://github.com/libre-informatique/SeedBatchBundle/pull/18) ([FanchTheSystem](https://github.com/FanchTheSystem))
 
-## [0.4.5](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.5) (2017-07-26)
+## [0.4.5](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.5) (2017-07-28)
 [Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.4...0.4.5)
 
 **Merged pull requests:**
 
-- DevKit updates for SeedBatchBundle [\#15](https://github.com/libre-informatique/SeedBatchBundle/pull/15) ([BlastCI](https://github.com/BlastCI))
+- Lisem fix & features [\#16](https://github.com/libre-informatique/SeedBatchBundle/pull/16) ([FanchTheSystem](https://github.com/FanchTheSystem))
 - Lisem fix & features [\#13](https://github.com/libre-informatique/SeedBatchBundle/pull/13) ([FanchTheSystem](https://github.com/FanchTheSystem))
-- DevKit updates for SeedBatchBundle [\#12](https://github.com/libre-informatique/SeedBatchBundle/pull/12) ([BlastCI](https://github.com/BlastCI))
-- DevKit updates for SeedBatchBundle [\#11](https://github.com/libre-informatique/SeedBatchBundle/pull/11) ([BlastCI](https://github.com/BlastCI))
 - Wip lisem [\#10](https://github.com/libre-informatique/SeedBatchBundle/pull/10) ([FanchTheSystem](https://github.com/FanchTheSystem))
-- DevKit updates for SeedBatchBundle [\#9](https://github.com/libre-informatique/SeedBatchBundle/pull/9) ([BlastCI](https://github.com/BlastCI))
-- DevKit updates for SeedBatchBundle [\#8](https://github.com/libre-informatique/SeedBatchBundle/pull/8) ([BlastCI](https://github.com/BlastCI))
 
 ## [0.4.4](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.4) (2017-06-27)
 [Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.3...0.4.4)
@@ -27,19 +23,8 @@
 ## [0.4.3](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.3) (2017-06-14)
 [Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.4.2...0.4.3)
 
-**Merged pull requests:**
-
-- DevKit updates for SeedBatchBundle [\#7](https://github.com/libre-informatique/SeedBatchBundle/pull/7) ([BlastCI](https://github.com/BlastCI))
-- DevKit updates for SeedBatchBundle [\#6](https://github.com/libre-informatique/SeedBatchBundle/pull/6) ([BlastCI](https://github.com/BlastCI))
-- DevKit updates for SeedBatchBundle [\#5](https://github.com/libre-informatique/SeedBatchBundle/pull/5) ([BlastCI](https://github.com/BlastCI))
-- DevKit updates for SeedBatchBundle [\#3](https://github.com/libre-informatique/SeedBatchBundle/pull/3) ([BlastCI](https://github.com/BlastCI))
-
 ## [0.4.2](https://github.com/libre-informatique/SeedBatchBundle/tree/0.4.2) (2017-05-05)
 [Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.2...0.4.2)
-
-**Merged pull requests:**
-
-- DevKit updates for SeedBatchBundle [\#2](https://github.com/libre-informatique/SeedBatchBundle/pull/2) ([BlastCI](https://github.com/BlastCI))
 
 ## [0.2](https://github.com/libre-informatique/SeedBatchBundle/tree/0.2) (2017-02-23)
 [Full Changelog](https://github.com/libre-informatique/SeedBatchBundle/compare/0.1...0.2)
