@@ -1,5 +1,11 @@
 services:
 
+
+    blast_core.label.strategy.librinfo_seedbatch:
+        class: Blast\CoreBundle\Translator\LibrinfoLabelTranslatorStrategy
+        arguments: ['Librinfo\SeedBatchBundle']
+
+  
 # ENTITY CODE GENERATORS
 
     librinfo_seed_batch.code_generator.seed_producer:
