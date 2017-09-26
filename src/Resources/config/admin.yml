@@ -1,4 +1,5 @@
 services:
+ 
     librinfo_seedbatch.admin.organism:
         class: Librinfo\SeedBatchBundle\Admin\OrganismAdmin
         arguments: [~, Librinfo\CRMBundle\Entity\Organism, LibrinfoSeedBatchBundle:OrganismAdmin]
@@ -6,8 +7,8 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Customers Relationship Management
-                label: librinfo.crm.organism_admin.label
-                label_translator_strategy: blast_core.label.strategy.librinfo
+                label: librinfo.seedbatchbundle.admin.organism
+                label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
         calls:
             - [ setTemplate, [edit, LibrinfoSeedBatchBundle:OrganismAdmin:edit.html.twig]]
             - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
@@ -19,8 +20,8 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Customers Relationship Management
-                label: librinfo.crm.organism_admin.label
-                label_translator_strategy: blast_core.label.strategy.librinfo
+                label: librinfo.seedbatchbundle.admin.organism
+                label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
         calls:
             - [ setTemplate, [edit, LibrinfoSeedBatchBundle:OrganismAdmin:edit.html.twig]]
             - [ setTemplate, [show, LibrinfoCRMBundle:OrganismAdmin:show.html.twig]]
@@ -32,8 +33,8 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Seed Batches
-                label: librinfo.seedbatch.seed_farm_admin.label
-                label_translator_strategy: blast_core.label.strategy.librinfo
+                label: librinfo.seedbatchbundle.admin.seed_farm
+                label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
 
     librinfo_seedbatch.admin.seedbatch:
         class: Librinfo\SeedBatchBundle\Admin\SeedBatchAdmin
@@ -42,8 +43,8 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Seed Batches
-                label: librinfo.seedbatch.seed_batch_admin.label
-                label_translator_strategy: blast_core.label.strategy.librinfo
+                label: librinfo.seedbatchbundle.admin.seed_batch
+                label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
         calls:
             - [ setTemplate, [edit, LibrinfoSeedBatchBundle:SeedBatchAdmin:edit.html.twig]]
 
@@ -54,8 +55,8 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Seed Batches
-                label: librinfo.seedbatch.seedbatch_admin.label
-                label_translator_strategy: blast_core.label.strategy.librinfo
+                label: librinfo.seedbatchbundle.admin.seedbatch
+                label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
 
     librinfo_seedbatch.admin.plot:
         class: Librinfo\SeedBatchBundle\Admin\PlotAdmin
@@ -64,8 +65,8 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Seed Batches
-                label: librinfo.seedbatch.plot_admin.label
-                label_translator_strategy: blast_core.label.strategy.librinfo
+                label: librinfo.seedbatchbundle.admin.plot
+                label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
 
     librinfo_seedbatch.admin.plot_embedded:
         class: Librinfo\SeedBatchBundle\Admin\PlotEmbeddedAdmin
@@ -74,8 +75,8 @@ services:
             -   name: sonata.admin
                 manager_type: orm
                 group: Seed Batches
-                label: librinfo.seedbatch.plot_admin.label
-                label_translator_strategy: blast_core.label.strategy.librinfo
+                label: librinfo.seedbatchbundle.admin.plot
+                label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
 
     librinfo_seed_batch.admin.certification:
         class: Librinfo\SeedBatchBundle\Admin\CertificationAdmin
@@ -85,7 +86,7 @@ services:
               manager_type: orm
               group: admin
               label: Certification
-              label_translator_strategy: blast_core.label.strategy.librinfo
+              label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
 
     librinfo_seed_batch.admin.certification_type:
         class: Librinfo\SeedBatchBundle\Admin\CertificationTypeAdmin
@@ -95,7 +96,7 @@ services:
               manager_type: orm
               group: admin
               label: CertificationType
-              label_translator_strategy: blast_core.label.strategy.librinfo
+              label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
         calls:
             - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
 
@@ -106,7 +107,7 @@ services:
             - name: sonata.admin
               manager_type: orm
               group: admin
-              label: librinfo.seedbatch.certifying_body_admin.label
-              label_translator_strategy: blast_core.label.strategy.librinfo
+              label: librinfo.seedbatchbundle.admin.certifying_body
+              label_translator_strategy: blast_core.label.strategy.librinfo_seedbatch
         calls:
             - [ setTemplate, [ edit, LibrinfoMediaBundle:CRUD:edit.html.twig ] ]
