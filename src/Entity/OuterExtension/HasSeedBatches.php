@@ -33,8 +33,9 @@ trait HasSeedBatches
     {
         $this->seedBatches[] = $seedBatch;
 
-        // We could have used $this->setOwningSideRelation($seedBatch) but SeedBatch#setOrganism method does not exist
-        $seedBatch->setProducer($this);
+        if (method_exists(get_class($this), 'setProducer')) {
+            $seedBatch->setProducer($this);
+        }
 
         return $this;
     }
