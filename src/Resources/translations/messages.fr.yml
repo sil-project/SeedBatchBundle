@@ -22,8 +22,17 @@ librinfo:
                 seedfarm: Artisan semencier
                 updatedat: Modifié le 
                 updatedby: Modifié par
+            form:
+                code: Code
+                createdat: ~
+                createdby: ~
+                updatedat: ~
+                updatedby: ~
             
         organism:
+            breadcrumb:
+                organism_create: 'Nouveau Tiers'
+                organism_list: 'Liste des tiers'
             list:
                 _action: Action                
                 active: Actif
@@ -49,14 +58,17 @@ librinfo:
                 emailnonewsletter: Pas de Newsletter
                 emailnpai: Mauvais courriel
                 first_catalogue_sent_date: Date premier envoi catalogue
+                firstname: 'Prénom'
                 iban: RIB (IBAN)
                 iscustomer: Est un Client
                 issupplier: Est un Fournisseur
                 last_catalogue_sent_date: Date dernier envoi catalogue
+                lastname: 'Nom de famille'
                 name: Contact
                 seedproducer: Producteur de semences
                 siret: N° Siret
                 source: Source
+                title: 'Titre / civilité'
                 updatedat: Modifié le 
                 updatedby: Modifié par
                 url: Site web
@@ -87,6 +99,9 @@ librinfo:
                 vat: N° TVA
                 
         plot:
+            breadcrumb:
+                seedbatch_create: ~
+                seedbatch_list: Liste des lots
             form:
                 address: Adresse 
                 batchnumber: Lot N°
@@ -145,6 +160,9 @@ librinfo:
                 producer: Producteur
                 
         certification:
+            breadcrumb:
+                plot_create: Créer une parcelle
+                plot_list: Liste des parcelles
             form:
                 address: Adresse 
                 city: Ville 
@@ -155,22 +173,50 @@ librinfo:
                 zip: Code postal 
                 
         certificationtype:
+            certificationtype_create: ~
+            certificationtype_list: Liste des certifications
             form:
                 certificationtype: Certification
-                
+                code: Code
+                createdat: ~
+                createdby: ~
+                description: Description
+                logo: Logo
+                name: 'Nom'
+                updatedat: ~
+                updatedby: ~                
+
         certifyingbody:
+            breadcrumb:
+                certification_create: Créer une certification
+                certification_list: Liste des certifications
+                certifyingbody_create: ~
+                certifyingbody_list: Liste des organismes certificateurs
             form:
                 #certificationtype: Certification
                 certificationdate: Début de validité 
                 certifyingbody: Organisme certificateur
+                city: 'Villes'
                 code: Code certificat
+                country: Pays
+                createdat: ~
+                createdby: ~
                 description: Description
                 expirydate: Date d'expiration 
                 #'
+                name: 'Nom'
+                npai: 'NPAI'
                 startdate: Date de certification 
+                updatedat: ~
+                updatedby: ~
                 url: URL du certificat
+                zip: 'Code postal'
+                address: 'Addresses'
             
         seedfarm:
+            breadcrumb:
+                seedfarm_create: ~
+                seedfarm_list: ~
             list:
                 producer: Producteur
                 variety: Variété
@@ -179,8 +225,24 @@ librinfo:
                 variety: Variété
             form:
                 seedfarm: Artisan semencier
-
+                address: 'Addresses'
+                city: 'Villes'
+                code: Code
+                country: Pays
+                createdat: ~
+                createdby: ~
+                description: Description
+                name: 'Nom'
+                npai: 'NPAI'
+                updatedat: ~
+                updatedby: ~
+                variety: Variété
+                zip: 'Code postal'
+                
         seedproducer:
+            breadcrumb:
+                seedproducer_create: ~
+                seedproducer_list: Liste des producteurs
             list:
                 _action: Action
                 active: Actif
@@ -200,29 +262,33 @@ librinfo:
                 #'
                 catalogue_sent: Catalogue envoyé
                 catalogue_type: Type de catalogue
+                circles: 'Groupes'
                 city: Ville
                 code: Code
                 createdat: Créé le 
                 createdby: Crée par
                 description: Description
+                email: 'Email'
                 emailnonewsletter: Pas de Newsletter
                 emailnpai: Mauvais courriel
                 first_catalogue_sent_date: Date premier envoi catalogue
+                firstname: 'Prénom'
                 iban: RIB (IBAN)
                 iscustomer: Est un Client
                 issupplier: Est un Fournisseur
                 last_catalogue_sent_date: Date dernier envoi catalogue
+                lastname: 'Nom de famille'
                 name: Nom de la parcelle 
                 producer: Producteur
                 productionyear: Année de production
                 seedproducer: Producteur de semences
                 siret: N° Siret
                 source: Source
+                title: 'Titre / civilité'
                 updatedat: Modifié le 
                 updatedby: Modifié par
                 url: Site web
                 vat: N° TVA
-                
             show:
                 active: Actif
                 batchnumber: Lot N°
@@ -254,115 +320,22 @@ librinfo:
                 vat: N° TVA
 
                 
-#form_tab_general: 'Général'
-#form_group_certifications: Certificats
-#form_group_delivery: Livraison
-#form_group_germination_rate: Taux de germination
-#form_group_plot: Parcelle
-#form_group_seedbatch: Lot
-#form_group_tkw: PMG
-#form_tab_certifications: Certificats
-#form_tab_plots: Parcelles
-#form_tab_seedbatches: Lots
-#form_tab_stocks: Stocks
+form_tab_general: 'Général'
+form_group_certifications: Certificats
+form_group_delivery: Livraison
+form_group_germination_rate: Taux de germination
+form_group_plot: Parcelle
+form_group_seedbatch: Lot
+form_group_tkw: PMG
+form_tab_certifications: Certificats
+form_tab_plots: Parcelles
+form_tab_seedbatches: Lots
+form_tab_stocks: Stocks
 
-#show_tab_certifications: Certificats
-#show_tab_plots: Parcelles
-#show_tab_seedbatches: Lots
+show_tab_certifications: Certificats
+show_tab_plots: Parcelles
+show_tab_seedbatches: Lots
 
-librinfo.old:
-    error.old:
-        invalid_batch_number.old: Le champ "Numéro de lot" n'est pas valide
-        invalid_production_year.old: Le champ "Année de production" n'est pas valide
-        missing_batch_number.old: Le champ "Numéro de lot" est vide
-        missing_production_year.old: Le champ "Année de production" est vide
-        missing_seed_farm.old: Le champ "Artisan semencier" est vide
-        missing_seed_farm_code.old: Le champ "Code artisan semencier" est vide
-        missing_seed_farm_name.old: Le champ "Nom de l'artisan semencier" est vide
-        missing_producer.old: Le champ "Producteur" est vide
-        missing_seed_producer_code.old: Le champ "Code producteur" est vide
-        missing_species.old: Le champ "Espèce" est vide
-        missing_species_code.old: Le champ "Code espèce" est vide
-        missing_variety.old: Le champ "Variété" est vide
-        missing_variety_code.old: Le champ "Code variété" est vide
-        missing_seed_batch.old: Le champ "Lot" est vide
-    label.old:
-        batch_number.old: Lot N°
-        certification_code.old: Code certificat
-        certification_body.old: Organisme certificateur
-        certification_date.old: Date de certification
-        certification_start_date.old: Début de validité
-        certification_type.old: Certification
-        certification_url.old: URL du certificat
-        certifications.old: Certifications
-        certifying_body.old: Organisme certificateur
-        delivery_date.old: Date de livraison
-        delivery_note.old: Bon de livraison fourni
-        expiry_date.old: Date d'expiration
-        generate_seedbatch_code.old: Générer code
-        germination_date.old: Date de la mesure
-        gross_delivered_weight.old: Poids brut livré
-        gross_producer_weight.old: Poids brut chez le producteur
-        list_seed_producer_name.old: Producteur
-        logo.old: Logo
-        menu.old:
-            plots.old: Parcelles
-            seed_batches.old: Lots
-        net_screened_weight.old: Poids net trié
-        plot.old: Parcelle
-        plot_name.old: Nom de la parcelle
-        plots.old: Parcelles
-        producer.old: Producteur
-        seed_producer_code.old: Code producteur
-        producer_name.old: Producteur
-        production_year.old: Année de production
-        seed_batch_code.old: Code Lot
-        seed_batches.old: Lots
-        seed_farm.old: Artisan semencier
-        seed_farm_name.old: Artisan semencier
-        seed_producer.old: Producteur de semences
-        seedbatches.old: Lots
-        tkw_date.old: Date de la mesure
-        to_screen_weight.old: Poids restant à trier
-        variety.old: Variété
-        plot_producer.old: Producteur
-        start_date.old: Date de mise en vigueur
-        is_seed_producer.old: Producteur
-        seedproducercode.old: Code producteur
-    link.old:
-        certification_create.old: Créer une certification
-        certification_list.old: Liste des certifications
-        certification_type_create.old: Créer une certification
-        certification_type_list.old: Liste des certifications
-        certificationtype_list.old: Liste des certifications
-        certifyingbody_list.old: Liste des organismes certificateurs
-        certifying_body_list.old: Liste des organismes certificateurs
-        certifying_body_create.old: Créer un organisme certificateur
-        plot_create.old: Créer une parcelle
-        plot_list.old: Liste des parcelles
-        seedproducer_list.old: Liste des producteurs
-        seed_producer_list.old: Liste des producteurs
-        seed_batch_create.old: Nouveau Lot
-        seedbatch_list.old: Liste des lots
-        seed_batch_list.old: Liste des lots
-        seed_farm_list.old: Liste des Artisans Semenciers
-        seed_producer_create.old: Créer un producteur
-        seeds_product_variant_embedded_delete.old: Supprimer une variante
-        seeds_product_variant_embedded_list.old: Liste des variantes
-    help.old:
-        batchNumber.old: Nombre entre 1 et 99
-    placeholder.old:
-        seed_producer_code.old: Code producteur
-    seedbatch.old:
-        plot_admin.old:
-            label.old: Parcelle
-        seed_batch_admin.old:
-            label.old: Lot
-        seed_farm_admin.old:
-            label.old: Artisan Semencier
-        seedbatch_admin.old:
-            label.old: Lot
-        certifying_body_admin.old:
-            label.old: Organisme certificateur
-Mr.old: M
-Mrs.old: Mme
+Mr: M
+Mrs: Mme
+
