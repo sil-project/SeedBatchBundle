@@ -1,6 +1,25 @@
 
 
 librinfo:
+    error:
+        invalid_batch_number: Le champ "Numéro de lot" n'est pas valide
+        invalid_production_year: Le champ "Année de production" n'est pas valide
+        missing_batch_number: Le champ "Numéro de lot" est vide
+        missing_production_year: Le champ "Année de production" est vide
+        missing_seed_farm: Le champ "Artisan semencier" est vide
+        missing_seed_farm_code: Le champ "Code artisan semencier" est vide
+        missing_seed_farm_name: Le champ "Nom de l'artisan semencier" est vide
+        missing_producer: Le champ "Producteur" est vide
+        missing_seed_producer_code: Le champ "Code producteur" est vide
+        missing_species: Le champ "Espèce" est vide
+        missing_species_code: Le champ "Code espèce" est vide
+        missing_variety: Le champ "Variété" est vide
+        missing_variety_code: Le champ "Code variété" est vide
+        missing_seed_batch: Le champ "Lot" est vide
+    help:
+        batchNumber: Nombre entre 1 et 99
+    placeholder:
+        seed_producer_code: Code producteur   
     seedbatchbundle:
         organism_list: Liste des contacts
         
