@@ -24,15 +24,15 @@ librinfo:
                 updatedby: Modifié par
             form:
                 code: Code
-                createdat: ~
-                createdby: ~
-                updatedat: ~
-                updatedby: ~
+                createdat: Créé le
+                createdby: Crée par
+                updatedat: Modifié le
+                updatedby: Modifié par
             
         organism:
             breadcrumb:
-                organism_create: 'Nouveau Tiers'
-                organism_list: 'Liste des tiers'
+                organism_create: Nouveau Tiers
+                organism_list: Liste des tiers
             list:
                 _action: Action                
                 active: Actif
@@ -58,17 +58,17 @@ librinfo:
                 emailnonewsletter: Pas de Newsletter
                 emailnpai: Mauvais courriel
                 first_catalogue_sent_date: Date premier envoi catalogue
-                firstname: 'Prénom'
+                firstname: Prénom
                 iban: RIB (IBAN)
                 iscustomer: Est un Client
                 issupplier: Est un Fournisseur
                 last_catalogue_sent_date: Date dernier envoi catalogue
-                lastname: 'Nom de famille'
+                lastname: Nom de famille
                 name: Contact
                 seedproducer: Producteur de semences
                 siret: N° Siret
                 source: Source
-                title: 'Titre / civilité'
+                title: Titre / civilité
                 updatedat: Modifié le 
                 updatedby: Modifié par
                 url: Site web
@@ -100,7 +100,7 @@ librinfo:
                 
         plot:
             breadcrumb:
-                seedbatch_create: ~
+                seedbatch_create: Créer un lot
                 seedbatch_list: Liste des lots
             form:
                 address: Adresse 
@@ -173,50 +173,50 @@ librinfo:
                 zip: Code postal 
                 
         certificationtype:
-            certificationtype_create: ~
+            certificationtype_create: Créer une certification
             certificationtype_list: Liste des certifications
             form:
                 certificationtype: Certification
                 code: Code
-                createdat: ~
-                createdby: ~
+                createdat: Créé le
+                createdby: Crée par
                 description: Description
                 logo: Logo
-                name: 'Nom'
-                updatedat: ~
-                updatedby: ~                
+                name: Nom
+                updatedat: Modifié le
+                updatedby: Modifié par                
 
         certifyingbody:
             breadcrumb:
                 certification_create: Créer une certification
                 certification_list: Liste des certifications
-                certifyingbody_create: ~
+                certifyingbody_create: Créer un organism certificateur
                 certifyingbody_list: Liste des organismes certificateurs
             form:
                 #certificationtype: Certification
                 certificationdate: Début de validité 
                 certifyingbody: Organisme certificateur
-                city: 'Villes'
+                city: Villes
                 code: Code certificat
                 country: Pays
-                createdat: ~
-                createdby: ~
+                createdat: Créé le
+                createdby: Crée par
                 description: Description
                 expirydate: Date d'expiration 
                 #'
-                name: 'Nom'
-                npai: 'NPAI'
+                name: Nom
+                npai: NPAI
                 startdate: Date de certification 
-                updatedat: ~
-                updatedby: ~
+                updatedat: Modifié le
+                updatedby: Modifié par
                 url: URL du certificat
-                zip: 'Code postal'
-                address: 'Addresses'
+                zip: Code postal
+                address: Addresses
             
         seedfarm:
             breadcrumb:
-                seedfarm_create: ~
-                seedfarm_list: ~
+                seedfarm_create: Ajouter un producteur
+                seedfarm_list: Liste des producteurs
             list:
                 producer: Producteur
                 variety: Variété
@@ -225,23 +225,23 @@ librinfo:
                 variety: Variété
             form:
                 seedfarm: Artisan semencier
-                address: 'Addresses'
-                city: 'Villes'
+                address: Addresses
+                city: Villes
                 code: Code
                 country: Pays
-                createdat: ~
-                createdby: ~
+                createdat: Créé le
+                createdby: Crée par
                 description: Description
-                name: 'Nom'
-                npai: 'NPAI'
-                updatedat: ~
-                updatedby: ~
+                name: Nom
+                npai: NPAI
+                updatedat: Modifié le
+                updatedby: Modifié par
                 variety: Variété
-                zip: 'Code postal'
+                zip: Code postal
                 
         seedproducer:
             breadcrumb:
-                seedproducer_create: ~
+                seedproducer_create: Ajouter un producteur
                 seedproducer_list: Liste des producteurs
             list:
                 _action: Action
@@ -262,29 +262,29 @@ librinfo:
                 #'
                 catalogue_sent: Catalogue envoyé
                 catalogue_type: Type de catalogue
-                circles: 'Groupes'
+                circles: Groupes
                 city: Ville
                 code: Code
                 createdat: Créé le 
                 createdby: Crée par
                 description: Description
-                email: 'Email'
+                email: Email
                 emailnonewsletter: Pas de Newsletter
                 emailnpai: Mauvais courriel
                 first_catalogue_sent_date: Date premier envoi catalogue
-                firstname: 'Prénom'
+                firstname: Prénom
                 iban: RIB (IBAN)
                 iscustomer: Est un Client
                 issupplier: Est un Fournisseur
                 last_catalogue_sent_date: Date dernier envoi catalogue
-                lastname: 'Nom de famille'
+                lastname: Nom de famille
                 name: Nom de la parcelle 
                 producer: Producteur
                 productionyear: Année de production
                 seedproducer: Producteur de semences
                 siret: N° Siret
                 source: Source
-                title: 'Titre / civilité'
+                title: Titre / civilité
                 updatedat: Modifié le 
                 updatedby: Modifié par
                 url: Site web
