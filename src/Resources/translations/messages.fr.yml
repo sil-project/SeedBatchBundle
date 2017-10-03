@@ -22,7 +22,16 @@ librinfo:
         seed_producer_code: Code producteur   
     seedbatchbundle:
         organism_list: Liste des contacts
-        
+        admin:
+            certifying_body: Organisme certificateur
+            organism: Tiers
+            seed_batch: Lot
+            seed_farm: Artisan semencier
+        certificationtype:
+            breadcrumb:
+                certificationtype_create: Créer une certification
+
+                certificationtype_list: Liste des certifications
         link:
             organism_list: Liste des contacts
             seedbatch_list: Liste des lots
