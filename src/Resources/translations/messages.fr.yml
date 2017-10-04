@@ -27,35 +27,73 @@ librinfo:
             organism: Tiers
             seed_batch: Lot
             seed_farm: Artisan semencier
-        certificationtype:
-            breadcrumb:
-                certificationtype_create: Créer une certification
-
-                certificationtype_list: Liste des certifications
         link:
             organism_list: Liste des contacts
             seedbatch_list: Liste des lots
             seedproducer_list: Liste des producteurs
-            
-        seedbatch: 
-            organism_list: Liste des contacts
-            seedbatch_list: Liste des lots
-            list:
-                code: Code lot
-                seedfarm: Artisan semencier
-            show:
-                code: Code lot
-                createdat: Créé le 
-                createdby: Crée par
-                seedfarm: Artisan semencier
-                updatedat: Modifié le 
-                updatedby: Modifié par
+            plot_list: Liste des parcelles
+                
+        certification:
+            breadcrumb:
+                plot_create: Créer une parcelle
+                plot_list: Liste des parcelles
+            filter:
+                city: Ville
+                code: Code
+                country: Pays
+                name: Nom
+                producer_name: Producteur
+                zip: Code postal
             form:
+                address: Adresse 
+                city: Ville 
+                code: Code
+                country: Pays
+                description: Description 
+                name: Nom 
+                zip: Code postal 
+                
+        certifyingbody:
+            breadcrumb:
+                certification_create: Créer une certification
+                certification_list: Liste des certifications
+                certifyingbody_create: Créer un organism certificateur
+                certifyingbody_list: Liste des organismes certificateurs
+            form:
+                #certificationtype: Certification
+                certificationdate: Début de validité 
+                certifyingbody: Organisme certificateur
+                city: Villes
+                code: Code certificat
+                country: Pays
+                createdat: Créé le
+                createdby: Crée par
+                description: Description
+                expirydate: Date d'expiration 
+                #'
+                name: Nom
+                npai: NPAI
+                startdate: Date de certification 
+                updatedat: Modifié le
+                updatedby: Modifié par
+                url: URL du certificat
+                zip: Code postal
+                address: Addresses
+
+        certificationtype:
+            breadcrumb:
+                certificationtype_create: Créer une certification
+                certificationtype_list: Liste des certifications
+            form:
+                certificationtype: Certification
                 code: Code
                 createdat: Créé le
                 createdby: Crée par
+                description: Description
+                logo: Logo
+                name: Nom
                 updatedat: Modifié le
-                updatedby: Modifié par
+                updatedby: Modifié par                
             
         organism:
             breadcrumb:
@@ -130,6 +168,13 @@ librinfo:
             breadcrumb:
                 seedbatch_create: Créer un lot
                 seedbatch_list: Liste des lots
+            filter:
+                code: Code
+                plot_name: Parcelle
+                producer_name: Producteur
+                productionyear: Année de production
+                seedfarm_name: Artisan semencier
+                variety: Variété
             form:
                 address: Adresse 
                 batchnumber: Lot N°
@@ -186,65 +231,51 @@ librinfo:
                 name: Nom
                 code: Code
                 producer: Producteur
-                
-        certification:
+           
+        seedbatch: 
             breadcrumb:
-                plot_create: Créer une parcelle
-                plot_list: Liste des parcelles
+                organism_list: Liste des contacts
+                seedbatch_list: Liste des lots
+            filter:
+                active: Actif
+                alert: Alerte
+                category: Categorie
+                circles: Groupes
+                culture: Culture
+                customercode: Code Client
+                email: Email
+                emailnonewsletter: Pas de Newsletter
+                emailnpai: Mauvais courriel
+                fulltextname: Nom
+                iscustomer: Est un client
+                isindividual: Est un individu
+                issupplier: Est un fournisseur
+                name: Nom
+                suppliercode: Code fournisseur
             form:
-                address: Adresse 
-                city: Ville 
-                code: Code
-                country: Pays
-                description: Description 
-                name: Nom de la parcelle 
-                zip: Code postal 
-                
-        certificationtype:
-            certificationtype_create: Créer une certification
-            certificationtype_list: Liste des certifications
-            form:
-                certificationtype: Certification
                 code: Code
                 createdat: Créé le
                 createdby: Crée par
-                description: Description
-                logo: Logo
-                name: Nom
-                updatedat: Modifié le
-                updatedby: Modifié par                
-
-        certifyingbody:
-            breadcrumb:
-                certification_create: Créer une certification
-                certification_list: Liste des certifications
-                certifyingbody_create: Créer un organism certificateur
-                certifyingbody_list: Liste des organismes certificateurs
-            form:
-                #certificationtype: Certification
-                certificationdate: Début de validité 
-                certifyingbody: Organisme certificateur
-                city: Villes
-                code: Code certificat
-                country: Pays
-                createdat: Créé le
-                createdby: Crée par
-                description: Description
-                expirydate: Date d'expiration 
-                #'
-                name: Nom
-                npai: NPAI
-                startdate: Date de certification 
                 updatedat: Modifié le
                 updatedby: Modifié par
-                url: URL du certificat
-                zip: Code postal
-                address: Addresses
+            list:
+                code: Code lot
+                seedfarm: Artisan semencier
+            show:
+                code: Code lot
+                createdat: Créé le 
+                createdby: Crée par
+                seedfarm: Artisan semencier
+                updatedat: Modifié le 
+                updatedby: Modifié par
+            
+                
             
         seedfarm:
             breadcrumb:
-                seedfarm_create: Ajouter un producteur
-                seedfarm_list: Liste des producteurs
+                organism_list: Liste des contacts
+                seedfarm_create: Ajouter un artisans
+                seedfarm_list: Liste des artisans
             list:
                 producer: Producteur
                 variety: Variété
@@ -252,7 +283,6 @@ librinfo:
                 producer: Producteur
                 variety: Variété
             form:
-                seedfarm: Artisan semencier
                 address: Addresses
                 city: Villes
                 code: Code
@@ -262,6 +292,7 @@ librinfo:
                 description: Description
                 name: Nom
                 npai: NPAI
+                seedfarm: Artisan semencier
                 updatedat: Modifié le
                 updatedby: Modifié par
                 variety: Variété
