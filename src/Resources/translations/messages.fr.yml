@@ -32,353 +32,100 @@ librinfo:
             seedbatch_list: Liste des lots
             seedproducer_list: Liste des producteurs
             plot_list: Liste des parcelles
-                
-        certification:
-            breadcrumb:
-                plot_create: Créer une parcelle
-                plot_list: Liste des parcelles
-            filter:
-                city: Ville
-                code: Code
-                country: Pays
-                name: Nom
-                producer_name: Producteur
-                zip: Code postal
-            form:
-                address: Adresse 
-                city: Ville 
-                code: Code
-                country: Pays
-                description: Description 
-                name: Nom 
-                zip: Code postal 
-                
-        certifyingbody:
-            breadcrumb:
-                certification_create: Créer une certification
-                certification_list: Liste des certifications
-                certifyingbody_create: Créer un organism certificateur
-                certifyingbody_list: Liste des organismes certificateurs
-            form:
-                #certificationtype: Certification
-                certificationdate: Début de validité 
-                certifyingbody: Organisme certificateur
-                city: Villes
-                code: Code certificat
-                country: Pays
-                createdat: Créé le
-                createdby: Crée par
-                description: Description
-                expirydate: Date d'expiration 
-                #'
-                name: Nom
-                npai: NPAI
-                startdate: Date de certification 
-                updatedat: Modifié le
-                updatedby: Modifié par
-                url: URL du certificat
-                zip: Code postal
-                address: Addresses
 
-        certificationtype:
-            breadcrumb:
-                certificationtype_create: Créer une certification
-                certificationtype_list: Liste des certifications
-            form:
-                certificationtype: Certification
-                code: Code
-                createdat: Créé le
-                createdby: Crée par
-                description: Description
-                logo: Logo
-                name: Nom
-                updatedat: Modifié le
-                updatedby: Modifié par                
-            
-        organism:
-            breadcrumb:
-                organism_create: Nouveau Tiers
-                organism_list: Liste des tiers
-            list:
-                _action: Action                
-                active: Actif
-                alert: Alerte	
-                circles: Groupes
-                customercode: Code client
-                email: Email
-                fulltextname: Contact
-                isindividual: Est un individu
-                suppliercode: Code fournisseur 	
-            form:
-                active: Actif
-                alert: Alerte
-                catalogue_send_mean: Méthode d'envoi
-                #'
-                catalogue_sent: Catalogue envoyé
-                catalogue_type: Type de catalogue
-                circles: Groupes
-                createdat: Créé le 
-                createdby: Crée par
-                description: Description
-                email: Email
-                emailnonewsletter: Pas de Newsletter
-                emailnpai: Mauvais courriel
-                first_catalogue_sent_date: Date premier envoi catalogue
-                firstname: Prénom
-                iban: RIB (IBAN)
-                iscustomer: Est un Client
-                issupplier: Est un Fournisseur
-                last_catalogue_sent_date: Date dernier envoi catalogue
-                lastname: Nom de famille
-                name: Contact
-                seedproducer: Producteur de semences
-                siret: N° Siret
-                source: Source
-                title: Titre / civilité
-                updatedat: Modifié le 
-                updatedby: Modifié par
-                url: Site web
-                vat: N° TVA
-            show:
-                active: Actif
-                catalogue_send_mean: Méthode d'envoi
-                #'
-                catalogue_sent: Catalogue envoyé
-                category_name: Catégorie de tiers
-                circles: Groupes
-                createdat: Créé le 
-                createdby: Crée par
-                description: Bloc-notes
-                email: Email
-                first_catalogue_sent_date: Date premier envoi catalogue
-                fulltextname: Contact
-                iban: RIB (IBAN)
-                iscustomer: Est un Client
-                isseedproducer: Est un Producteur
-                issupplier: Est un Fournisseur
-                last_catalogue_sent_date: Date dernier envoi catalogue
-                plots: Parcelles
-                siret: N° Siret
-                source: Source
-                updatedat: Modifié le 
-                updatedby: Modifié par
-                vat: N° TVA
-                
-        plot:
-            breadcrumb:
-                seedbatch_create: Créer un lot
-                seedbatch_list: Liste des lots
-            filter:
-                code: Code
-                plot_name: Parcelle
-                producer_name: Producteur
-                productionyear: Année de production
-                seedfarm_name: Artisan semencier
-                variety: Variété
-            form:
-                address: Adresse 
-                batchnumber: Lot N°
-                city: Ville 
-                code: Code Lot
-                country: Pays
-                createdat: Créé le 
-                createdby: Crée par
-                deliverydate: Date de livraison
-                deliverynote: Bon de livraison fourni
-                description: Description
-                germinationdate: Date de la mesure
-                germinationrate: Taux de germination AS 
-                grossdeliveredweight:  Poids brut livré
-                grossproducerweight: Poids brut chez le producteur
-                netscreenedweight: Poids net trié
-                npai: NPAI
-                plot: Parcelle
-                productionyear: Année de production
-                seedfarm: Artisan semencier
-                tkw: Poids de mille graines
-                tkwdate: Date de la mesure
-                toscreenweight: Poids restant à trier
-                updatedat: Modifié le 
-                updatedby: Modifié par
-                variety: Variété
-                zip: Code postal 
-            show:
-                address: Adresse
-                city: Ville
-                code: Code
-                country: Pays
-                createdat: Créé le 
-                createdby: Crée par
-                deliverydate: Date de livraison
-                deliverynote: Bon de livraison fourni
-                description: Description
-                germinationdate: Date de la mesure
-                germinationrate: Taux de germination AS 
-                grossdeliveredweight: Poids brut livré
-                grossproducerweight: Poids brut chez le producteur
-                name: Nom
-                netscreenedweight: Poids net trié
-                npai: NPAI
-                producer: Producteur
-                tkw: Poids de mille graines
-                tkwdate: Date de la mesure
-                toscreenweight: Poids restant à trier
-                updatedat: Modifié le 
-                updatedby: Modifié par
-                zip: Code postal
-                
-            list:
-                name: Nom
-                code: Code
-                producer: Producteur
-           
+        _action: Action
+        active: Actif
+        address: Adresse 
+        alert: Alerte	
+        batchnumber: Lot N°
+        catalogue_send_mean: 'Méthode d''envoi'
+        catalogue_sent: Catalogue envoyé
+        catalogue_type: Type de catalogue
+        category: Categorie
+        category_name: Catégorie de tiers
+        certification_create: Créer une certification
+        certification_list: Liste des certifications
+        certificationdate: Début de validité 
+        certifications: Certifications
+        certificationtype: Certification
+        certificationtype_create: Créer une certification
+        certificationtype_list: Liste des certifications
+        certifyingbody: Organisme certificateur
+        certifyingbody_create: Créer un organism certificateur
+        certifyingbody_list: Liste des organismes certificateurs
+        circles: Groupes
+        city: Ville 
+        code: Code
+        country: Pays
+        createdat: Créé le
+        createdby: Crée par
+        createdby: Crée par
+        culture: Culture
+        customercode: Code Client
+        deliverydate: Date de livraison
+        deliverynote: Bon de livraison fourni
+        description: Description 
+        email: Email
+        emailnonewsletter: Pas de Newsletter
+        emailnpai: Mauvais courriel
+        expirydate: 'Date d''expiration'
+        first_catalogue_sent_date: Date premier envoi catalogue
+        firstname: Prénom
+        fulltextname: Nom
+        germinationdate: Date de la mesure
+        germinationrate: Taux de germination AS 
+        grossdeliveredweight: Poids brut livré
+        grossproducerweight: Poids brut chez le producteur
+        iban: RIB (IBAN)
+        iscustomer: Client
+        iscustomer: Est un Client
+        isindividual: Est un individu
+        isseedproducer: Est un Producteur
+        issupplier: Est un Fournisseur
+        last_catalogue_sent_date: Date dernier envoi catalogue
+        lastname: Nom de famille
+        logo: Logo
+        name: Nom
+        npai: NPAI
+        organism_create: Nouveau Tiers
+        organism_list: Liste des contacts
+        plot: Parcelle
+        plot_create: Créer une parcelle
+        plot_list: Liste des parcelles
+        plot_name: Parcelle
+        plots: Parcelles
+        producer: Producteur
+        producer_name: Producteur
+        productionyear: Année de production
         seedbatch: 
-            breadcrumb:
-                organism_list: Liste des contacts
-                seedbatch_list: Liste des lots
-            filter:
-                active: Actif
-                alert: Alerte
-                category: Categorie
-                circles: Groupes
-                culture: Culture
-                customercode: Code Client
-                email: Email
-                emailnonewsletter: Pas de Newsletter
-                emailnpai: Mauvais courriel
-                fulltextname: Nom
-                iscustomer: Est un client
-                isindividual: Est un individu
-                issupplier: Est un fournisseur
-                name: Nom
-                suppliercode: Code fournisseur
-            form:
-                code: Code
-                createdat: Créé le
-                createdby: Crée par
-                updatedat: Modifié le
-                updatedby: Modifié par
-            list:
-                code: Code lot
-                seedfarm: Artisan semencier
-            show:
-                code: Code lot
-                createdat: Créé le 
-                createdby: Crée par
-                seedfarm: Artisan semencier
-                updatedat: Modifié le 
-                updatedby: Modifié par
-            
-                
-            
-        seedfarm:
-            breadcrumb:
-                organism_list: Liste des contacts
-                seedfarm_create: Ajouter un artisans
-                seedfarm_list: Liste des artisans
-            list:
-                producer: Producteur
-                variety: Variété
-            show:
-                producer: Producteur
-                variety: Variété
-            form:
-                address: Addresses
-                city: Villes
-                code: Code
-                country: Pays
-                createdat: Créé le
-                createdby: Crée par
-                description: Description
-                name: Nom
-                npai: NPAI
-                seedfarm: Artisan semencier
-                updatedat: Modifié le
-                updatedby: Modifié par
-                variety: Variété
-                zip: Code postal
-                
-        seedproducer:
-            breadcrumb:
-                seedproducer_create: Ajouter un producteur
-                seedproducer_list: Liste des producteurs
-            list:
-                _action: Action
-                active: Actif
-                alert: Alerte
-                circles: Groupes
-                city: Ville
-                email: Email
-                fulltextname: Producteur
-                isindividual: Est un individu
-                productionyear: Année de production
-                seedproducercode: Code producteur
-            form:
-                active: Actif
-                alert: Alerte
-                batchnumber: Lot N°
-                catalogue_send_mean: Méthode d'envoi
-                #'
-                catalogue_sent: Catalogue envoyé
-                catalogue_type: Type de catalogue
-                circles: Groupes
-                city: Ville
-                code: Code
-                createdat: Créé le 
-                createdby: Crée par
-                description: Description
-                email: Email
-                emailnonewsletter: Pas de Newsletter
-                emailnpai: Mauvais courriel
-                first_catalogue_sent_date: Date premier envoi catalogue
-                firstname: Prénom
-                iban: RIB (IBAN)
-                iscustomer: Est un Client
-                issupplier: Est un Fournisseur
-                last_catalogue_sent_date: Date dernier envoi catalogue
-                lastname: Nom de famille
-                name: Nom de la parcelle 
-                producer: Producteur
-                productionyear: Année de production
-                seedproducer: Producteur de semences
-                siret: N° Siret
-                source: Source
-                title: Titre / civilité
-                updatedat: Modifié le 
-                updatedby: Modifié par
-                url: Site web
-                vat: N° TVA
-            show:
-                active: Actif
-                batchnumber: Lot N°
-                catalogue_send_mean: Méthode d'envoi
-                #'
-                catalogue_sent: Catalogue envoyé
-                category_name: Catégorie de tiers
-                certifications: Certifications
-                circles: Groupes
-                createdat: Créé le 
-                createdby: Crée par
-                description: Bloc-notes
-                email: Email
-                first_catalogue_sent_date: Date premier envoi catalogue
-                fulltextname: Nom
-                iban: RIB (IBAN)
-                iscustomer: Client
-                isseedproducer: Producteur
-                issupplier: Fournisseur
-                last_catalogue_sent_date: Date dernier envoi catalogue
-                plot: Parcelle
-                plots: Lots
-                productionyear: Année de production
-                seedbatches: Parcelles
-                siret: N° Siret
-                source: Source
-                updatedat: Modifié le 
-                updatedby: Modifié par
-                vat: N° TVA
+        seedbatch_create: Créer un lot
+        seedbatch_list: Liste des lots
+        seedbatches: Parcelles
+        seedfarm: Artisan semencier
+        seedfarm_create: Ajouter un artisans
+        seedfarm_list: Liste des artisans
+        seedfarm_name: Artisan semencier
+        seedproducer: Producteur de semences
+        seedproducer_create: Ajouter un producteur
+        seedproducer_list: Liste des producteurs
+        seedproducercode: Code producteur
+        siret: N° Siret
+        source: Source
+        startdate: Date de certification 
+        suppliercode: Code fournisseur
+        title: Titre / civilité
+        tkw: Poids de mille graines
+        tkwdate: Date de la mesure
+        toscreenweight: Poids restant à trier
+        updatedat: Modifié le
+        updatedby: Modifié par
+        url: Site web
+        variety: Variété
+        vat: N° TVA
+        zip: Code postal
 
-                
+
+        
 form_tab_general: 'Général'
 form_group_certifications: Certificats
 form_group_delivery: Livraison
