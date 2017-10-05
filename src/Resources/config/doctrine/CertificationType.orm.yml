@@ -5,13 +5,14 @@ Librinfo\SeedBatchBundle\Entity\CertificationType:
             type: string
             length: 255
             unique: true
-    
+
     oneToOne:
         logo:
             targetEntity: Librinfo\MediaBundle\Entity\File
-            joinColumn: 
+            joinColumn:
                 name: logo_id
                 referencedColumnName: id
                 nullable: true
+                onDelete: SET NULL
             cascade: [persist, remove]
             oprhanRemoval: true
