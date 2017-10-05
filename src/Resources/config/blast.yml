@@ -708,6 +708,7 @@ parameters:
                             logo:
                                 type: Librinfo\MediaBundle\Form\Type\DropzoneType
                                 required: false
+                                multipleFiles: false
                             description:
                                 type: textarea
                                 required: false
