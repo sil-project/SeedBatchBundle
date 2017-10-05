@@ -86,6 +86,7 @@ librinfo:
         lastname: Nom de famille
         logo: Logo
         name: Nom
+        netscreenedweight: Poids net trié
         npai: NPAI
         organism_create: Nouveau Tiers
         organism_list: Liste des contacts
@@ -93,6 +94,7 @@ librinfo:
         plot_create: Créer une parcelle
         plot_list: Liste des parcelles
         plot_name: Parcelle
+        plot_producer: Producteur
         plots: Parcelles
         producer: Producteur
         producer_name: Producteur
