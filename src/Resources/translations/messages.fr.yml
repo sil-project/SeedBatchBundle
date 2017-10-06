@@ -19,7 +19,7 @@ librinfo:
     help:
         batchNumber: Nombre entre 1 et 99
     placeholder:
-        seed_producer_code: Code producteur   
+        seed_producer_code: Code producteur
     seedbatchbundle:
         organism_list: Liste des contacts
         admin:
@@ -35,8 +35,8 @@ librinfo:
 
         _action: Action
         active: Actif
-        address: Adresse 
-        alert: Alerte	
+        address: Adresse
+        alert: Alerte
         batchnumber: Lot N°
         catalogue_send_mean: 'Méthode d''envoi'
         catalogue_sent: Catalogue envoyé
@@ -45,7 +45,7 @@ librinfo:
         category_name: Catégorie de tiers
         certification_create: Créer une certification
         certification_list: Liste des certifications
-        certificationdate: Début de validité 
+        certificationdate: Début de validité
         certifications: Certifications
         certificationtype: Certification
         certificationtype_create: Créer une certification
@@ -54,7 +54,7 @@ librinfo:
         certifyingbody_create: Créer un organism certificateur
         certifyingbody_list: Liste des organismes certificateurs
         circles: Groupes
-        city: Ville 
+        city: Ville
         code: Code
         country: Pays
         createdat: Créé le
@@ -64,7 +64,7 @@ librinfo:
         customercode: Code Client
         deliverydate: Date de livraison
         deliverynote: Bon de livraison fourni
-        description: Description 
+        description: Description
         email: Email
         emailnonewsletter: Pas de Newsletter
         emailnpai: Mauvais courriel
@@ -73,7 +73,7 @@ librinfo:
         firstname: Prénom
         fulltextname: Nom
         germinationdate: Date de la mesure
-        germinationrate: Taux de germination AS 
+        germinationrate: Taux de germination AS
         grossdeliveredweight: Poids brut livré
         grossproducerweight: Poids brut chez le producteur
         iban: RIB (IBAN)
@@ -99,10 +99,10 @@ librinfo:
         producer: Producteur
         producer_name: Producteur
         productionyear: Année de production
-        seedbatch: 
+        seedbatch:
         seedbatch_create: Créer un lot
         seedbatch_list: Liste des lots
-        seedbatches: Parcelles
+        seedbatches: Lots
         seedfarm: Artisan semencier
         seedfarm_create: Ajouter un artisans
         seedfarm_list: Liste des artisans
@@ -113,7 +113,7 @@ librinfo:
         seedproducercode: Code producteur
         siret: N° Siret
         source: Source
-        startdate: Date de certification 
+        startdate: Date de certification
         suppliercode: Code fournisseur
         title: Titre / civilité
         tkw: Poids de mille graines
@@ -127,7 +127,7 @@ librinfo:
         zip: Code postal
 
 
-        
+
 form_tab_general: 'Général'
 form_group_certifications: Certificats
 form_group_delivery: Livraison
@@ -146,4 +146,3 @@ show_tab_seedbatches: Lots
 
 Mr: M
 Mrs: Mme
-
