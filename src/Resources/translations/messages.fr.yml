@@ -1,17 +1,4 @@
-form_tab_general: 'Général'
-form_group_certifications: Certificats
-form_group_delivery: Livraison
-form_group_germination_rate: Taux de germination
-form_group_plot: Parcelle
-form_group_seedbatch: Lot
-form_group_tkw: PMG
-form_tab_certifications: Certificats
-form_tab_plots: Parcelles
-form_tab_seedbatches: Lots
-form_tab_stocks: Stocks
-show_tab_certifications: Certificats
-show_tab_plots: Parcelles
-show_tab_seedbatches: Lots
+
 
 librinfo:
     error:
@@ -29,83 +16,133 @@ librinfo:
         missing_variety: Le champ "Variété" est vide
         missing_variety_code: Le champ "Code variété" est vide
         missing_seed_batch: Le champ "Lot" est vide
-    label:
-        batch_number: Lot N°
-        certification_code: Code certificat
-        certification_body: Organisme certificateur
-        certification_date: Date de certification
-        certification_start_date: Début de validité
-        certification_type: Certification
-        certification_url: URL du certificat
-        certifications: Certifications
-        certifying_body: Organisme certificateur
-        delivery_date: Date de livraison
-        delivery_note: Bon de livraison fourni
-        expiry_date: Date d'expiration
-        generate_seedbatch_code: Générer code
-        germination_date: Date de la mesure
-        gross_delivered_weight: Poids brut livré
-        gross_producer_weight: Poids brut chez le producteur
-        list_seed_producer_name: Producteur
-        logo: Logo
-        menu:
-            plots: Parcelles
-            seed_batches: Lots
-        net_screened_weight: Poids net trié
-        plot: Parcelle
-        plot_name: Nom de la parcelle
-        plots: Parcelles
-        producer: Producteur
-        seed_producer_code: Code producteur
-        producer_name: Producteur
-        production_year: Année de production
-        seed_batch_code: Code Lot
-        seed_batches: Lots
-        seed_farm: Artisan semencier
-        seed_farm_name: Artisan semencier
-        seed_producer: Producteur de semences
-        seedbatches: Lots
-        tkw_date: Date de la mesure
-        to_screen_weight: Poids restant à trier
-        variety: Variété
-        plot_producer: Producteur
-        start_date: Date de mise en vigueur
-        is_seed_producer: Producteur
-        seedproducercode: Code producteur
-    link:
-        certification_create: Créer une certification
-        certification_list: Liste des certifications
-        certification_type_create: Créer une certification
-        certification_type_list: Liste des certifications
-        certificationtype_list: Liste des certifications
-        certifyingbody_list: Liste des organismes certificateurs
-        certifying_body_list: Liste des organismes certificateurs
-        certifying_body_create: Créer un organisme certificateur
-        plot_create: Créer une parcelle
-        plot_list: Liste des parcelles
-        seedproducer_list: Liste des producteurs
-        seed_producer_list: Liste des producteurs
-        seed_batch_create: Nouveau Lot
-        seedbatch_list: Liste des lots
-        seed_batch_list: Liste des lots
-        seed_farm_list: Liste des Artisans Semenciers
-        seed_producer_create: Créer un producteur
-        seeds_product_variant_embedded_delete: Supprimer une variante
-        seeds_product_variant_embedded_list: Liste des variantes
     help:
         batchNumber: Nombre entre 1 et 99
     placeholder:
         seed_producer_code: Code producteur
-    seedbatch:
-        plot_admin:
-            label: Parcelle
-        seed_batch_admin:
-            label: Lot
-        seed_farm_admin:
-            label: Artisan Semencier
-        seedbatch_admin:
-            label: Lot
-        certifying_body_admin:
-            label: Organisme certificateur
+    seedbatchbundle:
+        organism_list: Liste des contacts
+        admin:
+            certifying_body: Organisme certificateur
+            organism: Tiers
+            seed_batch: Lot
+            seed_farm: Artisan semencier
+        link:
+            organism_list: Liste des contacts
+            seedbatch_list: Liste des lots
+            seedproducer_list: Liste des producteurs
+            plot_list: Liste des parcelles
+
+        _action: Action
+        active: Actif
+        address: Adresse
+        alert: Alerte
+        batchnumber: Lot N°
+        catalogue_send_mean: 'Méthode d''envoi'
+        catalogue_sent: Catalogue envoyé
+        catalogue_type: Type de catalogue
+        category: Categorie
+        category_name: Catégorie de tiers
+        certification_create: Créer une certification
+        certification_list: Liste des certifications
+        certificationdate: Début de validité
+        certifications: Certifications
+        certificationtype: Certification
+        certificationtype_create: Créer une certification
+        certificationtype_list: Liste des certifications
+        certifyingbody: Organisme certificateur
+        certifyingbody_create: Créer un organism certificateur
+        certifyingbody_list: Liste des organismes certificateurs
+        circles: Groupes
+        city: Ville
+        code: Code
+        country: Pays
+        createdat: Créé le
+        createdby: Crée par
+        createdby: Crée par
+        culture: Culture
+        customercode: Code Client
+        deliverydate: Date de livraison
+        deliverynote: Bon de livraison fourni
+        description: Description
+        email: Email
+        emailnonewsletter: Pas de Newsletter
+        emailnpai: Mauvais courriel
+        expirydate: 'Date d''expiration'
+        first_catalogue_sent_date: Date premier envoi catalogue
+        firstname: Prénom
+        fulltextname: Nom
+        germinationdate: Date de la mesure
+        germinationrate: Taux de germination AS
+        grossdeliveredweight: Poids brut livré
+        grossproducerweight: Poids brut chez le producteur
+        iban: RIB (IBAN)
+        iscustomer: Client
+        iscustomer: Est un Client
+        isindividual: Est un individu
+        isseedproducer: Est un Producteur
+        issupplier: Est un Fournisseur
+        last_catalogue_sent_date: Date dernier envoi catalogue
+        lastname: Nom de famille
+        logo: Logo
+        name: Nom
+        netscreenedweight: Poids net trié
+        npai: NPAI
+        organism_create: Nouveau Tiers
+        organism_list: Liste des contacts
+        plot: Parcelle
+        plot_create: Créer une parcelle
+        plot_list: Liste des parcelles
+        plot_name: Parcelle
+        plot_producer: Producteur
+        plots: Parcelles
+        producer: Producteur
+        producer_name: Producteur
+        productionyear: Année de production
+        seedbatch:
+        seedbatch_create: Créer un lot
+        seedbatch_list: Liste des lots
+        seedbatches: Lots
+        seedfarm: Artisan semencier
+        seedfarm_create: Ajouter un artisans
+        seedfarm_list: Liste des artisans
+        seedfarm_name: Artisan semencier
+        seedproducer: Producteur de semences
+        seedproducer_create: Ajouter un producteur
+        seedproducer_list: Liste des producteurs
+        seedproducercode: Code producteur
+        siret: N° Siret
+        source: Source
+        startdate: Date de certification
+        suppliercode: Code fournisseur
+        title: Titre / civilité
+        tkw: Poids de mille graines
+        tkwdate: Date de la mesure
+        toscreenweight: Poids restant à trier
+        updatedat: Modifié le
+        updatedby: Modifié par
+        url: Site web
+        variety: Variété
+        vat: N° TVA
+        zip: Code postal
+
+
+
+form_tab_general: 'Général'
+form_group_certifications: Certificats
+form_group_delivery: Livraison
+form_group_germination_rate: Taux de germination
+form_group_plot: Parcelle
+form_group_seedbatch: Lot
+form_group_tkw: PMG
+form_tab_certifications: Certificats
+form_tab_plots: Parcelles
+form_tab_seedbatches: Lots
+form_tab_stocks: Stocks
+
+show_tab_certifications: Certificats
+show_tab_plots: Parcelles
+show_tab_seedbatches: Lots
+
 Mr: M
 Mrs: Mme

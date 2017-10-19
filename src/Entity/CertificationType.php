@@ -38,9 +38,9 @@ class CertificationType
     private $code;
 
     /**
-     * @var \Librinfo\MediaBundle\Entity\File
+     * @var File
      */
-    private $logo;
+    private $logo = null;
 
     /**
      * Constructor.
@@ -56,6 +56,7 @@ class CertificationType
     {
         $this->id = null;
         $this->code = null;
+        $this->logo = null;
         $this->initCollections();
     }
 
@@ -96,6 +97,11 @@ class CertificationType
      */
     public function setLogo($logo = null)
     {
+        // @TODO: Ugly hack to avoid $form->handleRequest() changing this value from null to empty array
+        if (is_array($logo)) {
+            $logo = null;
+        }
+
         $this->logo = $logo;
 
         return $this;
