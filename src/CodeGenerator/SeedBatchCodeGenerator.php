@@ -74,7 +74,8 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
         if (!$productionYear) {
             throw new InvalidEntityCodeException('librinfo.error.missing_production_year');
         }
-        if ($productionYear < 2000 || $productionYear > 2099) {
+        // if ($productionYear < 2000 || $productionYear > 2099) {
+        if ($productionYear < 1) {
             throw new InvalidEntityCodeException('librinfo.error.invalid_production_year');
         }
         // TODO: test if year is too far in the future ?
@@ -83,17 +84,19 @@ class SeedBatchCodeGenerator implements CodeGeneratorInterface
         if (!$batchNumber) {
             throw new InvalidEntityCodeException('librinfo.error.missing_batch_number');
         }
-        if ($batchNumber < 1 || $batchNumber > 99) {
+        // if ($batchNumber < 1 || $batchNumber > 99) {
+        if ($batchNumber < 1) {
             throw new InvalidEntityCodeException('librinfo.error.invalid_batch_number');
         }
 
-        return sprintf('%s-%s%s-%s-%02d-%02d',
+        return sprintf(
+            '%s-%s%s-%s-%02d-%02d',
             $seedFarmCode,
             $speciesCode,
             $varietyCode,
             $producerCode,
-            $productionYear - 2000,
-            $batchNumber
+            $productionYear % 100, // - 2000,
+            $batchNumber % 100
         );
     }
 
