@@ -37,6 +37,5 @@
         "psr-4": {
             "Librinfo\\SeedBatchBundle\\": "src/"
         }
-    },
-    "version": "0.6.4"
+    }
 }
