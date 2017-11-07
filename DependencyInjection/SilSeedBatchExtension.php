@@ -10,10 +10,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Librinfo\SeedBatchBundle\DependencyInjection;
+namespace Sil\Bundle\SeedBatchBundle\DependencyInjection;
 
-use Blast\CoreBundle\DependencyInjection\BlastCoreExtension;
-use Blast\CoreBundle\DependencyInjection\DefaultParameters;
+use Blast\Bundle\CoreBundle\DependencyInjection\BlastCoreExtension;
+use Blast\Bundle\CoreBundle\DependencyInjection\DefaultParameters;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
@@ -24,7 +24,7 @@ use Symfony\Component\Yaml\Yaml;
  *
  * @see http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class LibrinfoSeedBatchExtension extends BlastCoreExtension
+class SilSeedBatchExtension extends BlastCoreExtension
 {
     /**
      * {@inheritdoc}
@@ -53,8 +53,8 @@ class LibrinfoSeedBatchExtension extends BlastCoreExtension
 
         $this->mergeParameter('blast', $container, __DIR__ . '/../Resources/config');
 
-        if (class_exists('\Librinfo\SecurityBundle\Configurator\SecurityConfigurator')) {
-            \Librinfo\SecurityBundle\Configurator\SecurityConfigurator::getInstance($container)->loadSecurityYml(__DIR__ . '/../Resources/config/security.yml');
+        if (class_exists('\Sil\Bundle\SecurityBundle\Configurator\SecurityConfigurator')) {
+            \Sil\Bundle\SecurityBundle\Configurator\SecurityConfigurator::getInstance($container)->loadSecurityYml(__DIR__ . '/../Resources/config/security.yml');
         }
     }
 }

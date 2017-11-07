@@ -10,12 +10,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Librinfo\SeedBatchBundle;
+namespace Sil\Bundle\SeedBatchBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class LibrinfoSeedBatchBundle extends Bundle
+class SilSeedBatchBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
