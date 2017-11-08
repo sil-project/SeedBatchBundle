@@ -10,11 +10,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Sil\Bundle\SeedBatchBundle\Entity\OuterExtension;
+namespace Sil\Bundle\SeedBatchBundle\Entity;
 
 use Sil\Bundle\SeedBatchBundle\Entity\SeedBatch;
 
-trait HasSeedBatch
+trait HasSeedBatchTrait
 {
     /**
      * @var SeedBatch
