@@ -1,6 +1,6 @@
 
 services:
-    sil_seedbatch.admin.seedbatch_embedded:
+    sil_seed_batch.admin.seedbatch_embedded:
         class: Sil\Bundle\SeedBatchBundle\Admin\SeedBatchEmbeddedAdmin
         arguments: [~, "%sil_seed_batch.entity.seed_batch.class%", BlastCoreBundle:CRUD]
         tags:

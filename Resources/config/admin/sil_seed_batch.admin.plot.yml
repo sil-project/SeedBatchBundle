@@ -1,7 +1,7 @@
 
 services:
-    sil_seedbatch.admin.plot_embedded:
-        class: Sil\Bundle\SeedBatchBundle\Admin\PlotEmbeddedAdmin
+    sil_seed_batch.admin.plot:
+        class: Sil\Bundle\SeedBatchBundle\Admin\PlotAdmin
         arguments: [~, "%sil_seed_batch.entity.plot.class%", BlastCoreBundle:CRUD]
         tags:
             -   name: sonata.admin
